@@ -1,0 +1,432 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching - James Kruck, PhD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen">
+    <!-- Header -->
+    <header class="header-nav shadow-sm no-print">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold">James Kruck, PhD</h1>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-12">
+                <div class="flex items-center">
+                    <div class="flex space-x-4">
+                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="education.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
+                        <a href="teaching.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900" aria-current="page">Teaching</a>
+                        <a href="leadership.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Leadership</a>
+                        <a href="scholarly.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Scholarly Activity</a>
+                        <a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Educational Projects</a>
+                        <a href="resources.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Helpful Resources</a>
+                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumb-nav no-print">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center space-x-2 h-10 text-sm">
+                <span class="text-gray-500">James Kruck</span>
+                <span class="text-gray-300">/</span>
+                <span class="text-gray-900 font-medium">Teaching</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Wrapper -->
+    <div class="flex flex-grow min-h-0">
+        <!-- Simplified Sidebar Navigation -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <!-- Major sections only -->
+                <a href="#teaching-philosophy" class="sidebar-link">Overview</a>
+                <a href="#teaching-journey" class="sidebar-link">Teaching Journey</a>
+                <a href="#teaching-experience" class="sidebar-link">Teaching Experience</a>
+                <a href="#student-feedback" class="sidebar-link">Student Feedback</a>
+                <a href="#teaching-methods" class="sidebar-link">Teaching Methods</a>
+                <a href="#teaching-summary" class="sidebar-link">Summary</a>
+                
+                <!-- Resources section at bottom -->
+                <div class="mt-8 border-t pt-4">
+                    <h3 class="px-3 text-xs font-medium text-gray-500 uppercase tracking-wider">Resources</h3>
+                    <div class="mt-2">
+                        <a href="https://jameskruck.com/wp-content/uploads/2024/12/latin-1000.pdf" class="sidebar-link text-sm flex items-center" target="_blank">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>Latin Course Syllabus</span>
+                        </a>
+                        <a href="https://jameskruck.com/wp-content/uploads/2024/12/fate-and-virtue.pdf" class="sidebar-link text-sm flex items-center" target="_blank">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>Fate & Virtue Syllabus</span>
+                        </a>
+                        <a href="https://jameskruck.com/wp-content/uploads/2025/01/syllabi-uiuc.pdf" class="sidebar-link text-sm flex items-center" target="_blank">
+                            <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                            <span>UIUC Syllabi</span>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                <!-- Introduction -->
+                <section id="teaching-philosophy" class="mb-12">
+                    <h1 class="text-2xl font-bold mb-4">Teaching Philosophy</h1>
+                    <p class="mb-4">My teaching philosophy has evolved from traditional instruction to facilitating dynamic, student-centered learning environments. Initially following a "sage on the stage" model, I've moved toward creating spaces where learning is created, not dispensed. Through this journey, I've discovered that the best teaching emerges from collaborative environments where instructors and learners contribute to shared growth.</p>
+                    
+                    <p class="mb-4">I believe that teaching should foster dialogue and discovery, cultivate engagement through active learning, leverage technology to promote inclusion, and center inclusive, decolonized approaches. My classroom practices focus on structured retrieval, flexible participation, and creating spaces where students can connect course material to their lived experiences.</p>
+                    
+                    <p class="mb-4">Teaching is about continuous growth and innovation. I remain committed to learning from my students and colleagues, expanding access through flexible delivery modes, and implementing universal design principles to create equitable learning environments for all students.</p>
+                </section>
+
+                <!-- Interactive Map -->
+                <section id="teaching-journey" class="mb-12 border-t pt-8">
+                    <h2 class="text-xl font-bold mb-6">My Teaching Journey</h2>
+                    <p class="mb-4">Explore the map below to see the institutions where I've had the privilege to teach. Click on each marker to learn more about my teaching experiences.</p>
+                    
+                    <div id="teaching-map" class="w-full h-96 rounded-lg border border-gray-200 mb-6"></div>
+                    
+                    <div id="map-info" class="bg-blue-50 p-4 rounded-lg mb-6 hidden">
+                        <h3 id="map-title" class="font-semibold mb-2"></h3>
+                        <p id="map-description"></p>
+                    </div>
+                    
+                    <p class="text-sm text-gray-600 italic">Click on each marker to learn more about my teaching experience at each institution.</p>
+                </section>
+
+                <!-- Teaching Experience -->
+                <section id="teaching-experience" class="mb-12 border-t pt-8">
+                    <h2 class="text-xl font-bold mb-6">Teaching Experience</h2>
+                    
+                    <!-- University of Manitoba -->
+                    <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Manitoba_Bisons_logo.svg" alt="University of Manitoba Logo" class="h-16 mr-4">
+                            <div>
+                                <h3 class="text-lg font-bold">University of Manitoba</h3>
+                                <p class="text-gray-600">Instructor (2008)</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">My first opportunity to teach came during my graduate studies at the University of Manitoba. At the time, I was very inexperienced and reliant on teaching in the same way that I had been taught.</p>
+                        
+                        <div class="mt-4 bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <h4 class="font-semibold mb-2">Introduction to Latin</h4>
+                            <p class="mb-4">In the summer session of 2008, I designed and delivered a first-year Latin course to undergraduate students. We met regularly to review readings and cover grammatical concepts.</p>
+                            
+                            <p class="mb-4">One of my favorite aspects of this experience was watching students master challenging content and grow in confidence with each lesson. Learning a language that is rarely spoken requires students to practice memorizing new terminology and grammar until they can instinctively recognize words and the concepts they imply.</p>
+                            
+                            <p>Part of the joy of teaching a class like this comes from being alongside students as they tackle this task. I know from my own studies how challenging it can be, so I'm always eager to dive in, share struggles, and offer tips to help them along the way.</p>
+                        </div>
+                        
+                        <div class="mt-4 text-right">
+                            <a href="https://jameskruck.com/wp-content/uploads/2024/12/latin-1000.pdf" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors" target="_blank">
+                                View Course Syllabus
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- University of Western Ontario -->
+                    <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/f/fb/Western_University_logo.svg" alt="Western University Logo" class="h-16 mr-4">
+                            <div>
+                                <h3 class="text-lg font-bold">University of Western Ontario</h3>
+                                <p class="text-gray-600">Instructor & Teaching Assistant (2010-2012)</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">During my time at Western University, I had the chance to grow as an educator through a variety of teaching assistant and instructor roles. It was at Western that a mentor shared a piece of advice that has stayed with me ever since: <em>"When teaching, you can be the Sage on the Stage or the Guide from the Side."</em></p>
+                        
+                        <p class="mb-4">That well-known maxim has stuck in my head ever since. I began to think carefully about when to step forward as an authoritative voice guiding students through complex material, and when to step back to let students take ownership of their learning. Finding a balance between these approaches became a central focus of my classroom practice.</p>
+                        
+                        <div class="mt-4 bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <h4 class="font-semibold mb-2">Introduction to Latin</h4>
+                            <p class="mb-4">As an Instructor for an Introduction to Latin class, I led a blended, two-term undergraduate course, balancing in-person and online instruction to introduce students to the fundamentals of the Latin language. This role gave me the opportunity to design lesson plans, deliver engaging lectures, and support student learning across multiple environments.</p>
+                        </div>
+                        
+                        <div class="mt-4 bg-white p-4 rounded-lg shadow-sm">
+                            <h4 class="font-semibold mb-2">Teaching Assistant Roles</h4>
+                            <p>In my roles as a Teaching Assistant—spanning courses such as <em>Crime and Punishment in Ancient Greece and Rome</em>, <em>Alexander the Great</em>, <em>Daily Life in Ancient Rome</em>, and <em>Classical Civilization</em>—I worked closely with students through office hours, coursework advising, and detailed feedback on assignments. Beyond these responsibilities, I also had opportunities to guest lecture, sharing my excitement and insight into the content with the students.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Quest University -->
+                    <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://jameskruck.com/wp-content/uploads/2024/12/5480_logo-1.png" alt="Quest University Logo" class="h-16 mr-4">
+                            <div>
+                                <h3 class="text-lg font-bold">Quest University</h3>
+                                <p class="text-gray-600">Visiting Faculty (2013)</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">My time at Quest marked a crucial shift in my teaching approach. The university's unique block system, where students take one course at a time in intensive three-hour daily sessions, demanded rethinking traditional lecture-based instruction.</p>
+                        
+                        <div class="mt-4 bg-white p-4 rounded-lg shadow-sm mb-4">
+                            <h4 class="font-semibold mb-2">Fate and Virtue in the Ancient World</h4>
+                            <p class="mb-4">Teaching this course twice allowed me to significantly evolve my methods. In the first iteration, I relied too heavily on lectures. Student feedback made clear they wanted more interactive discussions and collaborative exploration. For the second offering, I restructured each session into three distinct segments:</p>
+                            
+                            <ul class="list-disc list-inside text-gray-700 ml-4 mb-4">
+                                <li>Opening: Brief contextual framing of key concepts</li>
+                                <li>Exploration: Student-led small group discussions using self-generated prompts</li>
+                                <li>Integration: Full class discussion synthesizing group insights</li>
+                            </ul>
+                            
+                            <p class="mb-4">Students examined how ancient figures like Achilles, Socrates, and Aristotle wrestled with questions of fate, virtue, and moral responsibility. By having students generate their own discussion questions and work collaboratively, they found personal connections to these enduring philosophical challenges.</p>
+                            
+                            <h4 class="font-semibold mb-2 mt-6">Teaching Philosophy Development</h4>
+                            <p>Later, my time at Quest University deepened my reflection on teaching approaches when I received additional insight: while students at Quest appreciate their instructors delivering an occasional "knowledge bomb"— an interlude in which instructors offer a deep-dive into their area of expertise — the majority of the class is best spent in idea generation and refinement.</p>
+                        </div>
+                        
+                        <div class="mt-4 text-right">
+                            <a href="https://jameskruck.com/wp-content/uploads/2024/12/fate-and-virtue.pdf" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors" target="_blank">
+                                View Course Syllabus
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- University of Illinois -->
+                    <div class="mb-10 bg-gray-50 p-6 rounded-lg">
+                        <div class="flex items-center mb-4">
+                            <img src="https://jameskruck.com/wp-content/uploads/2024/12/university-of-illinois.png" alt="University of Illinois Logo" class="h-16 mr-4">
+                            <div>
+                                <h3 class="text-lg font-bold">University of Illinois Urbana-Champaign</h3>
+                                <p class="text-gray-600">Lecturer (2015)</p>
+                            </div>
+                        </div>
+                        
+                        <p class="mb-4">After completing my PhD coursework, I had the opportunity to lecture at the University of Illinois at Urbana-Champaign, where I designed and delivered courses exploring ancient literature, archaeology, and cultural history. Each course provided a unique space to engage with students, unpack complex texts and artifacts, and encourage thoughtful discussion and analysis.</p>
+                        
+                        <p class="mb-4">Building on lessons learned from Quest University about active learning and student engagement, I structured these courses to balance content delivery with meaningful student participation. Rather than relying on lengthy lectures, I incorporated varied engagement strategies and encouraged students to connect classical materials to their own experiences and understanding.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 mb-6">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h4 class="font-medium mb-2">Readings in Latin Literature</h4>
+                                <p>In this mixed-level course on Catullus and Horace, I moved beyond traditional translation-focused instruction by positioning myself as someone who had once struggled with these texts (Latin is hard!). This approach encouraged students to engage more personally with the material, leading to richer discussions about contemporary themes.</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h4 class="font-medium mb-2">Classical Archaeology, Rome and Italy</h4>
+                                <p>This course explored Rome's material legacy from its early days as a monarchy through the imperial era. Using creative participation strategies like cue cards, I encouraged active engagement while reinforcing retrieval practice principles.</p>
+                            </div>
+                            
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <h4 class="font-medium mb-2">The Tragic Spirit</h4>
+                                <p>This course examined Greek and Roman tragedy as windows into questions of justice, power, and human experience. I used familiar references like Harry Potter and Frodo to help students grasp concepts like oikos and polis, creating bridges between their knowledge and ancient ideas.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 text-right">
+                            <a href="https://jameskruck.com/wp-content/uploads/2025/01/syllabi-uiuc.pdf" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors" target="_blank">
+                                View UIUC Syllabi
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Student Feedback -->
+                <section id="student-feedback" class="mb-12 border-t pt-8">
+                    <h2 class="text-xl font-bold mb-6">Classroom Impact</h2>
+                    <p class="mb-4">Direct quotes from observations and student feedback highlight the impact of my teaching approaches across different contexts.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-2">Making Complex Material Accessible:</h3>
+                            <p class="text-gray-700 italic">"He explained difficult concepts (sometimes presented rather confusing or over-analytical in the textbook for a first-level course) very well and was always available for questions either in person or by email. Occasionally made mistakes but always corrected them—great course."</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-2">Creating an Engaging and Inclusive Environment:</h3>
+                            <p class="text-gray-700 italic">"James sparked a lively conversation about heroes, seamlessly blending student contributions into a cohesive discussion. His use of Think-Pair-Share kept every student engaged, and his enthusiasm for student input created an open, collaborative atmosphere."</p>
+                            <p class="text-gray-700 italic mt-2">"James offered a masterly integration of each element, applying them across the list of heroes, and deftly steered the conversation into elements he wanted to cover."</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-2">Encouraging Deep Critical Thinking:</h3>
+                            <p class="text-gray-700 italic">"James guided students to think through the types of conflict a hero might face. They came up with 'personal, strong opponent, moral ambiguity.'"</p>
+                            <p class="text-gray-700 italic mt-2">"James' technique of focusing attention on specific passages, which he reads aloud, is good for encouraging students to base their ideas on specific passages, thus modeling the type of critique sought in papers and tests."</p>
+                        </div>
+                        
+                        <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-2">Building Confidence and Participation:</h3>
+                            <p class="text-gray-700 italic">"The activity worked effectively to interest the class in the topic of heroes; it also ensured that every student had something to say, and so participation in this portion of the class was well-balanced. The students clearly enjoyed it."</p>
+                            <p class="text-gray-700 italic mt-2">"You're a really awesome teacher. Thanks for teaching us this whole year."</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Teaching Methods -->
+                <section id="teaching-methods" class="mb-12 border-t pt-8">
+                    <h2 class="text-xl font-bold mb-6">Teaching Methods and Approaches</h2>
+                    <p class="mb-4">My teaching practice draws on several key approaches that enhance student engagement and learning outcomes.</p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-3">Active Learning Strategies</h3>
+                            <p class="text-gray-700">Implementing retrieval practice, think-pair-share activities, student-generated discussion prompts, and collaborative exploration to create dynamic learning environments. These approaches encourage deeper engagement with material and help students develop critical thinking skills.</p>
+                        </div>
+                        
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-3">Inclusive Teaching Practices</h3>
+                            <p class="text-gray-700">Designing courses with flexible participation options, diverse assessment methods, and culturally responsive content to ensure all students can engage meaningfully. I work to create learning environments where diverse perspectives are valued and multiple approaches to learning are supported.</p>
+                        </div>
+                        
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-3">Technology Integration</h3>
+                            <p class="text-gray-700">Leveraging digital tools and blended learning approaches to enhance accessibility and engage diverse learners. During the transition to online learning, I focused on finding platforms that balanced ease of use with robust features for student interaction and assessment.</p>
+                        </div>
+                        
+                        <div class="p-6 bg-gray-50 rounded-lg shadow-sm">
+                            <h3 class="font-semibold mb-3">Cultural Bridging</h3>
+                            <p class="text-gray-700">Using familiar references and contemporary examples to help students connect with ancient concepts and texts. This approach builds bridges between students' existing knowledge and new material, making complex ideas more accessible and relevant to their lives.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Summary -->
+                <section id="teaching-summary" class="mb-12 border-t pt-8">
+                    <h2 class="text-xl font-bold mb-6">Teaching Journey: Evolution and Growth</h2>
+                    
+                    <p class="mb-4">From those first steps as a Teaching Assistant to leading classrooms and coaching fellow educators, my teaching journey has been driven by a commitment to inclusion, evidence-based strategies, and meaningful engagement.</p>
+                    
+                    <p class="mb-4">Along the way, I've developed skills in curriculum design, student mentorship, public speaking, and team facilitation. Every class, every workshop, and every conversation has reinforced my belief that learning is a collaborative, transformative experience—and I'm proud to play a role in creating spaces where that transformation can happen.</p>
+                    
+                    <p class="mb-4">Looking ahead, I remain committed to leveraging technology and evidence-based strategies to create more equitable learning environments, while maintaining an openness to learning from my students and colleagues. This includes expanding access through flexible delivery modes, implementing universal design principles, and using learning analytics to identify and address barriers to student success.</p>
+                    
+                    <p class="mb-4">By integrating research on cognitive science with culturally responsive pedagogy, while continuously refining approaches based on diverse student experiences and feedback, I aim to approach teaching innovation with both humility and enthusiasm. My goal is to contribute to lasting, positive change in how we make higher education more inclusive and accessible for all learners.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 no-print">
+        <div class="py-6 px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-sm text-gray-500">© 2025 James Kruck, PhD</p>
+        </div>
+    </footer>
+
+ <script>
+        // Initialize map
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('teaching-map').setView([46.6, -89.0], 4);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add markers for teaching institutions
+            const institutions = [
+                {
+                    name: "University of Manitoba",
+                    position: [49.8088, -97.1344],
+                    roles: ["Instructor - Introduction to Latin (2008)"],
+                    description: "My teaching journey began here as an instructor while completing my Master's degree. I taught Latin to undergraduate students, focusing on language fundamentals and classical text analysis."
+                },
+                {
+                    name: "Western University",
+                    position: [43.0096, -81.2737],
+                    roles: ["Instructor - Introduction to Latin", "Teaching Assistant - Various Classics Courses"],
+                    description: "At Western, I grew as an educator through both teaching and TA roles. It was here that I began to develop my philosophy around balancing direct instruction with student-centered learning approaches."
+                },
+                {
+                    name: "Quest University",
+                    position: [49.7387, -123.1363],
+                    roles: ["Visiting Faculty - Fate and Virtue in the Ancient World"],
+                    description: "Quest's unique block system challenged me to reimagine my teaching approach. I shifted from lecture-based instruction to more interactive, student-driven learning experiences, restructuring my course to emphasize collaborative exploration."
+                },
+                {
+                    name: "University of Illinois Urbana-Champaign",
+                    position: [40.1020, -88.2272],
+                    roles: ["Lecturer - Readings in Latin Literature", "Lecturer - Classical Archaeology", "Lecturer - The Tragic Spirit"],
+                    description: "At UIUC, I designed and delivered multiple courses on ancient literature, archaeology, and tragedy. Building on earlier experiences, I implemented active learning strategies and cultural bridging techniques to make classical material accessible and relevant to students' lives."
+                }
+            ];
+
+            // Add markers to map
+            institutions.forEach(inst => {
+                const marker = L.marker(inst.position).addTo(map);
+                
+                marker.on('click', function() {
+                    // Show institution info when marker is clicked
+                    document.getElementById('map-info').classList.remove('hidden');
+                    document.getElementById('map-title').textContent = inst.name;
+                    
+                    // Create HTML for roles and description
+                    let rolesList = '<ul class="list-disc list-inside mb-2">';
+                    inst.roles.forEach(role => {
+                        rolesList += `<li>${role}</li>`;
+                    });
+                    rolesList += '</ul>';
+                    
+                    document.getElementById('map-description').innerHTML = rolesList + inst.description;
+                });
+            });
+
+            // Make sure markers are all visible
+            const bounds = L.latLngBounds(institutions.map(inst => inst.position));
+            map.fitBounds(bounds, { padding: [50, 50] });
+        });
+
+        // Highlight active section in sidebar based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 150) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href && href.slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>

@@ -3,194 +3,821 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Kruck, PhD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>James Kruck, PhD - Learning Technology & Curriculum Specialist</title>
+    <meta name="description" content="Professional portfolio of James Kruck, PhD, specializing in curriculum design, digital pedagogy, and inclusive learning environments.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937; /* Darker text for better contrast */
+            line-height: 1.6;
+        }
+        
+        /* Focus styles for accessibility */
+        a:focus, button:focus {
+            outline: 3px solid #2563eb;
+            outline-offset: 2px;
+        }
+        
+        /* Skip to content link for keyboard navigation */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #2563eb;
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.2s;
+        }
+        
+        .skip-link:focus {
+            top: 0;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        
+        /* Card hover effects */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Tags */
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .tag-blue {
+            background-color: rgba(59, 130, 246, 0.15);
+            color: #1d4ed8; /* Darkened for better contrast */
+        }
+        
+        .tag-green {
+            background-color: rgba(16, 185, 129, 0.15); 
+            color: #047857; /* Darkened for better contrast */
+        }
+        
+        .tag-purple {
+            background-color: rgba(139, 92, 246, 0.15);
+            color: #6d28d9; /* Darkened for better contrast */
+        }
+        
+        .tag-orange {
+            background-color: rgba(249, 115, 22, 0.15);
+            color: #c2410c; /* Darkened for better contrast */
+        }
+        
+        /* Smooth scrolling */
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+        
+        /* Skill card styles */
+        .skill-card {
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Timeline styles */
+        .timeline-item {
+            position: relative;
+            padding-left: 28px;
+        }
+        
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #e5e7eb;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: -5px;
+            top: 6px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #3b82f6;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background-color: white;
+            padding: 1rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            z-index: 40;
+        }
+        
+        .mobile-menu.open {
+            display: block;
+        }
+        
+        /* Increase text size for better readability */
+        p {
+            font-size: 1.0625rem;
+        }
+        
+        /* Improved link styling */
+        .text-link {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        
+        /* High contrast mode support */
+        @media (forced-colors: active) {
+            .tag, .skill-card, .project-card {
+                border: 1px solid;
+            }
+            
+            button, a.btn {
+                border: 1px solid;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="header-nav shadow-sm no-print">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-xl font-bold">James Kruck, PhD</h1>
+<body class="smooth-scroll bg-gray-50">
+    <!-- Skip to content link for keyboard users -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+                </div>
+                <div class="hidden md:block" aria-label="Desktop Navigation">
+                    <div class="flex space-x-8">
+                        <a href="#about" class="text-gray-700 hover:text-blue-600 transition" aria-current="page">About</a>
+                        <a href="#experience" class="text-gray-700 hover:text-blue-600 transition">Experience</a>
+                        <a href="#teaching" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+                        <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                        <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
+                        <a href="#education" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                     </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-12">
-                <div class="flex items-center">
-                    <div class="flex space-x-4">
-                        <a href="index.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900" aria-current="page">Home</a>
-                        <a href="education.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="teaching.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Teaching</a>
-                        <a href="leadership.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Leadership</a>
-                        <a href="scholarly.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Scholarly Activity</a>
-                        <a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Educational Projects</a>
-                        <a href="resources.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Helpful Resources</a>
-                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+            <div class="flex flex-col space-y-3">
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">About</a>
+                <a href="#experience" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Experience</a>
+                <a href="#teaching" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+                <a href="#projects" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Projects</a>
+                <a href="#skills" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Skills</a>
+                <a href="#education" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumb-nav no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center space-x-2 h-10 text-sm">
-                <span class="text-gray-500">James Kruck</span>
-                <span class="text-gray-300">/</span>
-                <span class="text-gray-900 font-medium">Home</span>
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" aria-labelledby="hero-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="md:flex items-center">
+                    <div class="md:w-2/3">
+                        <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
+                            Learning Technology & Curriculum Specialist
+                        </h1>
+                        <p class="text-xl text-gray-800 mb-8">
+                            Over 15 years of experience developing digital learning solutions, evidence-based curriculum, and accessible educational environments.
+                        </p>
+                        <div class="flex flex-wrap gap-3 mb-8" aria-label="Areas of expertise">
+                            <span class="tag tag-blue">Curriculum Design</span>
+                            <span class="tag tag-green">Educational Technology</span>
+                            <span class="tag tag-purple">Inclusive Learning</span>
+                            <span class="tag tag-orange">Leadership</span>
+                        </div>
+                        <a href="#contact" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            Get in Touch
+                        </a>
+                    </div>
+ <div class="md:w-1/3 flex justify-center mt-8 md:mt-0">
+    <div class="h-64 w-64 rounded-full bg-white shadow-lg overflow-hidden">
+        <img src="images/james.png" alt="James Kruck" class="w-full h-full object-cover">
+    </div>
+</div>
+                </div>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Content Wrapper -->
-    <div class="flex flex-grow min-h-0">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <nav class="sidebar-nav">
-                <a href="#welcome" class="sidebar-link">Welcome</a>
-                <a href="#experience" class="sidebar-link">Experience</a>
-                <a href="#skills" class="sidebar-link">Areas of Expertise</a>
-                <a href="#education" class="sidebar-link">Education</a>
-                <a href="#contact" class="sidebar-link">Contact</a>
-            </nav>
-        </aside>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <div class="max-w-6xl mx-auto">
-                <!-- Welcome Section -->
-                <section id="welcome" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Welcome</h2>
-                    <p class="mb-4">Hi, I'm James! As a learning technology and curriculum specialist, I've spent over 15 years developing expertise in digital learning design, evidence-based curriculum development, and universal design for accessibility. My work spans both higher education and the private sector, where I've led the development of over 130 competency-based online and blended programs while ensuring full accessibility compliance.</p>
-                    
-                    <p class="mb-4">Whether I'm designing professional development workshops, implementing learning management systems, or leading curriculum initiatives, my focus is on creating meaningful, data-driven learning experiences. I believe in building programs that not only meet rigorous academic standards but also create genuine engagement and measurable outcomes for all learners.</p>
-                    
-                    <p class="mb-4">Currently pursuing PMP certification and recently completed Business Analytics training, I'm committed to continuous professional growth and bringing current best practices to every project.</p>
-                </section>
-
-                <!-- Experience Section -->
-                <section id="experience" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Experience</h2>
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold mb-2">Manager, Curriculum Department</h3>
-                        <p class="text-gray-600 mb-2">Occupational Safety Group (2016-Present)</p>
-                        <p class="mb-4">Leading the design, implementation, and continuous improvement of learning programs with measurable impacts:</p>
-                        <ul class="list-disc list-inside mb-4 text-gray-700">
-                            <li>Enhanced learner satisfaction by 17% through improved accessibility and engagement strategies</li>
-                            <li>Led procurement and implementation of a data-centric LMS, increasing assessment data collection sixfold</li>
-                            <li>Achieved full AODA and WCAG accessibility compliance across all digital learning environments</li>
-                            <li>Facilitated workshops on evidence-based learning strategies with over 90% of participants reporting increased teaching effectiveness</li>
-                        </ul>
-                        <p class="mb-4">Currently developing and facilitating professional development workshops including "UDL Plus One," "Mastering Effective Questioning Techniques," and "Modelling and Providing Examples" to support ongoing facilitator development.</p>
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white" aria-labelledby="about-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="about-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+                <div class="md:flex items-start space-y-8 md:space-y-0 md:space-x-12">
+                    <div class="md:w-2/3">
+                        <p class="text-gray-800 mb-4">
+                            My approach is grounded in the belief that the best teaching emerges from collaborative environments where instructors, developers, and learners contribute to shared growth. Whether I'm designing professional development workshops, implementing learning management systems, or leading curriculum initiatives, my focus is on creating meaningful, data-driven learning experiences that foster engagement and measurable outcomes.
+                        </p>
+                        <p class="text-gray-800 mb-4">
+                            With experience in both higher education and the private sector, I've led the development of competency-based programs while ensuring full accessibility compliance. I'm passionate about creating inclusive, engaging learning experiences that leverage the best of technology while remaining firmly grounded in sound pedagogical principles.
+                        </p>
+                        <p class="text-gray-800">
+                            Currently pursuing PMP certification and having recently completed Business Analytics training, I'm committed to continuous professional growth and bringing current best practices to every project.
+                        </p>
                     </div>
-                </section>
-
-                <!-- Skills Section -->
-                <section id="skills" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Areas of Expertise</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Learning Technology & Curriculum Design</h3>
-                            <p class="text-gray-700">Expert in LMS implementation, digital learning program design, accessibility compliance (AODA, WCAG), and evidence-based curriculum development. Proficient with Articulate 360, Adobe Creative Suite, and AI tools in education.</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Professional Development</h3>
-                            <p class="text-gray-700">Experienced in designing and facilitating evidence-based workshops, comprehensive online training programs, and coaching initiatives. Focus on adult learning theory and measurable outcomes.</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Data-Driven Decision Making</h3>
-                            <p class="text-gray-700">Strong background in learning analytics, program evaluation, and continuous improvement methodologies. Expertise in implementing data collection frameworks and measuring learning outcomes.</p>
-                        </div>
-                        
-                        <div>
-                            <h3 class="text-lg font-semibold mb-2">Leadership & Project Management</h3>
-                            <p class="text-gray-700">Skilled in strategic planning, change management, and cross-functional team leadership. Currently pursuing PMP certification with focus on educational technology projects.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <!-- Education Section -->
-                <section id="education" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Education</h2>
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold mb-2">PhD, Classics</h3>
-                        <p class="font-medium mb-2">University of Western Ontario, London (2014)</p>
-                        <p class="mb-2">Dissertation: "The Modalities of Roman Translation"</p>
-                        <p class="text-gray-600 italic">Relevant coursework: Greek Lyric Poetry; Latin Epigraphy; Topics in Greek Authors; Selected Topics in Latin Authors</p>
-                    </div>
-
-                    <div class="mb-6">
-                        <h3 class="text-lg font-semibold mb-2">Recent Professional Development</h3>
-                        <ul class="list-disc list-inside mb-4 text-gray-700">
-                            <li>Business Analytics (2024) - University of Western Ontario</li>
-                            <li>Professional Certificate in Project Management (In Progress) - University of Western Ontario</li>
+                    <div class="md:w-1/3 bg-blue-50 p-8 rounded-lg border border-blue-100">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-800">Core Values</h3>
+                        <ul class="space-y-3" aria-label="My core professional values">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Evidence-based approaches</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Inclusive design principles</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Collaborative leadership</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Data-driven decision making</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Continuous improvement</span>
+                            </li>
                         </ul>
                     </div>
-                </section>
+                </div>
+            </div>
+        </section>
 
-                <!-- Contact Section -->
-                <section id="contact" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-                    <h2 class="text-2xl font-bold mb-4">Contact</h2>
-                    <div class="flex flex-col md:flex-row gap-6">
-                        <div class="flex-1">
-                            <h3 class="text-lg font-semibold mb-2">Professional Inquiries</h3>
-                            <p class="mb-2">Email: <a href="mailto:jkruck@uwo.ca" class="text-blue-600 hover:text-blue-800">jkruck@uwo.ca</a></p>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-lg font-semibold mb-2">Social Media</h3>
-                            <div class="flex space-x-4">
-                                <a href="https://www.linkedin.com/in/james-kruck-77485a102/" class="text-blue-600 hover:text-blue-800">LinkedIn</a>
-                                <a href="https://bsky.app/profile/jameskruck.bsky.social" class="text-blue-600 hover:text-blue-800">Bluesky</a>
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-gray-50" aria-labelledby="experience-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="experience-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Professional Experience</h2>
+                <div class="max-w-3xl mx-auto">
+                    <div class="timeline-item pb-12">
+                        <div class="timeline-dot" aria-hidden="true"></div>
+                        <div class="bg-white rounded-lg shadow-md p-6 ml-4">
+                            <div class="flex flex-wrap justify-between items-start mb-3">
+                                <div>
+                                    <h3 class="text-xl font-semibold">Manager, Curriculum Department</h3>
+                                    <p class="text-gray-700">Occupational Safety Group</p>
+                                </div>
+                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                    2016-Present
+                                </div>
+                            </div>
+                            <p class="mb-4">Leading the design, implementation, and continuous improvement of learning programs with measurable impacts:</p>
+                            <ul class="space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Enhanced learner satisfaction by 17% through improved accessibility and engagement strategies</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Led procurement and implementation of a data-centric LMS, increasing assessment data collection sixfold</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Achieved full AODA and WCAG accessibility compliance across all digital learning environments</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                    <span>Facilitated workshops on evidence-based learning strategies with over 90% of participants reporting increased teaching effectiveness</span>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <a href="leadership.html" class="text-blue-600 hover:text-blue-800 font-medium text-link">Learn more about my leadership philosophy →</a>
                             </div>
                         </div>
                     </div>
-                </section>
+                    
+                    <!-- Add more timeline items here if needed -->
+                </div>
             </div>
-        </main>
+        </section>
+
+        <!-- Teaching Section -->
+        <section id="teaching" class="py-20 bg-white" aria-labelledby="teaching-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="teaching-heading" class="text-3xl font-bold text-center text-gray-900 mb-6">Teaching Experience</h2>
+                <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-12">
+                    My teaching philosophy has evolved from traditional instruction to facilitating dynamic, student-centered learning environments that promote dialogue, discovery, and active engagement.
+                </p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Teaching Cards -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                        <div class="h-40 bg-blue-100 flex items-center justify-center" aria-hidden="true">
+                            <img src="https://umanitoba.ca/themes/custom/umanitoba/images/logo.svg" alt="University of Manitoba Logo" class="h-24 w-24" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold mb-2">University of Manitoba</h3>
+                            <p class="text-gray-700 mb-3">Instructor (2008)</p>
+                            <div class="mb-3" aria-label="Course subjects">
+                                <span class="tag tag-blue">Latin</span>
+                            </div>
+                            <p class="text-gray-800">Taught Introduction to Latin to undergraduate students, developing first-year language curriculum.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                        <div class="h-40 bg-indigo-100 flex items-center justify-center" aria-hidden="true">
+                            <img src="https://brand.westernu.ca/assets/img/assets/indexpage-thumbs/western-brand.svg" alt="Western University Logo" class="h-24 w-24" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold mb-2">University of Western Ontario</h3>
+                            <p class="text-gray-700 mb-3">Instructor & TA (2010-2012)</p>
+                            <div class="mb-3" aria-label="Course subjects">
+                                <span class="tag tag-blue">Classics</span>
+                            </div>
+                            <p class="text-gray-800">Led blended Latin courses and served as TA for various classical studies courses.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                        <div class="h-40 bg-green-100 flex items-center justify-center" aria-hidden="true">
+                            <img src="images/quest.png" alt="Quest University Logo" class="h-24 w-24" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold mb-2">Quest University</h3>
+                            <p class="text-gray-700 mb-3">Visiting Faculty (2013)</p>
+                            <div class="mb-3" aria-label="Course subjects">
+                                <span class="tag tag-purple">Humanities</span>
+                            </div>
+                            <p class="text-gray-800">Taught "Fate and Virtue in the Ancient World" in an intensive block format.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                        <div class="h-40 bg-yellow-100 flex items-center justify-center" aria-hidden="true">
+<img src="images/university-of-illinois@2x.png" alt="University of Illinois Logo" class="h-auto w-40" />
+                        </div>
+                        <div class="p-5">
+                            <h3 class="text-lg font-semibold mb-2">University of Illinois</h3>
+                            <p class="text-gray-700 mb-3">Lecturer (2015)</p>
+                            <div class="mb-3" aria-label="Course subjects">
+                                <span class="tag tag-blue">Classics</span>
+                                <span class="tag tag-green">Archaeology</span>
+                            </div>
+                            <p class="text-gray-800">Designed and delivered multiple courses on Latin literature and classical archaeology.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="teaching.html" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                        Explore My Teaching Philosophy
+                    </a>
+                </div>
+            </div>
+        </section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-50" aria-labelledby="projects-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 id="projects-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                <div class="h-48 bg-blue-100 flex items-center justify-center" aria-hidden="true">
+                    <img src="/api/placeholder/400/320" alt="Visual representation of the GenAI workshop interface" class="object-cover h-full w-full" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-3" aria-label="Project categories">
+                        <span class="tag tag-blue">Faculty Development</span>
+                        <span class="tag tag-green">AI in Education</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">GenAI in Teaching & Learning Workshop</h3>
+                    <p class="text-gray-700 mb-4">
+                        A four-part interactive workshop that guides faculty from AI exploration to practical implementation. Combines hands-on experimentation with evidence-based teaching strategies and addresses the gap between student adoption (45%) and faculty usage (15%) of AI tools. Includes implementation planning and authentic assessment approaches.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                <div class="h-48 bg-green-100 flex items-center justify-center" aria-hidden="true">
+                    <img src="/api/placeholder/400/320" alt="Visual representation of the UDL workshop materials" class="object-cover h-full w-full" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-3" aria-label="Project categories">
+                        <span class="tag tag-blue">Accessibility</span>
+                        <span class="tag tag-purple">Inclusive Teaching</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
+                    <p class="text-gray-700 mb-4">
+                        An experiential workshop that introduces safety trainers to Universal Design for Learning through the practical "Plus One" approach. Uses lockout procedures as a concrete example to demonstrate how traditional training can be enhanced with multiple representation and assessment methods, resulting in more accessible and effective safety training.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                <div class="h-48 bg-purple-100 flex items-center justify-center" aria-hidden="true">
+                    <img src="/api/placeholder/400/320" alt="Visual representation of LMS data dashboard" class="object-cover h-full w-full" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-3" aria-label="Project categories">
+                        <span class="tag tag-orange">Learning Analytics</span>
+                        <span class="tag tag-blue">Technology</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Data-Driven LMS Implementation</h3>
+                    <p class="text-gray-700 mb-4">
+                        Led the strategic selection and implementation of a learning management system that increased assessment data collection sixfold. Developed analytics approaches to identify learning bottlenecks and improve student outcomes through data-informed instruction and varied engagement methods.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 4 (Moved Inside the Grid) -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                <div class="h-48 bg-indigo-100 flex items-center justify-center" aria-hidden="true">
+                    <img src="/api/placeholder/400/320" alt="Visual representation of the course redesign" class="object-cover h-full w-full" />
+                </div>
+                <div class="p-6">
+                    <div class="mb-3" aria-label="Project categories">
+                        <span class="tag tag-blue">Curriculum Development</span>
+                        <span class="tag tag-purple">Digital Pedagogy</span>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Digital Course Redesign: The Tragic Spirit</h3>
+                    <p class="text-gray-700 mb-4">
+                        Transformed a traditional Classics course into an engaging digital experience using UDL principles and culturally responsive teaching. The redesign features multiple engagement pathways, diverse cultural perspectives, and interactive components that make ancient texts relevant to today's diverse students.
+                    </p>
+                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+                </div>
+            </div>
+        </div> <!-- Closing the grid container -->
+
+        <!-- Button Below the Grid -->
+        <div class="text-center mt-10">
+            <a href="projects.html" class="inline-block bg-white border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                View All Projects
+            </a>
+        </div>
     </div>
+</section>
+
+   
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-white" aria-labelledby="skills-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="skills-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Areas of Expertise</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Skill Category 1 -->
+                    <div class="p-6 bg-blue-50 rounded-lg skill-card border border-blue-100">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-700">Learning Technology</h3>
+                        <ul class="space-y-2" aria-label="Learning technology expertise">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>LMS Implementation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Digital Content Creation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>AI in Education</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Assessment Tools</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Category 2 -->
+                    <div class="p-6 bg-green-50 rounded-lg skill-card border border-green-100">
+                        <h3 class="text-xl font-semibold mb-4 text-green-700">Curriculum Design</h3>
+                        <ul class="space-y-2" aria-label="Curriculum design expertise">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Outcome-Based Design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Authentic Assessment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Competency Mapping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Program Development</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Category 3 -->
+                    <div class="p-6 bg-purple-50 rounded-lg skill-card border border-purple-100">
+                        <h3 class="text-xl font-semibold mb-4 text-purple-700">Inclusive Design</h3>
+                        <ul class="space-y-2" aria-label="Inclusive design expertise">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Universal Design for Learning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>AODA/WCAG Compliance</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Accessible Content Creation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Diverse Learner Support</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Skill Category 4 -->
+                    <div class="p-6 bg-amber-50 rounded-lg skill-card border border-amber-100">
+                        <h3 class="text-xl font-semibold mb-4 text-amber-700">Leadership</h3>
+                        <ul class="space-y-2" aria-label="Leadership expertise">
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Project Management</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Team Development</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Strategic Planning</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                </svg>
+                                <span>Change Management</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20 bg-gray-50" aria-labelledby="education-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="education-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Education</h2>
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold">PhD, Classics</h3>
+                                <p class="text-gray-700">University of Western Ontario, London</p>
+                            </div>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                2014
+                            </div>
+                        </div>
+                        <p class="mb-2"><span class="font-medium">Dissertation:</span> "The Modalities of Roman Translation"</p>
+                        <p class="text-gray-600 italic">Relevant coursework: Greek Lyric Poetry; Latin Epigraphy; Topics in Greek Authors; Selected Topics in Latin Authors</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-xl font-semibold">Master of Arts, Classics</h3>
+                                <p class="text-gray-700">University of Manitoba, Winnipeg</p>
+                            </div>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                2008
+                            </div>
+                        </div>
+                        <p class="mb-2"><span class="font-medium">Thesis:</span> "Cicero as Translator of Greek in his Presentation of the Stoic Theory of Action"</p>
+                        <p class="text-gray-600 italic">Relevant coursework: Greek Literature; Latin Literature</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <h3 class="text-xl font-semibold mb-4">Recent Professional Development</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><span class="font-medium">Business Analytics</span> (2024) - University of Western Ontario</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                <span><span class="font-medium">Professional Certificate in Project Management</span> (In Progress) - University of Western Ontario</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white" aria-labelledby="contact-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 id="contact-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
+                <div class="max-w-3xl mx-auto text-center">
+                    <p class="text-lg text-gray-700 mb-8">
+                        Interested in collaborating or learning more about my work in educational development? I'd love to connect and discuss how we might work together.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6">
+                        <a href="mailto:jkruck@uwo.ca" class="flex items-center text-gray-700 hover:text-blue-600 transition p-2">
+                            <svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            jkruck@uwo.ca
+                        </a>
+                        <a href="https://www.linkedin.com/in/james-kruck-77485a102/" target="_blank" rel="noopener" class="flex items-center text-gray-700 hover:text-blue-600 transition p-2">
+                            <svg class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="https://bsky.app/profile/jameskruck.bsky.social" target="_blank" rel="noopener" class="flex items-center text-gray-700 hover:text-blue-600 transition p-2">
+                            <svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                            </svg>
+                            Bluesky
+                        </a>
+                        <a href="#" class="flex items-center text-gray-700 hover:text-blue-600 transition p-2">
+                            <svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 no-print">
-        <div class="py-6 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-500">© 2024 James Kruck, PhD</p>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+                Designed with a focus on accessibility and inclusive design principles.
+            </p>
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    <button 
+        id="scrollToTopBtn" 
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Scroll to top"
+    >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
     <script>
-        // Highlight active section in sidebar based on scroll position
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.sidebar-link');
-
-            let currentSection = '';
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentSection) {
-                    link.classList.add('active');
-                }
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         });
+        
+        // Add active state to navigation links based on scroll position
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+        
+        function highlightNavLink() {
+            let scrollPosition = window.pageYOffset + 150;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('text-blue-600');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('text-blue-600');
+                        }
+                    });
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightNavLink);
     </script>
-</body>
-</html>

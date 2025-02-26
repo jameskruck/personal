@@ -4,328 +4,568 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Education - James Kruck, PhD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Academic background and educational journey of James Kruck, PhD - from Classics to curriculum design and educational technology.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
 </head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
-    <!-- Header -->
-    <header class="header-nav shadow-sm no-print">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-xl font-bold">James Kruck, PhD</h1>
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+                </div>
+                <div class="hidden md:block" aria-label="Desktop Navigation">
+                    <div class="flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                        <a href="education.html" class="text-blue-600 font-medium" aria-current="page">Education</a>
+                        <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+                        <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition">Leadership</a>
+                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+                        <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">Educational Projects</a>
+                        <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition">Resources</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                     </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-12">
-                <div class="flex items-center">
-                    <div class="flex space-x-4">
-                        <a href="education.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="index.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900" aria-current="page">Education</a>
-                        <a href="teaching.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Teaching</a>
-                        <a href="leadership.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Leadership</a>
-                        <a href="scholarly.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Scholarly Activity</a>
-                        <a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Educational Projects</a>
-                        <a href="resources.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Helpful Resources</a>
-                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-                    </div>
-                </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Home</a>
+                <a href="education.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Education</a>
+                <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+                <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Leadership</a>
+                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+                <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Educational Projects</a>
+                <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumb-nav no-print">
+    <!-- Hero Section -->
+    <section class="page-hero" aria-labelledby="page-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center space-x-2 h-10 text-sm">
-                <span class="text-gray-500">James Kruck</span>
-                <span class="text-gray-300">/</span>
-                <span class="text-gray-900 font-medium">Education</span>
+            <div class="max-w-3xl">
+                <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">Academic Journey</h1>
+                <p class="text-xl text-gray-800 mb-6">
+                    From classical languages to modern educational design — the academic foundation that shapes my approach to learning.
+                </p>
+                <div class="flex flex-wrap gap-3" aria-label="Key focus areas">
+                    <span class="tag tag-blue">Classical Education</span>
+                    <span class="tag tag-purple">Translation Studies</span>
+                    <span class="tag tag-green">Research Methods</span>
+                    <span class="tag tag-orange">Professional Development</span>
+                </div>
             </div>
         </div>
-    </nav>
-    <!-- Content Wrapper (Sidebar + Main Content) -->
-<div class="flex flex-grow min-h-0">
-    <!-- Sidebar Navigation -->
-    <aside class="sidebar">
-        <nav class="sidebar-nav">
-            <a href="#academic-journey" class="sidebar-link">Academic Journey</a>
-            
-            <a href="#educational-timeline" class="sidebar-link">Educational Timeline</a>
-            
-            <div class="sidebar-section">
-                <a href="#bachelors" class="sidebar-link">Bachelor's Degree</a>
-                <div class="pl-4">
-                    <a href="#bachelors-overview" class="sidebar-link text-sm">Overview</a>
-                    <a href="#bachelors-skills" class="sidebar-link text-sm">Skills Developed</a>
-                </div>
-            </div>
+    </section>
 
-            <div class="sidebar-section">
-                <a href="#masters" class="sidebar-link">Master's Degree</a>
-                <div class="pl-4">
-                    <a href="#masters-overview" class="sidebar-link text-sm">Overview</a>
-                    <a href="#masters-thesis" class="sidebar-link text-sm">Thesis Research</a>
-                    <a href="#masters-skills" class="sidebar-link text-sm">Skills Developed</a>
-                </div>
-            </div>
+    <main id="main-content" class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="lg:flex gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4 mb-8 lg:mb-0">
+                    <div class="sidebar bg-white rounded-lg shadow-sm p-4 lg:sticky lg:top-32">
+                        <nav aria-label="Section Navigation">
+                            <a href="#overview" class="sidebar-link">Overview</a>
+                            <a href="#educational-journey" class="sidebar-link">Educational Journey</a>
+                            <a href="#formal-education" class="sidebar-link">Formal Education</a>
+                            <a href="#research-highlights" class="sidebar-link">Research Highlights</a>
+                            <a href="#skills-impact" class="sidebar-link">Skills & Impact</a>
+                            <a href="#current-learning" class="sidebar-link">Current Learning</a>
+                        </nav>
+                        <div class="mt-8 pt-4 border-t border-gray-200">
+                            <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+                            <a href="https://ir.lib.uwo.ca/etd/2167/" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" target="_blank" rel="noopener">
+                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <span>Read Dissertation</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
 
-            <div class="sidebar-section">
-                <a href="#phd" class="sidebar-link">PhD Studies</a>
-                <div class="pl-4">
-                    <a href="#phd-overview" class="sidebar-link text-sm">Overview</a>
-                    <a href="#phd-research" class="sidebar-link text-sm">Research Projects</a>
-                    <a href="#phd-dissertation" class="sidebar-link text-sm">Dissertation</a>
-                    <a href="#phd-skills" class="sidebar-link text-sm">Skills Developed</a>
-                </div>
-            </div>
+                <!-- Main Content -->
+                <div class="lg:w-3/4">
+                    <!-- Overview Section -->
+                    <section id="overview" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Academic Background</h2>
+                        <p class="text-gray-800 mb-4">
+                            My academic journey began with curiosity and grew into a deep commitment to understanding how words, stories, and cultures connect across time. Along the way, I developed essential skills that continue to shape my professional work today: strong research habits, confident public speaking, and the ability to translate complex information into clear, meaningful insights.
+                        </p>
+                        
+                        <p class="text-gray-800">
+                            From an unexpected passion for Classics sparked by a single elective, to a deep dive into translation theory and cultural analysis, my path has been one of curiosity, discovery, and growth that continues to influence my approach to education and learning.
+                        </p>
+                    </section>
 
-            <a href="#research-highlights" class="sidebar-link">Research Highlights</a>
-            
-            <a href="#professional-impact" class="sidebar-link">Professional Impact</a>
-            
-            <div class="sidebar-section">
-                <a href="#current-learning" class="sidebar-link">Current Learning</a>
-                <div class="pl-4">
-                    <a href="#business-analytics" class="sidebar-link text-sm">Business Analytics</a>
-                    <a href="#project-management" class="sidebar-link text-sm">Project Management</a>
-                </div>
-            </div>
-
-            <div class="sidebar-section mt-6">
-                <h3 class="text-sm font-medium text-gray-500 px-3 mb-2">Resources</h3>
-                <a href="https://ir.lib.uwo.ca/etd/2167/" class="sidebar-link text-sm" target="_blank">
-                    <span>View Dissertation</span>
-                    <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-    </aside>
-</div>
-    <!-- Main Content -->
-    <main class="main-content flex-grow">
-        <div class="bg-white rounded-lg shadow-sm p-6">
-            <!-- Introduction -->
-            <section class="mb-12">
-                <h1 class="text-2xl font-bold mb-4">Academic Journey</h1>
-                <p class="mb-4">My academic journey began with curiosity and grew into a deep commitment to understanding how words, stories, and cultures connect across time. Along the way, I developed essential skills that continue to shape my professional work today: strong research habits, confident public speaking, and the ability to translate complex information into clear, meaningful insights.</p>
-            </section>
-
-            <!-- Timeline -->
-            <section class="mb-12">
-                <h2 class="text-xl font-bold mb-6">Educational Timeline</h2>
-                <div class="relative py-8">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gray-200"></div>
-                    <div class="relative z-10 space-y-12">
-                        <div class="flex items-center">
-                            <div class="w-1/2 pr-8 text-right">
-                                <div class="bg-white p-4 rounded shadow-sm">
-                                    <h3 class="font-semibold">Bachelor of Arts in Classics</h3>
-                                    <p class="text-gray-600">University of Manitoba, 2005</p>
+                    <!-- Educational Journey Map Section -->
+                    <section id="educational-journey" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">My Educational Journey</h2>
+                        
+                        <div id="education-map" class="map-container mb-6"></div>
+                        
+                        <div id="map-info" class="bg-blue-50 p-4 rounded-lg mb-6 hidden border border-blue-100">
+                            <h3 id="map-title" class="font-semibold mb-2"></h3>
+                            <div id="map-description"></div>
+                        </div>
+                        
+                        <p class="text-sm text-gray-600 italic">Click on each marker to learn more about my educational experience at each institution.</p>
+                    </section>
+                    
+                    <!-- Formal Education Section -->
+                    <section id="formal-education" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Formal Education</h2>
+                        
+                        <!-- Timeline style education history -->
+                        <div class="space-y-8">
+                            <!-- PhD -->
+                            <div class="timeline-item pb-8">
+                                <div class="timeline-dot" aria-hidden="true"></div>
+                                <div class="bg-white rounded-lg shadow-sm p-6 ml-4">
+                                    <div class="flex flex-wrap justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-semibold">PhD in Classics</h3>
+                                            <p class="text-gray-700">Western University, London</p>
+                                        </div>
+                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                            2014
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="mb-4">For my PhD, I moved to London, Ontario to study at Western University. While completing my coursework, I remained curious about how Romans interacted with their Greek predecessors, particularly in the realms of language, culture, and epigraphy.</p>
+                                    
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                                        <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                            <h4 class="font-medium mb-2">Roman Tomb Inscriptions</h4>
+                                            <p class="text-gray-700">Explored how private or sentimental messages were often left in Greek, while the rest of the inscription remained in Latin.</p>
+                                        </div>
+                                        
+                                        <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                            <h4 class="font-medium mb-2">Catullus Translation</h4>
+                                            <p class="text-gray-700">Analyzed how the Roman poet Catullus translated and interacted with a Sapphic poem.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 mb-6">
+                                        <h4 class="font-semibold mb-3">Dissertation</h4>
+                                        <p class="mb-2"><span class="font-semibold">Title:</span> "The Modalities of Roman Translation"</p>
+                                        <p class="mb-4">My dissertation examined how Roman translators positioned themselves within their literary world. Traditionally, translation studies focus on the binary of ad verbum (<em>word-for-word</em>) and ad sensum (<em>sense-for-sense</em>) approaches. However, I argued that this binary is insufficient for understanding the broader literary and social role of translators.</p>
+                                        <p>I emphasized the translator as an agent, someone who actively evaluates their socio-literary conditions and crafts responses that not only address those conditions but also capitalize on them.</p>
+                                        <div class="mt-4">
+                                            <a href="https://ir.lib.uwo.ca/etd/2167/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                                Read Full Dissertation
+                                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-3">Key Skills Developed</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tag tag-blue">Advanced Research Methods</span>
+                                        <span class="tag tag-green">Teaching Experience</span>
+                                        <span class="tag tag-purple">Long-form Writing</span>
+                                        <span class="tag tag-orange">Conference Presentations</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <div class="w-1/2 pl-8"></div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1/2 pr-8"></div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <div class="w-1/2 pl-8">
-                                <div class="bg-white p-4 rounded shadow-sm">
-                                    <h3 class="font-semibold">Master of Arts in Classics</h3>
-                                    <p class="text-gray-600">University of Manitoba, 2008</p>
+                            
+                            <!-- Master's -->
+                            <div class="timeline-item pb-8">
+                                <div class="timeline-dot" aria-hidden="true"></div>
+                                <div class="bg-white rounded-lg shadow-sm p-6 ml-4">
+                                    <div class="flex flex-wrap justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-semibold">Master of Arts in Classics</h3>
+                                            <p class="text-gray-700">University of Manitoba, Winnipeg</p>
+                                        </div>
+                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                            2008
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="mb-4">I remained at the University of Manitoba to pursue my Master's degree. After completing my coursework, I began my thesis research. During my studies, I became particularly interested in how the Latin author Cicero used Greek words when describing philosophical concepts.</p>
+                                    
+                                    <div class="bg-gray-50 p-5 rounded-lg mb-6">
+                                        <h4 class="font-semibold mb-2">Thesis Research</h4>
+                                        <p class="mb-2"><span class="font-semibold">Title:</span> "Cicero as Translator of Greek in his Presentation of the Stoic Theory of Action."</p>
+                                        <p class="text-gray-700">To me, these Greek words weren't simply loanwords (think <em>rendezvous</em>, <em>kindergarten</em>, or even <em>philosophy</em>). Instead, they acted as acknowledgments of a shared educational background between Cicero and his audience—who, in many cases, were written directly into the dialogues themselves. My thesis examined specific instances where Cicero deliberately explains and contextualizes his use of Greek terms, offering insights into his rhetorical strategy.</p>
+                                    </div>
+                                    
+                                    <h4 class="font-semibold mb-3">Key Skills Developed</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tag tag-blue">Advanced Research</span>
+                                        <span class="tag tag-green">Cross-Linguistic Analysis</span>
+                                        <span class="tag tag-purple">Academic Writing</span>
+                                        <span class="tag tag-orange">Public Presenting</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Bachelor's -->
+                            <div class="timeline-item">
+                                <div class="timeline-dot" aria-hidden="true"></div>
+                                <div class="bg-white rounded-lg shadow-sm p-6 ml-4">
+                                    <div class="flex flex-wrap justify-between items-start mb-4">
+                                        <div>
+                                            <h3 class="text-xl font-semibold">Bachelor of Arts in Classics</h3>
+                                            <p class="text-gray-700">University of Manitoba, Winnipeg</p>
+                                        </div>
+                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                            2005
+                                        </div>
+                                    </div>
+                                    
+                                    <p class="mb-4">I started at the University of Manitoba in 1999 with plans to study accounting. However, I took a Classical Mythology course as an elective, and that was that for my accounting dreams.</p>
+                                    
+                                    <p class="mb-4">After getting a taste of the Classics world, I quickly found myself taking more and more courses from the department. Eventually, I started learning Latin and Ancient Greek, diving deeper into ancient texts and languages.</p>
+                                    
+                                    <h4 class="font-semibold mb-3">Key Skills Developed</h4>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="tag tag-blue">Language Acquisition</span>
+                                        <span class="tag tag-green">Critical Reading</span>
+                                        <span class="tag tag-purple">Cultural Interpretation</span>
+                                        <span class="tag tag-orange">Research Methods</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="flex items-center">
-                            <div class="w-1/2 pr-8 text-right">
-                                <div class="bg-white p-4 rounded shadow-sm">
-                                    <h3 class="font-semibold">PhD in Classics</h3>
-                                    <p class="text-gray-600">University of Western Ontario, 2014</p>
+                    </section>
+
+                    <!-- Research Highlights -->
+                    <section id="research-highlights" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Research Highlights</h2>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+                                <div class="mb-4">
+                                    <span class="tag tag-purple">Cultural Analysis</span>
+                                    <span class="tag tag-blue">Epigraphy</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Roman Tomb Inscriptions Study</h3>
+                                <p class="text-gray-700 mb-4">Explored how private or sentimental messages were often left in Greek while formal text remained in Latin, revealing insights into cultural code-switching and the relationship between public and private expression in Roman society.</p>
+                                <div class="mt-4">
+                                    <h4 class="font-medium mb-2">Key Findings:</h4>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Identified patterns in language choice based on message content
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Analyzed the role of Greek in expressing intimate emotions
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Documented regional variations in bilingual inscription practices
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <div class="w-1/2 pl-8"></div>
-                        </div>
-                        <div class="flex items-center">
-                            <div class="w-1/2 pr-8"></div>
-                            <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full"></div>
-                            <div class="w-1/2 pl-8">
-                                <div class="bg-white p-4 rounded shadow-sm">
-                                    <h3 class="font-semibold">Project Management Professional</h3>
-                                    <p class="text-gray-600">In Progress</p>
+
+                            <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+                                <div class="mb-4">
+                                    <span class="tag tag-purple">Translation Theory</span>
+                                    <span class="tag tag-blue">Literary Studies</span>
+                                </div>
+                                <h3 class="text-xl font-semibold mb-3">Translation Studies Analysis</h3>
+                                <p class="text-gray-700 mb-4">Examined how Roman translators positioned themselves within their literary world, going beyond traditional binary translation approaches to understand the cultural and social dimensions of translation practice.</p>
+                                <div class="mt-4">
+                                    <h4 class="font-medium mb-2">Key Contributions:</h4>
+                                    <ul class="space-y-1 text-gray-700">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Developed new framework for analyzing translator agency
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Documented strategic adaptation practices
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Explored the role of cultural mediation in translation
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            <!-- Skills Developed -->
-            <section class="mb-12">
-                <h2 class="text-xl font-bold mb-6">Academic Skills & Competencies</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-blue-50 rounded-lg p-6">
-                        <h3 class="font-semibold mb-3">Research & Analysis</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Advanced research methodology</li>
-                            <li>Critical analysis and synthesis</li>
-                            <li>Data collection and interpretation</li>
-                            <li>Scholarly writing and publication</li>
-                        </ul>
-                    </div>
-                    <div class="bg-blue-50 rounded-lg p-6">
-                        <h3 class="font-semibold mb-3">Communication</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Translation and cross-cultural communication</li>
-                            <li>Public speaking and presentation</li>
-                            <li>Academic writing and editing</li>
-                            <li>Stakeholder engagement</li>
-                        </ul>
-                    </div>
-                    <div class="bg-blue-50 rounded-lg p-6">
-                        <h3 class="font-semibold mb-3">Project Management</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Research project coordination</li>
-                            <li>Timeline and resource management</li>
-                            <li>Cross-functional collaboration</li>
-                            <li>Risk assessment and mitigation</li>
-                        </ul>
-                    </div>
-                    <div class="bg-blue-50 rounded-lg p-6">
-                        <h3 class="font-semibold mb-3">Teaching & Leadership</h3>
-                        <ul class="list-disc list-inside text-gray-700 space-y-2">
-                            <li>Curriculum development</li>
-                            <li>Student mentorship</li>
-                            <li>Workshop facilitation</li>
-                            <li>Educational technology integration</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Research Highlights -->
-            <section class="mb-12">
-                <h2 class="text-xl font-bold mb-6">Research Highlights</h2>
-                <div class="space-y-6">
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="font-semibold mb-2">Roman Tomb Inscriptions Study</h3>
-                        <p class="text-gray-700 mb-4">Explored how private or sentimental messages were often left in Greek while formal text remained in Latin, revealing insights into cultural code-switching and the relationship between public and private expression in Roman society.</p>
-                        <div class="bg-white p-4 rounded">
-                            <h4 class="font-medium mb-2">Key Findings:</h4>
-                            <ul class="list-disc list-inside text-gray-600">
-                                <li>Identified patterns in language choice based on message content</li>
-                                <li>Analyzed the role of Greek in expressing intimate emotions</li>
-                                <li>Documented regional variations in bilingual inscription practices</li>
-                            </ul>
+                    <!-- Skills & Professional Impact Section -->
+                    <section id="skills-impact" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Skills & Professional Impact</h2>
+                        <p class="mb-6 text-gray-800">My academic training has developed transferable skills that continue to shape my professional work in education and curriculum development.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-6 bg-blue-50 rounded-lg skill-card border border-blue-100">
+                                <h3 class="text-xl font-semibold mb-4 text-blue-700">Research to Practice</h3>
+                                <p class="text-gray-800">Applying academic research methodologies to develop evidence-based learning solutions and evaluate program effectiveness. This includes implementing systematic approaches to data collection and analysis for continuous improvement.</p>
+                            </div>
+                            
+                            <div class="p-6 bg-green-50 rounded-lg skill-card border border-green-100">
+                                <h3 class="text-xl font-semibold mb-4 text-green-700">Cross-Cultural Communication</h3>
+                                <p class="text-gray-800">Using insights from classical translation studies to bridge communication gaps in modern educational contexts, ensuring clear and effective communication across diverse audiences and stakeholder groups.</p>
+                            </div>
+                            
+                            <div class="p-6 bg-purple-50 rounded-lg skill-card border border-purple-100">
+                                <h3 class="text-xl font-semibold mb-4 text-purple-700">Critical Analysis</h3>
+                                <p class="text-gray-800">Leveraging analytical skills to evaluate learning technologies and develop strategic solutions, applying rigorous methodology to assess educational tools and approaches.</p>
+                            </div>
+                            
+                            <div class="p-6 bg-amber-50 rounded-lg skill-card border border-amber-100">
+                                <h3 class="text-xl font-semibold mb-4 text-amber-700">Teaching Excellence</h3>
+                                <p class="text-gray-800">Drawing on classical education principles to design engaging, effective learning experiences that promote deep understanding and lasting knowledge retention.</p>
+                            </div>
                         </div>
-                    </div>
+                    </section>
 
-                    <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="font-semibold mb-2">Translation Studies Analysis</h3>
-                        <p class="text-gray-700 mb-4">Examined how Roman translators positioned themselves within their literary world, going beyond traditional binary translation approaches to understand the cultural and social dimensions of translation practice.</p>
-                        <div class="bg-white p-4 rounded">
-                            <h4 class="font-medium mb-2">Key Contributions:</h4>
-                            <ul class="list-disc list-inside text-gray-600">
-                                <li>Developed new framework for analyzing translator agency</li>
-                                <li>Documented strategic adaptation practices</li>
-                                <li>Explored the role of cultural mediation in translation</li>
-                            </ul>
+                    <!-- Current Learning Section -->
+                    <section id="current-learning" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Continuing Professional Development</h2>
+                        <p class="mb-6 text-gray-800">My commitment to lifelong learning continues through formal professional development opportunities.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-8">
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                                <div class="h-20 bg-blue-600 flex items-center justify-center">
+                                    <h3 class="text-xl font-semibold text-white px-4">Business Analytics</h3>
+                                </div>
+                                <div class="p-6">
+                                    <div class="mb-3">
+                                        <span class="tag tag-blue">Data Analysis</span>
+                                        <span class="tag tag-green">Decision Making</span>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">Developing data-driven approaches to evaluate and improve learning outcomes.</p>
+                                    <ul class="space-y-2 mb-4">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Statistical analysis and interpretation
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Data visualization techniques
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Predictive modeling applications
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-gray-500">University of Western Ontario (2024)</div>
+                                </div>
+                            </div>
+                            
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+                                <div class="h-20 bg-green-600 flex items-center justify-center">
+                                    <h3 class="text-xl font-semibold text-white px-4">Project Management Professional</h3>
+                                </div>
+                                <div class="p-6">
+                                    <div class="mb-3">
+                                        <span class="tag tag-orange">Leadership</span>
+                                        <span class="tag tag-purple">Strategic Planning</span>
+                                    </div>
+                                    <p class="text-gray-700 mb-4">After years of designing curricula and managing educational projects, pursuing formal certification to add structure to my practical experience.</p>
+                                    <ul class="space-y-2 mb-4">
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Agile methodology implementation
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Stakeholder management strategies
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                            </svg>
+                                            Risk assessment frameworks
+                                        </li>
+                                    </ul>
+                                    <div class="text-sm text-gray-500">University of Western Ontario (In Progress)</div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </section>
+                    </section>
 
-            <!-- Professional Impact -->
-            <section class="mb-12">
-                <h2 class="text-xl font-bold mb-6">From Academia to Professional Practice</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="p-6 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold mb-3">Research to Practice</h3>
-                        <p class="text-gray-700">Applying academic research methodologies to develop evidence-based learning solutions and evaluate program effectiveness. This includes implementing systematic approaches to data collection and analysis for continuous improvement.</p>
-                    </div>
-                    <div class="p-6 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold mb-3">Cross-Cultural Communication</h3>
-                        <p class="text-gray-700">Using insights from classical translation studies to bridge communication gaps in modern educational contexts, ensuring clear and effective communication across diverse audiences and stakeholder groups.</p>
-                    </div>
-                    <div class="p-6 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold mb-3">Critical Analysis</h3>
-                        <p class="text-gray-700">Leveraging analytical skills to evaluate learning technologies and develop strategic solutions, applying rigorous methodology to assess educational tools and approaches.</p>
-                    </div>
-                    <div class="p-6 bg-gray-50 rounded-lg">
-                        <h3 class="font-semibold mb-3">Teaching Excellence</h3>
-                        <p class="text-gray-700">Drawing on classical education principles to design engaging, effective learning experiences that promote deep understanding and lasting knowledge retention.</p>
-                    </div>
+                    <!-- Summary Section -->
+                    <section id="summary" class="bg-white rounded-lg shadow-sm p-6">
+                        <h2 class="text-2xl font-bold mb-6">Academic and Professional Evolution</h2>
+                        <p class="mb-4 text-gray-800">From an unexpected passion for Classics sparked by a single elective, to a deep dive into translation theory, cultural analysis, and ancient languages, my academic path has been one of curiosity, discovery, and growth. Along the way, I developed skills in research, critical analysis, public speaking, and making complex ideas accessible—skills that continue to shape my professional work every day.</p>
+                        
+                        <p class="mb-4 text-gray-800">More recently, my pursuit of a Professional Certificate in Project Management has added new tools to my toolkit: strategic planning, stakeholder engagement, risk management, and data analytics. These skills complement my academic foundation, providing structure and clarity to large-scale projects and collaborative initiatives.</p>
+                        
+                        <p class="text-gray-800">Together, these experiences have shaped me into an analytical thinker, an engaging communicator, and a committed advocate for inclusive, effective learning experiences.</p>
+                    </section>
                 </div>
-            </section>
-
-            <!-- Current Learning -->
-            <section class="mb-12">
-                <h2 class="text-xl font-bold mb-6">Continuous Professional Development</h2>
-                <div class="space-y-6">
-                    <div class="border-l-4 border-blue-500 pl-6">
-                        <h3 class="font-semibold mb-2">Business Analytics (2024)</h3>
-                        <p class="text-gray-700">Developing data-driven approaches to evaluate and improve learning outcomes, with a focus on:</p>
-                        <ul class="list-disc list-inside text-gray-600 mt-2">
-                            <li>Statistical analysis and interpretation</li>
-                            <li>Data visualization techniques</li>
-                            <li>Predictive modeling applications</li>
-                            <li>Performance metrics development</li>
-                        </ul>
-                    </div>
-                    <div class="border-l-4 border-blue-500 pl-6">
-                        <h3 class="font-semibold mb-2">Project Management Professional (In Progress)</h3>
-                        <p class="text-gray-700">Enhancing capabilities in strategic planning, risk management, and project delivery through:</p>
-                        <ul class="list-disc list-inside text-gray-600 mt-2">
-                            <li>Agile methodology implementation</li>
-                            <li>Stakeholder management strategies</li>
-                            <li>Risk assessment frameworks</li>
-                            <li>Resource optimization techniques</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     </main>
-      <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 no-print">
-        <div class="py-6 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-500">© 2024 James Kruck, PhD</p>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+                Designed with a focus on accessibility and inclusive design principles.
+            </p>
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    <button 
+        id="scrollToTopBtn" 
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Scroll to top"
+    >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
     <script>
-        // Highlight active section in sidebar based on scroll position
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Initialize map
+        document.addEventListener('DOMContentLoaded', function() {
+            const map = L.map('education-map').setView([46.6, -89.0], 4);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+            // Add markers for educational institutions
+            const institutions = [
+                {
+                    name: "University of Manitoba",
+                    position: [49.8088, -97.1344],
+                    degrees: ["Bachelor of Arts in Classics (2005)", "Master of Arts in Classics (2008)"],
+                    description: "My academic journey began here, where an elective in Classical Mythology changed my career path from accounting to Classics. I stayed for my Master's degree, where I focused on Cicero's use of Greek in his philosophical works."
+                },
+                {
+                    name: "Western University",
+                    position: [43.0096, -81.2737],
+                    degrees: ["PhD in Classics (2014)"],
+                    description: "At Western, I deepened my research into Roman translation practices, culminating in my dissertation 'The Modalities of Roman Translation,' which examined how Roman translators strategically positioned themselves within their literary world."
+                }
+            ];
+
+            // Add markers to map
+            institutions.forEach(inst => {
+                const marker = L.marker(inst.position).addTo(map);
+                
+                marker.on('click', function() {
+                    // Show institution info when marker is clicked
+                    document.getElementById('map-info').classList.remove('hidden');
+                    document.getElementById('map-title').textContent = inst.name;
+                    
+                    // Create HTML for degrees and description
+                    let degreesList = '<ul class="list-disc list-inside mb-2">';
+                    inst.degrees.forEach(degree => {
+                        degreesList += `<li>${degree}</li>`;
+                    });
+                    degreesList += '</ul>';
+                    
+                    document.getElementById('map-description').innerHTML = degreesList + inst.description;
+                });
+            });
+
+            // Make sure markers are all visible
+            const bounds = L.latLngBounds(institutions.map(inst => inst.position));
+            map.fitBounds(bounds, { padding: [50, 50] });
+        });
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Highlight active section in sidebar based on scroll position
+        function highlightActiveSidebarLink() {
+            const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.sidebar-link');
 
             let currentSection = '';
-
+            
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 150) {
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop - 200 && window.pageYOffset < sectionTop + sectionHeight - 200) {
                     currentSection = section.getAttribute('id');
                 }
             });
 
             navLinks.forEach(link => {
                 link.classList.remove('active');
-                if (link.getAttribute('href').slice(1) === currentSection) {
+                const href = link.getAttribute('href');
+                if (href && href.slice(1) === currentSection) {
                     link.classList.add('active');
                 }
             });
-        });
+        }
+        
+        window.addEventListener('scroll', highlightActiveSidebarLink);
+        window.addEventListener('load', highlightActiveSidebarLink);
     </script>
 </body>
 </html>
