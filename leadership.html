@@ -4,161 +4,471 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leadership - James Kruck, PhD</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Leadership">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-</head>
-<body class="bg-gray-50 flex flex-col min-h-screen">
+    
+    <!-- Conditional stylesheets -->
+    <!-- Include only when needed (e.g., for pages with maps) -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" rel="stylesheet"> -->
+    
+    <!-- Conditional scripts -->
+    <!-- Include only when needed (e.g., for pages with maps) -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script> -->
+    
+    <!-- Common scripts -->
+    <script src="js/common.js" defer></script>
+    
+    <!-- Structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfilePage",
+        "headline": "Home",
+        "description": "Professional portfolio of James Kruck, PhD, specializing in curriculum design, digital pedagogy, and inclusive learning environments.",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "James Kruck",
+            "jobTitle": "Learning Technology & Curriculum Specialist",
+            "telephone": "",
+            "email": "jameskruck@gmail.com",
+            "url": "https://jameskruck.com",
+            "alumniOf": [
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Western Ontario",
+                    "sameAs": "https://www.uwo.ca/"
+                },
+                {
+                    "@type": "CollegeOrUniversity",
+                    "name": "University of Manitoba",
+                    "sameAs": "https://umanitoba.ca/"
+                }
+            ],
+            "knowsAbout": ["Curriculum Design", "Educational Technology", "Inclusive Learning", "Leadership"]
+        }
+    }
+    </script>
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Header -->
-    <header class="header-nav shadow-sm no-print">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-xl font-bold">James Kruck, PhD</h1>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Main Navigation -->
-    <nav class="main-nav no-print">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-12">
-                <div class="flex items-center">
-                    <div class="flex space-x-4">
-                        <a href="index.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                        <a href="education.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Education</a>
-                        <a href="teaching.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Teaching</a>
-                        <a href="leadership.html" class="text-white px-3 py-2 rounded-md text-sm font-medium bg-gray-900" aria-current="page">Leadership</a>
-                        <a href="scholarly.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Scholarly Activity</a>
-                                                <a href="projects.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Educational Projects</a>
-                        <a href="resources.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Helpful Resources</a>
-                        <a href="contact.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+                </div>
+                <div class="hidden md:block" aria-label="Desktop Navigation">
+                    <div class="flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                        <a href="education.html" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                        <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+                        <a href="leadership.html" class="text-blue-600 font-medium" aria-current="page">Leadership</a>
+                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+                        <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">Educational Projects</a>
+                        <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition">Resources</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                     </div>
                 </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Home</a>
+                <a href="education.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
+                <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+                <a href="leadership.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Leadership</a>
+                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+                <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Educational Projects</a>
+                <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Breadcrumbs -->
-    <nav class="breadcrumb-nav no-print">
+    <!-- Hero Section -->
+    <section class="page-hero" aria-labelledby="page-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center space-x-2 h-10 text-sm">
-                <span class="text-gray-500">James Kruck</span>
-                <span class="text-gray-300">/</span>
-                <span class="text-gray-900 font-medium">Leadership</span>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Content Wrapper -->
-    <div class="flex flex-grow min-h-0">
- <!-- Updated Sidebar -->
-<aside class="sidebar">
-    <nav class="sidebar-nav">
-        <a href="#philosophy" class="sidebar-link">Leadership Philosophy</a>
-        <div class="pl-4">
-            <a href="#community-building" class="sidebar-link text-sm">Community Building</a>
-            <a href="#authentic-dialogue" class="sidebar-link text-sm">Authentic Dialogue</a>
-            <a href="#meaningful-connection" class="sidebar-link text-sm">Meaningful Connection</a>
-            <a href="#mentorship" class="sidebar-link text-sm">Mentorship</a>
-            <a href="#balance" class="sidebar-link text-sm">Balance & Growth</a>
-        </div>
-        
-        <a href="#practical-impact" class="sidebar-link">Practical Impact</a>
-        <div class="pl-4">
-            <a href="#team-development" class="sidebar-link text-sm">Team Development</a>
-            <a href="#workshops" class="sidebar-link text-sm">Workshop Development</a>
-            <a href="#case-studies" class="sidebar-link text-sm">Case Studies</a>
-        </div>
-
-        <a href="#resources" class="sidebar-link">Resources</a>
-        <div class="pl-4">
-            <a href="#workshop-materials" class="sidebar-link text-sm">Workshop Materials</a>
-            <a href="#leadership-tools" class="sidebar-link text-sm">Leadership Tools</a>
-        </div>
-    </nav>
-</aside>
-
-<!-- Updated Main Content -->
-<main class="main-content">
-    <div class="max-w-6xl mx-auto">
-        <section id="philosophy" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4">Educational Leadership Philosophy</h2>
-            <p class="mb-4">My approach to educational leadership centers on fostering growth through community building, creating spaces for authentic dialogue, and maintaining a balance between aspiration and practicality.</p>
-            
-            <div id="community-building" class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Community Building</h3>
-                <p class="text-gray-700">Educational leadership grew from recognizing that the best teaching emerges from collaborative environments where instructors, developers, and learners contribute to shared growth. This belief shapes how I approach team development and professional learning initiatives.</p>
-            </div>
-
-            <div id="authentic-dialogue" class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Creating Spaces for Authentic Dialogue</h3>
-                <p class="text-gray-700">Great leaders create environments of mutual trust and continuous learning. When I transitioned to the private sector and inherited a team without formal learning backgrounds, we built a peer learning network where diverse perspectives shape our collective practice.</p>
-            </div>
-
-            <div id="meaningful-connection" class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Fostering Trust Through Connection</h3>
-                <p class="text-gray-700">Through one-on-one meetings and open discussions about goals and challenges, we establish trust that enables bi-directional coaching opportunities. Whether exploring universal design principles or emerging technologies, every team member's voice influences our direction.</p>
-            </div>
-        </section>
-
-        <section id="practical-impact" class="bg-white rounded-lg shadow-sm p-6 mb-8">
-            <h2 class="text-2xl font-bold mb-4">Leadership in Practice</h2>
-            
-            <div id="team-development" class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Team Development Initiatives</h3>
-                <div class="bg-blue-50 rounded-lg p-4">
-                    <ul class="list-disc list-inside text-gray-700">
-                        <li>Established structured career pathways and mentorship programs</li>
-                        <li>Created collaborative learning communities for sharing best practices</li>
-                        <li>Implemented regular feedback loops and growth opportunities</li>
-                        <li>Developed evidence-based professional development workshops</li>
-                    </ul>
+            <div class="max-w-3xl">
+                <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">Educational Leadership</h1>
+                <p class="text-xl text-gray-800 mb-6">
+                    Building collaborative environments where instructors, developers, and learners contribute to shared growth.
+                </p>
+                <div class="flex flex-wrap gap-3" aria-label="Key focus areas">
+                    <span class="tag tag-blue">Community Building</span>
+                    <span class="tag tag-purple">Authentic Dialogue</span>
+                    <span class="tag tag-green">Team Development</span>
+                    <span class="tag tag-orange">Continuous Growth</span>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div id="workshops" class="mb-6">
-                <h3 class="text-lg font-semibold mb-2">Workshop Development</h3>
-                <p class="text-gray-700">I design and facilitate workshops that support educators in creating inclusive, engaging learning environments. Recent examples include:</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    <div class="bg-gray-50 p-4 rounded">
-                        <h4 class="font-medium mb-2">Effective Questioning Techniques</h4>
-                        <p class="text-sm">Practical strategies for fostering active participation and critical thinking</p>
+    <main id="main-content" class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="lg:flex gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4 mb-8 lg:mb-0">
+                    <div class="sidebar bg-white rounded-lg shadow-sm p-4 lg:sticky lg:top-32">
+                        <nav aria-label="Section Navigation">
+                            <a href="#philosophy" class="sidebar-link">Leadership Philosophy</a>
+                            <a href="#community-building" class="sidebar-link">Community Building</a>
+                            <a href="#authentic-dialogue" class="sidebar-link">Authentic Dialogue</a>
+                            <a href="#meaningful-connection" class="sidebar-link">Meaningful Connection</a>
+                            <a href="#mentorship" class="sidebar-link">Mentorship</a>
+                            <a href="#balance" class="sidebar-link">Balance & Growth</a>
+                            <a href="#continuous-growth" class="sidebar-link">Challenging Complacency</a>
+                            <a href="#practical-impact" class="sidebar-link">Leadership in Practice</a>
+                            <a href="#resources" class="sidebar-link">Leadership Resources</a>
+                        </nav>
+                        <div class="mt-8 pt-4 border-t border-gray-200">
+                            <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" target="_blank" rel="noopener">
+                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <span>Workshop Materials</span>
+                            </a>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm flex items-center mt-2" target="_blank" rel="noopener">
+                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <span>Leadership Tools</span>
+                            </a>
+                        </div>
                     </div>
-                    <div class="bg-gray-50 p-4 rounded">
-                        <h4 class="font-medium mb-2">Universal Design for Learning</h4>
-                        <p class="text-sm">Creating accessible and inclusive learning experiences</p>
-                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="lg:w-3/4">
+                    <!-- Philosophy Overview Section -->
+                    <section id="philosophy" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Educational Leadership Philosophy</h2>
+                        <p class="text-gray-800 mb-4">
+                            My approach to educational leadership centers on fostering growth through community building, creating spaces for authentic dialogue, and maintaining a balance between aspiration and practicality. These principles guide my work in developing both educational environments and the people within them.
+                        </p>
+                        <p class="text-gray-800">
+                            The following principles shape how I approach leadership in educational contexts, whether working with teams of curriculum developers, instructors, or learners themselves. Each principle contributes to my overarching goal of creating collaborative environments where everyone can contribute to shared growth.
+                        </p>
+                    </section>
+
+                    <!-- Community Building Section -->
+                    <section id="community-building" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Foster Growth Through Community Building</h2>
+                        <p class="text-gray-700 mb-4">
+                            For me, educational leadership grew from recognizing that the best teaching emerges from collaborative environments where instructors, developers, and learners contribute to shared growth. This belief shapes how I approach team development and professional learning initiatives.
+                        </p>
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 mb-4">
+                            <p class="text-gray-700 italic">
+                                "As a teaching assistant with minimal formal training, I initially approached teaching through trial and error. However, a pivotal classroom observation from my department chair pushed me towards evidence-based learning research, thereby sparking a career-long commitment to intentional, research-driven educational development."
+                            </p>
+                        </div>
+                        
+                        <p class="text-gray-700">
+                            In every leadership role I've held, I've prioritized creating environments where team members feel safe to experiment, share ideas, and learn from both successes and failures. This approach fosters a sense of collective ownership and responsibility for our shared educational mission.
+                        </p>
+                    </section>
+
+                    <!-- Authentic Dialogue Section -->
+                    <section id="authentic-dialogue" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Create Spaces for Authentic Dialogue</h2>
+                        <p class="text-gray-700 mb-4">
+                            Great leaders create environments of mutual trust and continuous learning. When I transitioned to the private sector and inherited a team without formal learning backgrounds, I saw an opportunity to build a learning community.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                <h4 class="font-medium mb-2">Building a Resource-Sharing Culture</h4>
+                                <p class="text-gray-700">We began by sharing resources and best practices, creating a foundation of shared knowledge that allowed team members to develop confidence in their educational roles.</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                <h4 class="font-medium mb-2">Evolving into a Peer Learning Network</h4>
+                                <p class="text-gray-700">As our team grew to include members with diverse educational backgrounds, we evolved into a peer learning network, where diverse perspectives and experiences shaped our collective practice.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            To further my own development, I regularly put myself in the developer role, and invite feedback from team members on my approach. This models vulnerability and continuous learning while sending a clear message that everyone on the team has valuable insights to contribute.
+                        </p>
+                    </section>
+
+                    <!-- Meaningful Connection Section -->
+                    <section id="meaningful-connection" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Foster Trust Through Meaningful Connection</h2>
+                        <p class="text-gray-700 mb-4">
+                            In one-on-one meetings, my team members and I prioritize establishing trust through open discussions about goals and challenges. The resultant relationship enables coaching opportunities that flow in both directions.
+                        </p>
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 mb-4">
+                            <p class="text-gray-700">
+                                Whether we're exploring universal design principles, sharing accessibility tips, or discussing emerging technologies like generative AI, every team member's voice influences our direction. Through dedicated communication channels for sharing learning articles and teaching innovations, we maintain an ongoing dialogue about educational excellence.
+                            </p>
+                        </div>
+                        <p class="text-gray-700">
+                            This approach creates multiple pathways for connection and communication, ensuring that ideas can flow freely throughout the organization rather than being confined to formal meetings or top-down directives.
+                        </p>
+                    </section>
+
+                    <!-- Mentorship Section -->
+                    <section id="mentorship" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Model Mentorship and Lifelong Learning</h2>
+                        <p class="text-gray-700 mb-4">
+                            My mentors have taught me invaluable lessons about inviting students into the learning process and acknowledging its complexity. Perhaps most importantly, they showed me that "I don't know, but I'll find out" is a response that models the continuous learning mindset we hope to instill in others.
+                        </p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-green-50 p-4 rounded shadow-sm border border-green-100">
+                                <h4 class="font-medium mb-2 text-green-800">Embracing Uncertainty</h4>
+                                <p class="text-gray-700">When we demonstrate comfort with not knowing all the answers, we create safer spaces for others to explore, question, and learn alongside us.</p>
+                            </div>
+                            
+                            <div class="bg-green-50 p-4 rounded shadow-sm border border-green-100">
+                                <h4 class="font-medium mb-2 text-green-800">Teaching Through Modeling</h4>
+                                <p class="text-gray-700">These experiences have shaped how I now mentor others, emphasizing humility and enthusiasm in the teaching process.</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-700">
+                            By demonstrating vulnerability and curiosity, we create spaces where everyone feels comfortable exploring new ideas and approaches. This not only strengthens our learning community but also prepares team members to become mentors themselves.
+                        </p>
+                    </section>
+
+                    <!-- Balance Section -->
+                    <section id="balance" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Balance Aspiration with Practicality</h2>
+                        <p class="text-gray-700 mb-4">
+                            The best educational leaders help others navigate the challenging balance between aspiration and practicality. I've learned to guide team members in identifying their most critical project goals while emphasizing that improvement is an iterative process.
+                        </p>
+                        <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 mb-4">
+                            <p class="text-gray-700">
+                                This approach helps prevent frustration and burnout while maintaining momentum toward excellence. When we create supportive environments where people feel safe to experiment and grow incrementally, we foster sustainable development practices that benefit both educators and learners.
+                            </p>
+                        </div>
+                        <p class="text-gray-700">
+                            By embracing this balance, we can maintain our commitment to high standards while acknowledging the real-world constraints that affect our work. This creates a culture of sustainable excellence rather than perfectionism.
+                        </p>
+                    </section>
+
+                    <!-- Continuous Growth Section -->
+                    <section id="continuous-growth" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-4">Educational Leadership Should Challenge Complacency and Drive Continuous Growth</h2>
+                        <p class="text-gray-700 mb-4">
+                            Looking ahead, I stay attentive to the need for ongoing improvement in teaching and development practices. By maintaining a dual focus on research-informed methods and supportive relationships, while constantly seeking new ways to improve, we can create lasting positive change in how we approach teaching and learning.
+                        </p>
+                        <div class="p-5 bg-gray-50 rounded-lg mb-4">
+                            <h3 class="text-lg font-medium mb-3">Strategies for Continuous Growth</h3>
+                            <ul class="space-y-2 list-disc list-inside text-gray-700">
+                                <li>Regular review and refinement of our approaches based on evidence and feedback</li>
+                                <li>Creating structures that encourage innovation and experimentation</li>
+                                <li>Celebrating progress while maintaining focus on future growth</li>
+                                <li>Building reflection into our regular practice</li>
+                            </ul>
+                        </div>
+                        <p class="text-gray-700">
+                            Our role as educational leaders must include helping others maintain this balance of evidence-based practice and continuous growth, pushing beyond comfortable routines to discover new approaches and innovations.
+                        </p>
+                    </section>
+
+                    <!-- Practical Impact Section -->
+                    <section id="practical-impact" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Leadership in Practice</h2>
+                        
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold mb-4">Team Development Initiatives</h3>
+                            <p class="text-gray-700 mb-4">These principles inform my approach to building and developing educational teams, creating structures that support growth while maintaining focus on outcomes.</p>
+                            <div class="bg-blue-50 rounded-lg p-4">
+                                <ul class="list-disc list-inside text-gray-700">
+                                    <li>Established structured career pathways and mentorship programs</li>
+                                    <li>Created collaborative learning communities for sharing best practices</li>
+                                    <li>Implemented regular feedback loops and growth opportunities</li>
+                                    <li>Developed evidence-based professional development workshops</li>
+                                    <li>Designed assessment frameworks to measure program effectiveness</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <h3 class="text-lg font-semibold mb-4">Workshop Development</h3>
+                            <p class="text-gray-700 mb-4">I design and facilitate workshops that support educators in creating inclusive, engaging learning environments. Each workshop translates educational theory into practical, implementable strategies.</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                                <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                    <h4 class="font-medium mb-2">Effective Questioning Techniques</h4>
+                                    <p class="text-sm mb-2">Practical strategies for fostering active participation and critical thinking</p>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc list-inside">
+                                        <li>Research-supported questioning approaches</li>
+                                        <li>Reducing barriers to participation</li>
+                                        <li>Equitable classroom discussion methods</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-gray-50 p-4 rounded shadow-sm">
+                                    <h4 class="font-medium mb-2">Universal Design for Learning</h4>
+                                    <p class="text-sm mb-2">Creating accessible and inclusive learning experiences</p>
+                                    <ul class="text-xs text-gray-600 space-y-1 list-disc list-inside">
+                                        <li>Multiple means of representation</li>
+                                        <li>Multiple means of engagement</li>
+                                        <li>Multiple means of action and expression</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <h3 class="text-lg font-semibold mb-4">Case Studies in Educational Leadership</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+                                    <h4 class="font-medium mb-2">Building a Learning Design Team</h4>
+                                    <p class="text-sm text-gray-700 mb-3">When I joined the private sector, I inherited a team with technical skills but limited instructional design background. By establishing a structured professional development program focused on evidence-based learning principles, we transformed into a cohesive learning design unit.</p>
+                                    <div class="flex items-center text-sm text-blue-600">
+                                        <span class="font-medium">Key outcome:</span>
+                                        <span class="ml-2">17% increase in learner satisfaction scores</span>
+                                    </div>
+                                </div>
+                                <div class="bg-gray-50 p-5 rounded-lg shadow-sm border border-gray-200">
+                                    <h4 class="font-medium mb-2">Accessibility Compliance Initiative</h4>
+                                    <p class="text-sm text-gray-700 mb-3">Led a cross-functional team to achieve full AODA and WCAG accessibility compliance across all digital learning environments. By making this a team-wide priority rather than a specialized role, we created a culture where accessibility became everyone's responsibility.</p>
+                                    <div class="flex items-center text-sm text-blue-600">
+                                        <span class="font-medium">Key outcome:</span>
+                                        <span class="ml-2">100% compliance across all learning materials</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Resources Section -->
+                    <section id="resources" class="bg-white rounded-lg shadow-sm p-6">
+                        <h2 class="text-2xl font-bold mb-6">Leadership Resources</h2>
+                        <p class="text-gray-700 mb-6">I've developed resources to support educational leaders and instructors in creating effective, inclusive learning environments. These materials reflect my commitment to evidence-based practice and continuous improvement.</p>
+                        
+                        <div class="mb-6">
+                            <h3 class="text-lg font-semibold mb-4">Workshop Materials</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors border border-blue-100">
+                                    <h4 class="font-semibold mb-2">Effective Questioning Techniques</h4>
+                                    <p class="text-sm text-gray-600 mb-3">Complete workshop materials including facilitator notes, participant activities, and assessment tools.</p>
+                                    <span class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">Workshop Guide</span>
+                                </a>
+                                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors border border-blue-100">
+                                    <h4 class="font-semibold mb-2">Universal Design for Learning</h4>
+                                    <p class="text-sm text-gray-600 mb-3">Resources for creating learning experiences that work for all students, regardless of background or ability.</p>
+                                    <span class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">Workshop Guide</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-lg font-semibold mb-4">Leadership Tools</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors border border-blue-100">
+                                    <h4 class="font-semibold mb-2">Team Development Framework</h4>
+                                    <p class="text-sm text-gray-600 mb-3">Templates and resources for establishing professional growth plans and career pathways for learning teams.</p>
+                                    <span class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">Template Collection</span>
+                                </a>
+                                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors border border-blue-100">
+                                    <h4 class="font-semibold mb-2">Accessibility Checklist</h4>
+                                    <p class="text-sm text-gray-600 mb-3">Comprehensive checklist for ensuring digital learning materials meet accessibility standards.</p>
+                                    <span class="text-xs bg-blue-200 text-blue-800 px-2 py-1 rounded-full">Assessment Tool</span>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
-        </section>
-
-        <section id="resources" class="bg-white rounded-lg shadow-sm p-6">
-            <h2 class="text-2xl font-bold mb-4">Leadership Resources</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors">
-                    <h3 class="font-semibold mb-2">Workshop Materials</h3>
-                    <p class="text-sm text-gray-600">Access sample workshop scripts and materials</p>
-                </a>
-                <a href="#" class="block bg-blue-50 rounded-lg p-4 hover:bg-blue-100 transition-colors">
-                    <h3 class="font-semibold mb-2">Leadership Tools</h3>
-                    <p class="text-sm text-gray-600">Templates and resources for team development</p>
-                </a>
-            </div>
-        </section>
-    </div>
-</main>
+        </div>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 no-print">
-        <div class="py-6 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-500">© 2024 James Kruck, PhD</p>
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+                Designed with a focus on accessibility and inclusive design principles.
+            </p>
         </div>
     </footer>
 
+    <!-- Scroll to top button -->
+    <button 
+        id="scrollToTopBtn" 
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Scroll to top"
+    >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', !expanded);
+                mobileMenu.classList.toggle('open');
+            });
+        }
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        if (scrollToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    scrollToTopBtn.style.opacity = '1';
+                } else {
+                    scrollToTopBtn.style.opacity = '0';
+                }
+            });
+            
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+        
+        // Highlight active section in sidebar based on scroll position
+        function highlightActiveSidebarLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop - 200 && window.pageYOffset < sectionTop + sectionHeight - 200) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href && href.slice(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightActiveSidebarLink);
+        window.addEventListener('load', highlightActiveSidebarLink);
+    </script>
 </body>
 </html>
