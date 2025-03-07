@@ -1,0 +1,677 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI in Education - James Kruck, PhD</title>
+    <meta name="description" content="Explore curated resources on AI in education, including research articles, essays, and practical guides for integrating AI into teaching and learning.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Common scripts -->
+    <script src="js/common.js" defer></script>
+    
+    <!-- Structured data for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "headline": "AI in Education Resources",
+        "description": "Curated educational resources on AI in education, including research articles, essays, and practical guides for educators.",
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "item": {
+                        "@type": "Article",
+                        "headline": "Wrestling with A.I.",
+                        "author": "Catherine J. Denial"
+                    }
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "item": {
+                        "@type": "Article",
+                        "headline": "AI Literacy in Teaching and Learning: A Durable Framework for Higher Education",
+                        "author": "Michelle Kassorla, Maya Georgieva and Allison Papini"
+                    }
+                }
+            ]
+        },
+        "author": {
+            "@type": "Person",
+            "name": "James Kruck",
+            "jobTitle": "Learning Technology & Curriculum Specialist",
+            "url": "https://jameskruck.com"
+        }
+    }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div>
+                    <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+                </div>
+                <div class="hidden md:block" aria-label="Desktop Navigation">
+                    <div class="flex space-x-8">
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                        <a href="education.html" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                        <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+                        <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition">Leadership</a>
+                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+                        <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">Educational Projects</a>
+                        <a href="resources.html" class="text-blue-600 font-medium">Resources</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Home</a>
+                <a href="education.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
+                <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+                <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Leadership</a>
+                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+                <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Educational Projects</a>
+                <a href="resources.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero" aria-labelledby="page-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">AI in Education</h1>
+                <p class="text-xl text-gray-800 mb-6">
+                    Curated resources on the evolving role of AI in teaching and learning.
+                </p>
+                <div class="flex flex-wrap gap-3" aria-label="Resource types">
+                    <span class="tag tag-blue">Research Articles</span>
+                    <span class="tag tag-purple">Blogs & Newsletters</span>
+                    <span class="tag tag-green">Frameworks</span>
+                    <span class="tag tag-orange">Practical Guides</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content" class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="lg:flex gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4 mb-8 lg:mb-0">
+                    <div class="sidebar bg-white rounded-lg shadow-sm p-4 lg:sticky lg:top-32">
+                        <nav aria-label="Section Navigation">
+                            <a href="#introduction" class="sidebar-link">Introduction</a>
+                            <a href="#wrestling-with-ai" class="sidebar-link">Wrestling with A.I.</a>
+                            <a href="#ai-literacy" class="sidebar-link">AI Literacy Framework</a>
+                            <a href="#ai-tutoring" class="sidebar-link">AI Tutoring Research</a>
+                            <a href="#genai-quickstart" class="sidebar-link">GenAI Quickstart</a>
+                            <a href="#ai-in-ld" class="sidebar-link">AI in L&D</a>
+                            <a href="#dr-phil" class="sidebar-link">Dr Phil's Newsletter</a>
+                            <a href="#educating-ai" class="sidebar-link">Educating AI</a>
+                            <a href="#virtual-agents" class="sidebar-link">Intelligent Virtual Agents</a>
+                            <a href="#important-work" class="sidebar-link">The Important Work</a>
+                            <a href="#embrace-dont-avoid" class="sidebar-link">Embrace, Don't Avoid</a>
+                            <a href="#critical-ai-literacies" class="sidebar-link">Critical AI Literacies</a>
+                            <a href="#genai-sea-change" class="sidebar-link">GenAI: A Sea Change</a>
+                        </nav>
+                        <div class="mt-8 pt-4 border-t border-gray-200">
+                            <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+                            <a href="resources.html" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                                </svg>
+                                <span>Back to All Resources</span>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="lg:w-3/4">
+                    <!-- Introduction Section -->
+                    <section id="introduction" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Introduction</h2>
+                        <p class="text-gray-800 mb-4">
+                            AI is rapidly transforming education, presenting both exciting opportunities and significant challenges. This collection features a curated selection of blogs, newsletters, research articles, essays, and podcasts, all from educators and experts deeply engaged with the evolving role of AI in teaching and learning.
+                        </p>
+                        
+                        <p class="text-gray-800">
+                            These resources offer a range of perspectives, from practical guidance on using AI tools in the classroom to thought-provoking reflections on ethical and pedagogical implications. Whether you're exploring AI literacy, the potential of generative AI, or its applications in instructional design, there's something here to spark your curiosity and inform your practice.
+                        </p>
+                    </section>
+
+                    <!-- Resource 1 -->
+                    <section id="wrestling-with-ai" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://uen.pressbooks.pub/teachingandgenerativeai/chapter/wrestling-with-a-i/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Wrestling with A.I.
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Essay
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Catherine J. Denial</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This essay by Catherine J. Denial explores the ethical and pedagogical implications of integrating generative AI, such as ChatGPT, into higher education.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://uen.pressbooks.pub/teachingandgenerativeai/chapter/wrestling-with-a-i/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Essay
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 2 -->
+                    <section id="ai-literacy" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://www.educause.edu/content/2024/ai-literacy-in-teaching-and-learning/introduction" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    AI Literacy in Teaching and Learning: A Durable Framework for Higher Education
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Report
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Michelle Kassorla, Maya Georgieva and Allison Papini</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This report provides a framework for students, faculty, and staff to develop their AI literacy in teaching and learning (ALTL). Helpfully, the authors develop competency tables for each target audience. For example, under student ALTL, there are three competencies under the broad category technical understanding: Fundamentals of AI; Application of AI Tools; and Hands-On Experience. These competencies often repeat across the audiences, but each instance receives its own unique expanded description of the competency.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://www.educause.edu/content/2024/ai-literacy-in-teaching-and-learning/introduction" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Report
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 3 -->
+                    <section id="ai-tutoring" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://www.researchgate.net/publication/380587627_AI_Tutoring_Outperforms_Active_Learning" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    AI Tutoring Outperforms Active Learning
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Research Study
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Gregory Kestin, Kelly Miller, Anna Klales, Timothy Milbourne, and Gregorio Ponti</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This study found that students learn more than twice as much in less time when using an AI tutor compared to an active learning classroom setting. The AI tutor, designed with pedagogical best practices in mind, provides personalized feedback and allows for self-pacing, leading to increased engagement and motivation among students. The study suggests that AI tutors have the potential to revolutionize education by offering a scalable and accessible platform for personalized learning experiences.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://www.researchgate.net/publication/380587627_AI_Tutoring_Outperforms_Active_Learning" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Study
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 4 -->
+                    <section id="genai-quickstart" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://www.library.mcgill.ca/genai/index.html" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    GenAI Quickstart: Foundations for Faculty
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Online Course
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">McGill and Concordia Universities</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This self-paced course helps faculty raise their knowledge and skills in GenAI. Module topics include potential uses for GenAI in teaching and learning, responsible use considerations, and privacy and security considerations.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://www.library.mcgill.ca/genai/index.html" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Access Course
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 5 -->
+                    <section id="ai-in-ld" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://donaldhtaylor.co.uk/research_base/focus03-intention-and-reality/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    AI in L&D: Intention and Reality
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Research Report
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Donald H. Taylor and Eglė Vinauskaitė</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This report will give you an idea into how well AI is being integrated into L&D. The researchers surveyed 420 L&D professionals across 50+ countries, conducted six detailed case studies, and analyzed AI adoption in the field. They found that while AI is being used for departmental efficiencies, there's little evidence of progression toward more sophisticated applications, a gap illustrated by their Immaturity Model.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://donaldhtaylor.co.uk/research_base/focus03-intention-and-reality/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Report
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 6 -->
+                    <section id="dr-phil" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://drphilippahardman.substack.com/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Dr Phil's Newsletter
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Newsletter
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Philippa Hardman</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            Hardman's substack is a great resource for putting GenAI to use in your course development. Hardman offers valuable advice on the best way to prompt GenAI. For a starting point, I recommend <a href="https://open.substack.com/pub/drphilippahardman/p/how-to-build-a-custom-gpt-for-instructional?r=2xjq9n&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="text-blue-600 hover:underline">the guide on building a custom GPT for Instructional Design</a>.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://drphilippahardman.substack.com/" class="inline-flex items-center px-4 py-2 bg-blue -600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Subscribe to Newsletter
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 7 -->
+                    <section id="educating-ai" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://nickpotkalitsky.substack.com/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Educating AI
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Newsletter
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Nick Potkalitsky</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            Potkalitsky's substack offers thoughtful and actionable insights into the intersection of AI and education. With a focus on deep inquiry, it tackles critical topics like the impact of AI on student learning, AI-assisted knowledge creation, and the evolving educational landscape. This resource is perfect for educators, administrators, or anyone looking to stay informed and proactive about the role of AI in shaping the future of education.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://nickpotkalitsky.substack.com/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Subscribe to Newsletter
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 8 -->
+                    <section id="virtual-agents" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://ict.usc.edu/pubs/Intelligent%20Virtual%20Agents%20for%20Education%20and%20Training-%20Opportunities%20and%20Challenges.pdf" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Intelligent Virtual Agents for Education and Training: Opportunities and Challenges
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Research Paper
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Jeff Rickel</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This paper by Jeff Rickel advocates for the use of intelligent virtual agents (IVAs) within interactive virtual worlds as a powerful tool for experiential learning.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://ict.usc.edu/pubs/Intelligent%20Virtual%20Agents%20for%20Education%20and%20Training-%20Opportunities%20and%20Challenges.pdf" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Paper
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 9 -->
+                    <section id="important-work" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://theimportantworkproject.substack.com/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    The Important Work
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Newsletter
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Jane Rosenzweig</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            Rosenzweig's substack <em>The Important Work</em> offers a place for writing instructors to share their reflections on writing in the age of AI.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://theimportantworkproject.substack.com/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Subscribe to Newsletter
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 10 -->
+                    <section id="embrace-dont-avoid" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://www.researchgate.net/publication/386246950_Embrace_Don't_Avoid_Reimagining_Higher_Education_with_Generative_Artificial_Intelligence" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Embrace, Don't Avoid: Reimagining Higher Education with Generative Artificial Intelligence
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Research Paper
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Teuku Rizky Noviandy, Aga Maulana, Ghazi Idroes, Zahriah Zahriah, Maria Paristiowati, Talha Emran, Mukhlisuddin Ilyas, and Rinaldi Idroes</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This research review from the <em>Journal of Educational Management and Learning</em> examines the potential of generative artificial intelligence (AI) to revolutionise higher education. The authors explore both the benefits and challenges of integrating generative AI, including its capacity for personalised learning, advancements in research efficiency, and improvements in administrative processes. However, they also highlight crucial ethical considerations, such as bias, data privacy, and academic integrity.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://www.researchgate.net/publication/386246950_Embrace_Don't_Avoid_Reimagining_Higher_Education_with_Generative_Artificial_Intelligence" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Read Paper
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 11 -->
+                    <section id="critical-ai-literacies" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://teachinginhighered.com/podcast/cultivating-critical-ai-literacies/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    Teaching in Higher Ed: Cultivating Critical AI Literacies
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Podcast
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Bonni Stachowiak with guest Maha Bali</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-6">
+                            This episode of Teaching in Higher Ed discusses cultivating critical AI literacies, exploring how educators can help students develop a nuanced understanding of AI tools and their implications.
+                        </p>
+                        
+                        <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                            <!-- Spotify embed for Teaching in Higher Ed podcast -->
+                            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/5gjSeKPcDLHxcEkB18HjdM?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://teachinginhighered.com/podcast/cultivating-critical-ai-literacies/" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Listen to Episode
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Resource 12 -->
+                    <section id="genai-sea-change" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <div class="flex flex-wrap justify-between items-start mb-4">
+                            <h2 class="text-2xl font-bold">
+                                <a href="https://api.ca.kaltura.com/html5/html5lib/v2.98/mwEmbedFrame.php/p/148/uiconf_id/23449759/entry_id/0_fhsfwjjz?wid=_148&iframeembed=true&playerId=kaltura_player&entry_id=0_fhsfwjjz&flashvars[streamerType]=auto&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=0_448663qv" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                                    GenAI: A Sea Change in Teaching and Learning
+                                    <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                    </svg>
+                                </a>
+                            </h2>
+                            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                Keynote Address
+                            </div>
+                        </div>
+                        
+                        <p class="text-gray-700 mb-3">Lucas Wright</p>
+                        
+                        <h3 class="text-lg font-semibold mb-2">Why you might like it</h3>
+                        <p class="text-gray-800 mb-4">
+                            In this keynote address, Wright advocates for critical GenAI literacy, emphasizing the importance of understanding AI's architecture, mastering effective prompting techniques, and acknowledging its limitations, biases, and environmental impact. Although this was only a 45-minute talk, I found a lot of thoughtful takeaways.
+                        </p>
+                        
+                        <p class="text-gray-800 mb-6">
+                            I also recommend following <a href="https://www.linkedin.com/in/lucwright/" class="text-blue-600 hover:underline">Wright on LinkedIn</a> for more insights on GenAI in academia.
+                        </p>
+                        
+                        <div class="flex justify-end">
+                            <a href="https://api.ca.kaltura.com/html5/html5lib/v2.98/mwEmbedFrame.php/p/148/uiconf_id/23449759/entry_id/0_fhsfwjjz?wid=_148&iframeembed=true&playerId=kaltura_player&entry_id=0_fhsfwjjz&flashvars[streamerType]=auto&flashvars[localizationCode]=en&flashvars[leadWithHTML5]=true&flashvars[sideBarContainer.plugin]=true&flashvars[sideBarContainer.position]=left&flashvars[sideBarContainer.clickToClose]=true&flashvars[chapters.plugin]=true&flashvars[chapters.layout]=vertical&flashvars[chapters.thumbnailRotator]=false&flashvars[streamSelector.plugin]=true&flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&flashvars[dualScreen.plugin]=true&flashvars[Kaltura.addCrossoriginToIframe]=true&&wid=0_448663qv" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                                Watch Keynote
+                                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+
+                    <!-- Connect Section -->
+                    <section class="bg-white rounded-lg shadow-sm p-6 text-center">
+                        <p class="text-gray-800 mb-6">
+                            I continually update this collection as I discover new resources. If you know of other valuable resources on AI in education that should be included here, please <a href="contact.html" class="text-blue-600 hover:text-blue-800">let me know</a>.
+                        </p>
+                        
+                        <div class="flex justify-center space-x-4">
+                            <a href="https://bsky.app/profile/jameskruck.bsky.social" class="text-blue-600 hover:text-blue-800 p-2 rounded-full hover:bg-blue-50 transition" target="_blank" rel="noopener" aria-label="Bluesky Profile">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 17.5228 6.47813 22 12.001 22C17.5238 22 22.001 17.5228 22.001 12C22.001 6.47715 17.5238 2 12.001 2ZM8.40733 14.6256V9.89106H10.5516C10.5516 9.89106 10.2268 13.595 13.1246 13.595C14.2223 13.595 15.0861 12.8293 15.0861 11.6506C15.0861 10.3139 14.2951 9.69428 12.1704 9.11773C9.79699 8.46114 7.94596 7.29243 7.94596 5.08568C7.94596 2.23502 10.6331 2.01557 10.6331 2.01557C10.6331 2.01557 16.0823 1.89719 16.0823 6.17358H13.9381C13.9381 6.17358 14.0157 3.28447 11.5532 3.28447C10.3745 3.28447 9.80119 4.00672 9.80119 4.83728C9.80119 6.02919 10.9291 6.48755 12.0738 6.80276C14.6054 7.53312 17.0019 8.40997 17.0019 11.7282C17.0019 14.3307 14.8578 15.1119 13.5141 15.1119C9.51373 15.1119 9.51373 11.0645 9.51373 11.0645H8.40733V14.6256Z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/james-kruck-77485a102/" class="text-blue-600 hover:text-blue-800 p-2 rounded-full hover:bg-blue-50 transition" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+            <p class="text-gray-400 text-sm">
+                Designed with a focus on accessibility and inclusive design principles.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button 
+        id="scrollToTopBtn" 
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Scroll to top"
+    >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuButton.addEventListener('click', () => {
+            const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+            menuButton.setAttribute('aria-expanded', !expanded);
+            mobileMenu.classList.toggle('open');
+        });
+        
+        // Scroll to top functionality
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.opacity = '1';
+            } else {
+                scrollToTopBtn.style.opacity = '0';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Highlight active section in sidebar based on scroll position
+        function highlightActiveSidebarLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.sidebar-link');
+
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.pageYOffset >= sectionTop - 200 && window.pageYOffset < sectionTop + sectionHeight - 200) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href && href.slice(1) === currentSection) {link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', highlightActiveSidebarLink);
+        window.addEventListener('load', highlightActiveSidebarLink);
+    </script>
+</body>
+</html>
