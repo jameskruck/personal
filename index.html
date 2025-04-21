@@ -1,63 +1,97 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - James Kruck, PhD</title>
-    <meta name="description" content="Home">
-    
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Stylesheets -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    
-    <!-- Conditional stylesheets -->
-    <!-- Include only when needed (e.g., for pages with maps) -->
-    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" rel="stylesheet"> -->
-    
-    <!-- Conditional scripts -->
-    <!-- Include only when needed (e.g., for pages with maps) -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script> -->
-    
-    <!-- Common scripts -->
-    <script src="js/common.js" defer></script>
-    
-    <!-- Structured data for better SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "ProfilePage",
-        "headline": "Home",
-        "description": "Professional portfolio of James Kruck, PhD, specializing in curriculum design, digital pedagogy, and inclusive learning environments.",
-        "mainEntity": {
-            "@type": "Person",
-            "name": "James Kruck",
-            "jobTitle": "Learning Technology & Curriculum Specialist",
-            "telephone": "",
-            "email": "jameskruck@gmail.com",
-            "url": "https://jameskruck.com",
-            "alumniOf": [
-                {
-                    "@type": "CollegeOrUniversity",
-                    "name": "University of Western Ontario",
-                    "sameAs": "https://www.uwo.ca/"
-                },
-                {
-                    "@type": "CollegeOrUniversity",
-                    "name": "University of Manitoba",
-                    "sameAs": "https://umanitoba.ca/"
-                }
-            ],
-            "knowsAbout": ["Curriculum Design", "Educational Technology", "Inclusive Learning", "Leadership"]
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>James Kruck, PhD - Educational Developer and Learning Designer</title>
+  <meta name="description" content="Educational Developer specializing in faculty support, curriculum design, and inclusive teaching practices.">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Conditional stylesheets (commented out, fine to leave) -->
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" rel="stylesheet"> -->
+
+  <!-- Conditional scripts (commented out, fine to leave) -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script> -->
+
+  <!-- Common scripts -->
+  <script src="js/common.js" defer></script>
+
+  <!-- Structured Data for Better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "headline": "James Kruck, PhD - Educational Developer",
+    "description": "Professional portfolio of James Kruck, PhD, specializing in curriculum design, digital pedagogy, and inclusive learning environments.",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "James Kruck",
+      "jobTitle": "Learning Technology & Curriculum Specialist",
+      "email": "jameskruck@gmail.com",
+      "url": "https://jameskruck.com",
+      "alumniOf": [
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Western Ontario",
+          "sameAs": "https://www.uwo.ca/"
+        },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Manitoba",
+          "sameAs": "https://umanitoba.ca/"
         }
+      ],
+      "knowsAbout": [
+        "Curriculum Design",
+        "Educational Technology",
+        "Inclusive Learning",
+        "Leadership"
+      ]
     }
-    </script>
+  }
+  </script>
+
+  <!-- Favicon (optional but recommended) -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+  <!-- Accessibility: Browser theme color -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Open Graph for social media sharing (Optional but nice) -->
+  <meta property="og:title" content="James Kruck, PhD - Educational Developer">
+  <meta property="og:description" content="Creating accessible, inclusive, and evidence-based learning experiences.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jameskruck.com/">
+  <meta property="og:image" content="https://jameskruck.com/images/social-card.png">
+
+  <!-- Twitter Card metadata -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="James Kruck, PhD - Educational Developer">
+  <meta name="twitter:description" content="Creating accessible, inclusive, and evidence-based learning experiences.">
+  <meta name="twitter:image" content="https://jameskruck.com/images/social-card.png">
 </head>
-<body class="smooth-scroll bg-gray-50">
+
+<body class="smooth-scroll bg-gray-50 no-scroll">
+<!-- Splash Screen -->
+<div id="splash-screen" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+  <h1 class="text-7xl font-bold text-blue-600 font-sans tracking-wide animate-fade-in">
+    James Kruck, PhD
+  </h1>
+</div>
+
+
  <!-- Skip to content link for accessibility -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
+
+<header id="site-header" class="opacity-0 transition-opacity duration-1000">
 
 <!-- Navigation -->
 <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
@@ -101,45 +135,61 @@
         </div>
     </div>
 </nav>
+</header>
+<!-- hero -->
+<main id="main-content" class="opacity-0 transition-opacity duration-1000">
+<section class="hero hero-parallax" aria-labelledby="hero-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- New wrapper just around the hero content -->
+    <div class="fade-in-zoom">
+      <div class="md:flex items-center">
+        <div class="md:w-2/3">
+          <h1 id="hero-heading" class="hero-title opacity-0 translate-y-8 text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+            Educational Development Specialist
+          </h1>
 
-    <main id="main-content">
-<section class="hero" aria-labelledby="hero-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="md:flex items-center">
-            <div class="md:w-2/3">
-                <h1 id="hero-heading" class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
-                    Educational Development Specialist
-                </h1>
-                <p class="text-xl text-gray-800 mb-6">
-                    Designing evidence-based educational experiences that enhance teaching effectiveness and student learning outcomes. Certified Quality Matters Peer Reviewer and ISW-trained educator with expertise in curriculum design and faculty development.
-                </p>
-                <div class="flex flex-wrap gap-3 mb-6" aria-label="Areas of expertise">
-                    <span class="tag tag-blue">Higher Education</span>
-                    <span class="tag tag-green">Educator Development</span>
-                    <span class="tag tag-purple">Inclusive Pedagogy</span>
-                    <span class="tag tag-orange">Educational Technology</span>
-                </div>
-                <a href="#contact" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                    Connect About Teaching & Learning
-                </a>
-            </div>
-            <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
-                <div class="h-48 w-48 rounded-full bg-white shadow-lg overflow-hidden">
-                    <img src="images/james.png" alt="James Kruck" class="w-full h-full object-cover">
-                </div>
-            </div>
+<div class="hero-subcontent opacity-0 translate-y-8">
+  <p class="mb-4">
+    I design evidence-informed programs and curriculum solutions that empower educators, ignite curiosity, and build inclusive learning communities where all learners thrive.
+  </p>
+
+  <div class="flex flex-wrap gap-3 mb-6" aria-label="Areas of expertise">
+    <span class="tag tag-blue">Higher Education</span>
+    <span class="tag tag-green">Educator Development</span>
+    <span class="tag tag-purple">Inclusive Pedagogy</span>
+    <span class="tag tag-orange">Educational Technology</span>
+  </div>
+</div>
+          <a href="#contact" class="hero-button inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg transform hover:-translate-y-1 hover:shadow-xl opacity-0 translate-y-8">
+            Connect About Teaching & Learning
+          </a>
         </div>
-    </div>
-</section>
 
+        <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
+<div class="h-64 w-64 rounded-full border-4 border-blue-200 shadow-lg overflow-hidden">
+  <img src="images/james.png" alt="James Kruck" class="w-full h-full object-cover object-top" style="object-position: center 70%;">
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Scroll Down Arrow (keep as you had it) -->
+<div id="scroll-down" class="flex justify-center mt-6 opacity-0 translate-y-4">
+  <a href="#about" aria-label="Scroll down to About Me section">
+    <svg class="animate-bounce h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+</div>
         <!-- About Section -->
-<section id="about" class="py-20 bg-white" aria-labelledby="about-heading">
+<section id="about" class="py-20 bg-white fade-in-zoom" aria-labelledby="about-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="about-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
         <div class="md:flex items-start space-y-8 md:space-y-0 md:space-x-12">
             <div class="md:w-2/3">
                 <p class="text-gray-800 mb-4">
-                    As an educational development specialist, I design and implement educator development programs, curriculum enhancement initiatives, and teaching excellence frameworks. My background combines university teaching experience across multiple institutions with a strong foundation in supporting faculty through evidence-based pedagogical approaches.
+                    As an educational development specialist, I design and implement educator development programs, curriculum enhancement initiatives, and teaching excellence frameworks. My background combines university teaching experience across multiple institutions with a strong foundation in supporting educators through evidence-based pedagogical approaches.
                 </p>
                 <p class="text-gray-800 mb-4">
                     I bring a scholarly lens to educational practice, with research interests spanning classical education approaches and modern pedagogical frameworks. My training through the Instructional Skills Workshop and Quality Matters has further enhanced my ability to evaluate and improve educational experiences across modalities.
@@ -173,7 +223,7 @@
                         <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
-                        <span>Faculty development & mentorship</span>
+                        <span>Educator development & mentorship</span>
                     </li>
                     <li class="flex items-start">
                         <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -185,286 +235,634 @@
             </div>
         </div>
     </div>
+  </div>
 </section>
+<!-- Divider: top white, bottom gray -->
+<div class="relative">
+  <!-- White background on top -->
+  <div class="bg-white h-8"></div> <!-- Adjustable height if needed -->
+  <hr class="fade-divider mx-auto w-full absolute top-8 left-0">
+  <!-- Gray background starts immediately after divider -->
+  <div class="bg-gray-50 h-8"></div> <!-- Adjustable height if needed -->
+</div>
+
+
+<!-- Academic Foundations and Professional Development Section -->
+<section id="education" class="py-20 bg-gray-50 fade-in" aria-labelledby="education-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Main Heading -->
+    <h2 id="education-heading" class="text-3xl font-bold text-center text-gray-900 mb-6">Academic Foundations</h2>
+
+    <!-- Intro Paragraph -->
+    <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-12">
+      My academic background spans Classical Studies, critical analysis, research methodology, and language acquisition — all of which inform my work in educational development and instructional design today.
+    </p>
+
+    <div class="max-w-3xl mx-auto space-y-8">
+
+      <!-- PhD Card (Cleaned) -->
+      <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+        <div class="flex flex-wrap justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-semibold">PhD in Classics</h3>
+            <p class="text-gray-700">University of Western Ontario, London</p>
+          </div>
+          <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+            2014
+          </div>
+        </div>
+        <p class="text-gray-800">
+          My dissertation "<em>The Modalities of Roman Translation</em>" examined how Roman translators positioned themselves within their literary world through strategic translation choices. This work has informed my approach to cultural adaptation and knowledge transfer in educational contexts.
+        </p>
+      </div>
+
+      <!-- Master's Card (Cleaned) -->
+      <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+        <div class="flex flex-wrap justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-semibold">Master of Arts in Classics</h3>
+            <p class="text-gray-700">University of Manitoba, Winnipeg</p>
+          </div>
+          <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+            2008
+          </div>
+        </div>
+        <p class="text-gray-800">
+          My thesis focused on Cicero's translation practices when dealing with Greek philosophical concepts, examining how he navigated cultural adaptation for Roman audiences.
+        </p>
+      </div>
+
+      <!-- Bachelor's Card (Cleaned) -->
+      <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+        <div class="flex flex-wrap justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-semibold">Bachelor of Arts in Classics</h3>
+            <p class="text-gray-700">University of Manitoba, Winnipeg</p>
+          </div>
+          <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+            2005
+          </div>
+        </div>
+        <p class="text-gray-800">
+          Advanced degree with a major in Classics and a minor in History, developing strong foundations in critical analysis, language acquisition, and cultural interpretation.
+        </p>
+      </div>
+
+    </div>
+
+ <!-- Mini Heading Divider Before Professional Development -->
+<h3 class="text-2xl font-bold text-center text-gray-900 mt-20 mb-8">Professional Development</h3>
+
+<div class="max-w-3xl mx-auto space-y-8">
+
+  <!-- ISW Card -->
+  <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+    <div class="flex flex-wrap justify-between items-start mb-4">
+      <div>
+        <h3 class="text-xl font-semibold">Instructional Skills Workshop (ISW)</h3>
+        <p class="text-gray-700">ISW Network</p>
+      </div>
+      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+        2025
+      </div>
+    </div>
+  </div>
+
+  <!-- QM Rubric Card -->
+  <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+    <div class="flex flex-wrap justify-between items-start mb-4">
+      <div>
+        <h3 class="text-xl font-semibold">Applying the QM Rubric</h3>
+        <p class="text-gray-700">Quality Matters</p>
+      </div>
+      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+        2025
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Management Certificate Card -->
+  <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+    <div class="flex flex-wrap justify-between items-start mb-4">
+      <div>
+        <h3 class="text-xl font-semibold">Professional Certificate in Project Management</h3>
+        <p class="text-gray-700">University of Western Ontario</p>
+      </div>
+      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+        In Progress
+      </div>
+    </div>
+  </div>
+
+  <!-- Business Analytics Certificate Card -->
+  <div class="bg-white rounded-lg shadow-sm p-6 card-fade-up">
+    <div class="flex flex-wrap justify-between items-start mb-4">
+      <div>
+        <h3 class="text-xl font-semibold">Business Analytics</h3>
+        <p class="text-gray-700">University of Western Ontario</p>
+      </div>
+      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+        2024
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Accessible Context for Tags -->
+<p class="sr-only mt-16">Tags represent major professional development focus areas</p>
+
+<!-- Unified Tag Cloud for Academic Foundations + Professional Development -->
+<div class="flex flex-wrap gap-3 justify-center mt-16">
+  <span class="tag tag-blue">Advanced Research Methods</span>
+  <span class="tag tag-blue">Research Methods</span>
+  <span class="tag tag-blue">Critical Analysis</span>
+  <span class="tag tag-green">Teaching Experience</span>
+  <span class="tag tag-green">Facilitation Skills</span>
+  <span class="tag tag-green">Instructor Development</span>
+  <span class="tag tag-purple">Academic Writing</span>
+  <span class="tag tag-green">Writing and Communication</span>
+  <span class="tag tag-orange">Course Quality Standards</span>
+  <span class="tag tag-orange">Online Course Design</span>
+  <span class="tag tag-yellow">Project Planning</span>
+  <span class="tag tag-yellow">Stakeholder Communication</span>
+  <span class="tag tag-teal">Data Interpretation</span>
+  <span class="tag tag-teal">Decision-Making</span>
+</div>
+</section>
+
+<!-- Divider -->
+<hr class="my-16 border-gray-300 fade-divider">
+
+<!-- Educator Development Section -->
+<section id="faculty-development" class="py-24 bg-slate-50 fade-in" aria-labelledby="faculty-development-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Heading -->
+    <h2 id="faculty-development-heading" class="text-3xl font-bold text-center text-gray-900 mb-6">
+      Educator Development
+    </h2>
+
+    <!-- Intro Paragraph -->
+    <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-12">
+      I design practical, evidence-informed workshops and learning experiences that support educators in building inclusive, engaging, and research-driven teaching practices. Below are selected workshops and programs focused on instructional strategies, accessibility, active learning, and effective course design.
+    </p>
+
+    <!-- Workshop Grid -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+      <!-- Workshop 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden card-fade-up">
+        <div class="h-24 bg-blue-600 flex items-center justify-center">
+          <h3 class="text-xl font-semibold text-white px-4 text-center">UDL Plus One Workshop</h3>
+        </div>
+        <div class="p-5">
+          <p class="text-gray-700 mb-3">February 2024 – Present</p>
+          <p class="text-gray-800">
+            A practical approach to implementing Universal Design for Learning, guiding educators to enhance existing content with strategies that improve accessibility and engagement.
+          </p>
+        </div>
+      </div>
+
+      <!-- Workshop 2 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden card-fade-up">
+        <div class="h-24 bg-green-600 flex items-center justify-center">
+          <h3 class="text-xl font-semibold text-white px-4 text-center">Effective Questioning Techniques</h3>
+        </div>
+        <div class="p-5">
+          <p class="text-gray-700 mb-3">November 2023 – Present</p>
+          <p class="text-gray-800">
+            A 60-minute workshop on using strategic questioning to promote retrieval practice and knowledge construction among learners.
+          </p>
+        </div>
+      </div>
+
+      <!-- Workshop 3 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden card-fade-up">
+        <div class="h-24 bg-purple-600 flex items-center justify-center">
+          <h3 class="text-xl font-semibold text-white px-4 text-center">Modeling and Examples</h3>
+        </div>
+        <div class="p-5">
+          <p class="text-gray-700 mb-3">November 2023 – Present</p>
+          <p class="text-gray-800">
+            Guides educators in structured modeling approaches and strategic example usage to enhance student comprehension of complex concepts.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Featured Course -->
+    <div class="bg-white rounded-lg shadow-md p-6 card-fade-up mb-12">
+      <div class="bg-blue-100 py-3 rounded-t-lg">
+        <h3 class="text-2xl font-bold text-center text-blue-900">
+          Featured Course: Tools and Techniques for Adult Learning
+        </h3>
+      </div>
+
+      <div class="p-6">
+        <p class="text-gray-700 mb-3 text-center">March 2020 – Present</p>
+
+        <p class="text-gray-800 mb-6 text-center max-w-3xl mx-auto">
+          A comprehensive self-paced course preparing instructors for effective, inclusive teaching. Participants explore evidence-based training development, curriculum design, and adult learning strategies.
+        </p>
+
+        
+      </div>
+    </div>
+
+    <!-- Unified Tag Cloud for Educator Development -->
+    <div class="flex flex-wrap gap-3 justify-center mt-16">
+      <span class="tag tag-blue">Universal Design for Learning (UDL)</span>
+      <span class="tag tag-green">Inclusive Pedagogy</span>
+      <span class="tag tag-purple">Retrieval Practice</span>
+      <span class="tag tag-orange">Curriculum Design</span>
+      <span class="tag tag-yellow">Faculty Development</span>
+      <span class="tag tag-teal">Workshop Facilitation</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Divider -->
+<hr class="my-16 border-gray-300 fade-divider">
+
 
         <!-- Experience Section -->
-        <section id="experience" class="py-20 bg-gray-50" aria-labelledby="experience-heading">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 id="experience-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Professional Experience</h2>
-                <div class="max-w-3xl mx-auto">
-                    <div class="timeline-item pb-12">
-                        <div class="timeline-dot" aria-hidden="true"></div>
-                        <div class="bg-white rounded-lg shadow-md p-6 ml-4">
-                            <div class="flex flex-wrap justify-between items-start mb-3">
-                                <div>
-                                    <h3 class="text-xl font-semibold">Manager, Curriculum Department</h3>
-                                    <p class="text-gray-700">Occupational Safety Group</p>
-                                </div>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
-                                    2016-Present
-                                </div>
-                            </div>
-                            <p class="mb-4">Leading the design, implementation, and continuous improvement of learning programs with measurable impacts:</p>
-                            <ul class="space-y-2 mb-4">
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>Enhanced learner satisfaction by 17% through improved accessibility and engagement strategies</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>Led procurement and implementation of a data-centric LMS, increasing assessment data collection sixfold</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>Achieved full AODA and WCAG accessibility compliance across all digital learning environments</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                    </svg>
-                                    <span>Facilitated workshops on evidence-based learning strategies with over 90% of participants reporting increased teaching effectiveness</span>
-                                </li>
-                            </ul>
-                            <div class="mt-4">
-                                <a href="leadership.html" class="text-blue-600 hover:text-blue-800 font-medium text-link">Learn more about my leadership philosophy →</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Add more timeline items here if needed -->
-                </div>
-            </div>
-        </section>
+<!-- Educational Leadership Section -->
+<section id="experience" class="py-20 bg-gray-50 fade-in" aria-labelledby="experience-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <section id="academic-experience" class="py-20 bg-gray-50" aria-labelledby="academic-experience-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="academic-experience-heading" class="text-3xl font-bold text-center text-gray-900 mb-6">Academic Experience</h2>
-        <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-12">
-            My teaching experience spans multiple institutions, formats, and approaches, informing my work in educational development and curriculum design.
-        </p>
-        
-        <div class="grid md:grid-cols-2 gap-6 mb-8">
-            <!-- University of Illinois -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-semibold">University of Illinois Urbana-Champaign</h3>
-                        <p class="text-gray-700">Lecturer</p>
-                    </div>
-                    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
-                        2015
-                    </div>
-                </div>
-                <ul class="space-y-2 mb-4">
-                    <li class="flex items-start">
-                        <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>LAT 491: Readings in Latin Literature</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>CLCV 222: The Tragic Spirit</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>CLCV 132: Classical Archaeology, Italy and Rome</span>
-                    </li>
-                </ul>
-                <p class="text-gray-800">Mentored teaching assistants in interactive techniques and strategies for fostering inclusive, student-centered discussions while designing and delivering engaging courses in classical literature and archaeology.</p>
-            </div>
-            
-            <!-- Quest University -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-semibold">Quest University</h3>
-                        <p class="text-gray-700">Visiting Faculty</p>
-                    </div>
-                    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
-                        2013
-                    </div>
-                </div>
-                <ul class="space-y-2 mb-4">
-                    <li class="flex items-start">
-                        <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span>HUM 2100: Fate and Virtue (Block System)</span>
-                    </li>
-                </ul>
-                <p class="text-gray-800">Delivered this intensive 4-week block course twice, exploring ancient texts to understand themes of fate and virtue while connecting these concepts to challenges in modern life. Adapted teaching approaches based on student feedback between offerings.</p>
-            </div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-            <!-- Western University -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-semibold">University of Western Ontario</h3>
-                        <p class="text-gray-700">Instructor & Teaching Assistant</p>
-                    </div>
-                    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
-                        2009-2012
-                    </div>
-                </div>
-                <p class="text-gray-800 mb-4">Taught Latin 1000 in a blended format and supported multiple Classics courses as a teaching assistant, developing skills in assessment design and student mentorship.</p>
-                <p class="text-gray-700 italic">Teaching Assistant roles included: Crime and Punishment in Ancient Greece and Rome, Alexander the Great, Daily Life in Ancient Rome, and Classical Civilization</p>
-            </div>
-            
-            <!-- University of Manitoba -->
-            <div class="bg-white rounded-lg shadow-md p-6">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-xl font-semibold">University of Manitoba</h3>
-                        <p class="text-gray-700">Instructor</p>
-                    </div>
-                    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
-                        2008
-                    </div>
-                </div>
-                <p class="text-gray-800 mb-4">Designed and delivered two introductory Latin courses, developing curriculum materials and assessment strategies for language acquisition.</p>
-                <p class="text-gray-700 italic">Courses: Latin 1080 & Latin 1090: Introduction to Latin</p>
-            </div>
-        </div>
-    </div>
-</section>
+    <h2 id="experience-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Educational Leadership</h2>
 
-<!-- Projects Section - Fixed -->
-<section id="projects" class="py-20 bg-gray-50" aria-labelledby="projects-heading">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="projects-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
-        
-        <!-- Featured Project - Full Width -->
-        <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
-            <div class="md:flex">
-                <div class="md:w-1/3">
-                    <img src="images/ajax.jpg" alt="Classical engraving of Ajax, a hero from Greek mythology" class="h-full w-full object-cover" />
-                </div>
-                <div class="p-6 md:w-2/3">
-                    <div class="mb-3">
-                        <span class="tag tag-green">Cultural Preservation</span>
-                        <span class="tag tag-blue">Intergenerational Learning</span>
-                        <span class="tag tag-pink">Classical Wisdom</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Featured Project: Memory Garden</h3>
-                    <p class="text-gray-800 mb-4">
-                        A self-paced learning module exploring the design of spaces that preserve cultural knowledge and bridge generational gaps. This project blends insights from classical wisdom traditions with contemporary approaches to multisensory learning experiences.
-                    </p>
-                    <p class="text-gray-800 mb-4">
-                        The Memory Garden concept creates intentional environments where sensory triggers naturally evoke stories and traditions, facilitating meaningful intergenerational connections and preservation of heritage.
-                    </p>
-                    <div class="flex justify-end">
-                        <a href="https://jameskruck.github.io/projects/memory-garden.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
-                            Explore the Memory Garden
-                            <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Other Projects - Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <!-- Project 1 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                <div class="h-48 bg-blue-100 flex items-center justify-center" aria-hidden="true">
-                    <img src="/api/placeholder/400/320" alt="Visual representation of the GenAI workshop interface" class="object-cover h-full w-full" />
-                </div>
-                <div class="p-6">
-                    <div class="mb-3" aria-label="Project categories">
-                        <span class="tag tag-blue">Faculty Development</span>
-                        <span class="tag tag-green">AI in Education</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">GenAI in Teaching & Learning Workshop</h3>
-                    <p class="text-gray-700 mb-4">
-                        A four-part interactive workshop that guides faculty from AI exploration to practical implementation. Combines hands-on experimentation with evidence-based teaching strategies and addresses the gap between student adoption (45%) and faculty usage (15%) of AI tools.
-                    </p>
-                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
-                </div>
-            </div>
+    <!-- New Leadership Philosophy Intro -->
+    <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-16">
+      I believe educational leadership is about fostering environments where both learners and educators can thrive. My approach centers on collaboration, inclusivity, evidence-based practice, and sustainable improvement of learning outcomes.
+    </p>
 
-            <!-- Project 2 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                <div class="h-48 bg-green-100 flex items-center justify-center" aria-hidden="true">
-                    <img src="/api/placeholder/400/320" alt="Visual representation of the UDL workshop materials" class="object-cover h-full w-full" />
-                </div>
-                <div class="p-6">
-                    <div class="mb-3" aria-label="Project categories">
-                        <span class="tag tag-blue">Accessibility</span>
-                        <span class="tag tag-purple">Inclusive Teaching</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
-                    <p class="text-gray-700 mb-4">
-                        An experiential workshop that introduces safety trainers to Universal Design for Learning through the practical "Plus One" approach. Uses lockout procedures as a concrete example to demonstrate how traditional training can be enhanced.
-                    </p>
-                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
-                </div>
-            </div>
+    <div class="max-w-3xl mx-auto">
 
-            <!-- Project 3 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                <div class="h-48 bg-purple-100 flex items-center justify-center" aria-hidden="true">
-                    <img src="/api/placeholder/400/320" alt="Visual representation of LMS data dashboard" class="object-cover h-full w-full" />
-                </div>
-                <div class="p-6">
-                    <div class="mb-3" aria-label="Project categories">
-                        <span class="tag tag-orange">Learning Analytics</span>
-                        <span class="tag tag-blue">Technology</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Data-Driven LMS Implementation</h3>
-                    <p class="text-gray-700 mb-4">
-                        Led the strategic selection and implementation of a learning management system that increased assessment data collection sixfold. Developed analytics approaches to identify learning bottlenecks and improve student outcomes.
-                    </p>
-                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
-                </div>
-            </div>
+      <!-- Timeline Item -->
+      <div class="timeline-item pb-12 card-fade-up">
+        <div class="timeline-dot bg-blue-500" aria-hidden="true"></div>
+        <div class="bg-white rounded-lg shadow-md p-6 ml-4">
 
-            <!-- Project 4 -->
-            <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                <div class="h-48 bg-indigo-100 flex items-center justify-center" aria-hidden="true">
-                    <img src="/api/placeholder/400/320" alt="Visual representation of the course redesign" class="object-cover h-full w-full" />
-                </div>
-                <div class="p-6">
-                    <div class="mb-3" aria-label="Project categories">
-                        <span class="tag tag-blue">Curriculum Development</span>
-                        <span class="tag tag-purple">Digital Pedagogy</span>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-2">Digital Course Redesign: The Tragic Spirit</h3>
-                    <p class="text-gray-700 mb-4">
-                        Transformed a traditional Classics course into an engaging digital experience using UDL principles and culturally responsive teaching. The redesign features multiple engagement pathways and diverse cultural perspectives.
-                    </p>
-                    <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
-                </div>
+          <!-- Role Title and Date -->
+          <div class="flex flex-wrap justify-between items-start mb-3">
+            <div>
+              <h3 class="text-xl font-semibold">Manager, Curriculum Department</h3>
+              <p class="text-gray-700">Occupational Safety Group</p>
             </div>
-        </div>
+            <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+              2016–Present
+            </div>
+          </div>
 
-        <!-- Button Below the Grid -->
-        <div class="text-center mt-10">
-            <a href="projects.html" class="inline-block bg-white border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-                View All Projects
+          <!-- Impact Statement -->
+          <p class="mb-4">Leading the design, implementation, and continuous improvement of learning programs with measurable impacts:</p>
+
+          <!-- Updated Bullet Points -->
+          <ul class="space-y-2 mb-4">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Improved learner satisfaction by 17% through accessibility and engagement enhancements</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Procured and implemented a data-driven LMS, increasing assessment data collection by 600%</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Achieved 100% AODA and WCAG 2.1 compliance across digital learning environments</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-green-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <span>Facilitated evidence-based learning workshops with 90% of participants reporting increased teaching effectiveness</span>
+            </li>
+          </ul>
+
+          <!-- Link to Leadership Philosophy -->
+          <div class="mt-4">
+            <a href="leadership.html" class="text-blue-600 hover:text-blue-800 font-medium text-link">
+              Learn more about my leadership philosophy →
             </a>
+          </div>
+
         </div>
+      </div>
+
     </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<hr class="my-16 border-gray-300 fade-divider">
+
+<!-- Academic Experience Section -->
+<section id="academic-experience" class="py-20 bg-gray-50 fade-in" aria-labelledby="academic-experience-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 id="academic-experience-heading" class="text-3xl font-bold text-center text-gray-900 mb-6">Academic Experience</h2>
+
+    <!-- Updated Stronger Intro -->
+    <p class="text-lg text-gray-800 text-center max-w-3xl mx-auto mb-12">
+      My academic teaching journey spans multiple universities and course formats, providing a foundation for my educational development work. Through this experience, I refined my approach to curriculum design, inclusive teaching, blended learning, and student mentorship.
+    </p>
+
+    <!-- Grid of Academic Positions -->
+    <div class="grid md:grid-cols-2 gap-6 mb-8">
+
+      <!-- University of Illinois -->
+      <div class="bg-white rounded-lg shadow-md p-6 card-fade-up">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-semibold">University of Illinois Urbana-Champaign</h3>
+            <p class="text-gray-700">Lecturer</p>
+          </div>
+          <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+            2015
+          </div>
+        </div>
+
+        <p class="text-gray-700 font-semibold mb-2">Courses Taught:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>LAT 491: Readings in Latin Literature</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>CLCV 222: The Tragic Spirit</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>CLCV 132: Classical Archaeology, Italy and Rome</span>
+          </li>
+        </ul>
+        <p class="text-gray-800">
+          Mentored teaching assistants in interactive techniques and strategies for fostering inclusive, student-centered discussions while designing and delivering engaging courses in classical literature and archaeology.
+        </p>
+      </div>
+
+      <!-- Quest University -->
+      <div class="bg-white rounded-lg shadow-md p-6 card-fade-up">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <h3 class="text-xl font-semibold">Quest University</h3>
+            <p class="text-gray-700">Visiting Faculty</p>
+          </div>
+          <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+            2013
+          </div>
+        </div>
+
+        <p class="text-gray-700 font-semibold mb-2">Courses Taught:</p>
+        <ul class="space-y-2 mb-4">
+          <li class="flex items-start">
+            <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>HUM 2100: Fate and Virtue (Block System)</span>
+          </li>
+        </ul>
+        <p class="text-gray-800">
+          Delivered an intensive 4-week block course, exploring ancient texts to understand themes of fate and virtue while connecting these concepts to challenges in modern life. Adapted teaching approaches based on student feedback between offerings.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <!-- Western University -->
+<div class="bg-white rounded-lg shadow-md p-6 card-fade-up">
+  <div class="flex justify-between items-start mb-4">
+    <div>
+      <h3 class="text-xl font-semibold">University of Western Ontario</h3>
+      <p class="text-gray-700">Instructor & Teaching Assistant</p>
+    </div>
+    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+      2009–2012
+    </div>
+  </div>
+
+  <p class="text-gray-700 font-semibold mb-2">Courses Taught:</p>
+  <ul class="space-y-2 mb-4">
+    <li class="flex items-start">
+      <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>Latin 1000 (Blended Format)</span>
+    </li>
+  </ul>
+
+  <p class="text-gray-800 mb-2">
+    Supported multiple Classics courses as a teaching assistant, developing skills in assessment design and student mentorship.
+  </p>
+  <p class="text-gray-700 italic">
+    Teaching Assistant roles included: Crime and Punishment in Ancient Greece and Rome, Alexander the Great, Daily Life in Ancient Rome, and Classical Civilization.
+  </p>
+</div>
+
+
+      <!-- University of Manitoba -->
+<div class="bg-white rounded-lg shadow-md p-6 card-fade-up">
+  <div class="flex justify-between items-start mb-4">
+    <div>
+      <h3 class="text-xl font-semibold">University of Manitoba</h3>
+      <p class="text-gray-700">Instructor</p>
+    </div>
+    <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+      2008
+    </div>
+  </div>
+
+  <p class="text-gray-700 font-semibold mb-2">Courses Taught:</p>
+  <ul class="space-y-2 mb-4">
+    <li class="flex items-start">
+      <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>Latin 1080: Introduction to Latin</span>
+    </li>
+    <li class="flex items-start">
+      <svg class="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <span>Latin 1090: Introduction to Latin</span>
+    </li>
+  </ul>
+
+  <p class="text-gray-800">
+    Designed and delivered two introductory Latin courses, developing curriculum materials and assessment strategies for language acquisition.
+  </p>
+</div>
+
+
+    </div>
+
+    <!-- Optional Tag Cloud -->
+    <div class="flex flex-wrap gap-3 justify-center mt-12">
+      <span class="tag tag-blue">Curriculum Design</span>
+      <span class="tag tag-green">Inclusive Teaching</span>
+      <span class="tag tag-purple">Blended Learning</span>
+      <span class="tag tag-orange">Assessment Strategies</span>
+      <span class="tag tag-teal">Student Mentorship</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- Divider -->
+<hr class="my-16 border-gray-300 fade-divider">
+<!-- Projects Section - Fixed and Synced -->
+<section id="projects" class="py-24 bg-gray-50 fade-in" aria-labelledby="projects-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <h2 id="projects-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
+
+    <!-- Featured Project: Memory Garden -->
+    <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+      <div class="md:flex">
+        <div class="md:w-1/3">
+          <img src="images/ajax.jpg" alt="Classical engraving of Ajax, a hero from Greek mythology" class="h-full w-full object-cover" />
+        </div>
+        <div class="p-6 md:w-2/3">
+          <h3 class="text-xl font-semibold mb-2">Featured Project: Memory Garden</h3>
+          <p class="text-gray-800 mb-4">
+            A self-paced learning module exploring the design of spaces that preserve cultural knowledge and bridge generational gaps. This project blends insights from classical wisdom traditions with contemporary approaches to multisensory learning experiences.
+          </p>
+          <p class="text-gray-800 mb-4">
+            The Memory Garden concept creates intentional environments where sensory triggers naturally evoke stories and traditions, facilitating meaningful intergenerational connections and preservation of heritage.
+          </p>
+          <div class="flex justify-end">
+            <a href="https://jameskruck.github.io/projects/memory-garden.html" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+              Explore the Memory Garden
+              <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Project: GenAI Workshop -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+        <div class="h-48 bg-blue-100 flex items-center justify-center" aria-hidden="true">
+          <img src="/api/placeholder/400/320" alt="Visual representation of the GenAI workshop interface" class="object-cover h-full w-full" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">GenAI in Teaching & Learning Workshop</h3>
+          <p class="text-gray-700 mb-4">
+            A four-part interactive workshop that guides faculty from AI exploration to practical implementation. Combines hands-on experimentation with evidence-based teaching strategies and addresses the gap between student adoption (45%) and faculty usage (15%) of AI tools.
+          </p>
+          <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project: UDL Plus One Workshop -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+        <div class="h-48 bg-green-100 flex items-center justify-center" aria-hidden="true">
+          <img src="/api/placeholder/400/320" alt="Visual representation of the UDL workshop materials" class="object-cover h-full w-full" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
+          <p class="text-gray-700 mb-4">
+            An experiential workshop that introduces safety trainers to Universal Design for Learning through the practical "Plus One" approach. Uses lockout procedures as a concrete example to demonstrate how traditional training can be enhanced.
+          </p>
+          <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project: Tragic Spirit Redesign -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+        <div class="h-48 bg-indigo-100 flex items-center justify-center" aria-hidden="true">
+          <img src="/api/placeholder/400/320" alt="Visual representation of the course redesign" class="object-cover h-full w-full" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Digital Course Redesign: The Tragic Spirit</h3>
+          <p class="text-gray-700 mb-4">
+            Transformed a traditional Classics course into an engaging digital experience using UDL principles and culturally responsive teaching. The redesign features multiple engagement pathways and diverse cultural perspectives.
+          </p>
+          <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+        </div>
+      </div>
+
+      <!-- Project: Interactive Learning Artifacts Showcase -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
+        <div class="h-48 bg-purple-100 flex items-center justify-center" aria-hidden="true">
+          <img src="/api/placeholder/400/320" alt="Visual representation of the learning artifacts showcase" class="object-cover h-full w-full" />
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2">Interactive Learning Artifacts Showcase</h3>
+          <p class="text-gray-700 mb-4">
+            A dynamic collection of digital learning artifacts designed to foster creative assessment and experiential learning across disciplines.
+          </p>
+          <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition text-link">View Project →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Button Below the Grid -->
+    <div class="text-center mt-10">
+      <a href="projects.html" class="inline-block bg-white border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+        View All Projects
+      </a>
+    </div>
+
+    <!-- Unified Tag Cloud -->
+    <div class="mt-16 flex flex-wrap justify-center gap-3" aria-label="Project Tags">
+      <span class="tag tag-green">Cultural Preservation</span>
+      <span class="tag tag-blue">Intergenerational Learning</span>
+      <span class="tag tag-pink">Classical Wisdom</span>
+      <span class="tag tag-blue">Educator Development</span>
+      <span class="tag tag-green">AI in Education</span>
+      <span class="tag tag-blue">Accessibility</span>
+      <span class="tag tag-purple">Inclusive Teaching</span>
+      <span class="tag tag-blue">Curriculum Design</span>
+      <span class="tag tag-purple">Digital Pedagogy</span>
+      <span class="tag tag-orange">Creative Assessment</span>
+      <span class="tag tag-teal">Experiential Learning</span>
+    </div>
+
+  </div>
 </section>
 
 
-   
+<!-- Divider: Top gray, bottom white -->
+<div class="relative">
+  <!-- Gray background on top -->
+  <div class="bg-gray-50 h-8"></div> <!-- Adjustable height -->
+  
+  <!-- Divider in between -->
+  <hr class="fade-divider mx-auto w-full absolute top-8 left-0">
 
-<section id="skills" class="py-20 bg-white" aria-labelledby="skills-heading">
+  <!-- White background starts immediately after divider -->
+  <div class="bg-white h-8"></div> <!-- Adjustable height -->
+</div>
+
+<!-- Areas of Expertise -->
+<section id="skills" class="py-20 bg-white fade-in" aria-labelledby="skills-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="skills-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">Areas of Expertise</h2>
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -636,12 +1034,11 @@
 
 <!-- Footer -->
 <footer class="bg-gray-800 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
-        <p class="text-gray-400 text-sm">
-            Designed with a focus on accessibility and inclusive design principles.
-        </p>
-    </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="mb-4">
+      Designed and built by James Kruck, with a commitment to accessibility, inclusion, and lifelong learning. © 2025
+    </p>
+  </div>
 </footer>
 
 <!-- Scroll to top button -->
@@ -654,3 +1051,156 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
     </svg>
 </button>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const splash = document.getElementById('splash-screen');
+  const hero = document.querySelector('.fade-in-zoom');
+  const about = document.getElementById('about');
+
+  const heroTitle = document.querySelector('.hero-title');
+  const heroSubcontent = document.querySelector('.hero-subcontent');
+  const heroButton = document.querySelector('.hero-button');
+  const scrollArrow = document.getElementById('scroll-down');
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight &&
+      rect.bottom >= 0
+    );
+  }
+
+  // Step 1: Start fading out splash
+  setTimeout(() => {
+    splash.classList.add('hidden');
+  }, 1200);
+
+  // Step 2: After splash fade-out completes
+  setTimeout(() => {
+    splash.style.display = 'none';
+
+    if (hero) {
+      hero.classList.add('visible');
+    }
+
+    if (about) {
+      about.classList.add('visible');
+    }
+
+    if (heroTitle) {
+      setTimeout(() => {
+        heroTitle.classList.add('visible');
+      }, 300);
+    }
+
+    if (heroSubcontent) {
+      setTimeout(() => {
+        heroSubcontent.classList.add('visible');
+      }, 900);
+    }
+
+    if (heroButton) {
+      setTimeout(() => {
+        heroButton.classList.add('visible');
+      }, 1200);
+    }
+
+    if (scrollArrow) {
+      setTimeout(() => {
+        scrollArrow.classList.add('visible');
+      }, 1600);
+    }
+
+    document.body.classList.remove('no-scroll');
+
+  }, 2000);
+
+  // Step 3: Animate other sections + workshop cards on scroll
+const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .card-fade-up, .fade-divider');
+
+  const fadeInOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -100px 0px"
+  };
+
+  const fadeInObserver = new IntersectionObserver(function(entries, observer) {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 150);
+        fadeInObserver.unobserve(entry.target);
+      }
+    });
+  }, fadeInOptions);
+
+  fadeElements.forEach(element => {
+    if (window.innerWidth >= 768) {
+      if (element.classList.contains('fade-in')) {
+        element.classList.remove('fade-in');
+        if (Math.random() > 0.5) {
+          element.classList.add('fade-in-left');
+        } else {
+          element.classList.add('fade-in-right');
+        }
+      }
+    }
+    fadeInObserver.observe(element);
+  });
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    splash.classList.add('opacity-0', 'pointer-events-none');
+    setTimeout(() => splash.style.display = 'none', 1000); // Fully remove after fade
+  }, 1500); // Delay before fade starts (1.5 seconds)
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    splash.classList.add('opacity-0', 'pointer-events-none');
+    
+    setTimeout(() => {
+      splash.style.display = 'none';
+      // Now fade in main content
+      const mainContent = document.getElementById('main-content');
+      mainContent.classList.remove('opacity-0');
+    }, 1000); // After splash fade out (1 second)
+    
+  }, 1500); // Initial splash delay
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    const splash = document.getElementById('splash-screen');
+    splash.classList.add('opacity-0', 'pointer-events-none');
+
+    setTimeout(() => {
+      splash.style.display = 'none';
+      
+      const mainContent = document.getElementById('main-content');
+      mainContent.classList.remove('opacity-0');
+      
+      const header = document.getElementById('site-header');
+      header.classList.remove('opacity-0');
+      
+    }, 1000);
+  }, 1500);
+});
+</script>
+
+
+
+
+
+
+
+
+
+
