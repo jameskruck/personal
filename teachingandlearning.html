@@ -1,0 +1,550 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teaching & Learning - James Kruck, PhD</title>
+  <meta name="description" content="Curated teaching and learning resources including research, strategies, and reflections for educators and designers." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/common.js" defer></script>
+</head>
+<body class="bg-gray-50">
+  <!-- Skip to content link for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+        </div>
+        <div class="hidden md:block" aria-label="Desktop Navigation">
+          <div class="flex space-x-8">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+            <a href="education.html" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+            <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+            <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition">Leadership</a>
+            <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+            <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">Educational Projects</a>
+            <a href="resources.html" class="text-blue-600 font-medium" aria-current="page">Resources</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile menu, hidden by default -->
+    <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+      <div class="flex flex-col space-y-3">
+        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Home</a>
+        <a href="education.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
+        <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+        <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Leadership</a>
+        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+        <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Educational Projects</a>
+        <a href="resources.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Resources</a>
+        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="page-hero" aria-labelledby="page-heading">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">Teaching & Learning</h1>
+        <p class="text-xl text-gray-800 mb-6">
+          Curated research, practical strategies, and reflections on how people teach and learn.
+        </p>
+        <div class="flex flex-wrap gap-3" aria-label="Resource types">
+          <span class="tag tag-green">Learning Science</span>
+          <span class="tag tag-blue">Metacognition</span>
+          <span class="tag tag-purple">Instructional Design</span>
+          <span class="tag tag-orange">Faculty Development</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content" class="pb-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+      <div class="lg:flex gap-8">
+
+        <!-- Sidebar -->
+        <aside class="lg:w-1/4 mb-8 lg:mb-0">
+          <div class="sidebar bg-white rounded-lg shadow-sm p-4 lg:sticky lg:top-32">
+            <nav aria-label="Section Navigation">
+              <a href="#introduction" class="sidebar-link">Introduction</a>
+              <a href="#podcasts" class="sidebar-link">Podcasts</a>
+              <a href="#books" class="sidebar-link">Books</a>
+              <a href="#articles" class="sidebar-link">Articles</a>
+            </nav>
+            <div class="mt-8 pt-4 border-t border-gray-200">
+              <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+              <a href="resources.html" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18"></path>
+                </svg>
+                <span>Back to All Resources</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="lg:w-3/4">
+          <!-- Introduction Section -->
+          <section id="introduction" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Introduction</h2>
+            <p class="text-gray-800 mb-4">
+              The science of teaching and learning offers invaluable insights for educators and instructional designers alike. This collection brings together research, practical strategies, and reflective discussions aimed at improving teaching practices and enhancing student learning outcomes.
+            </p>
+            <p class="text-gray-800">
+              From active learning in the humanities to evidence-based techniques like retrieval practice, these resources explore foundational concepts and innovative methods that can transform how we teach and learn. Whether you're looking to deepen your understanding of metacognition, improve transparency in your courses, or explore the role of student beliefs in study habits, there's something here for every educator seeking to grow their craft.
+            </p>
+          </section>
+
+          <!-- Podcasts Section -->
+          <section id="podcasts" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Podcasts</h2>
+            
+            <!-- Intentional Teaching -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://intentionalteaching.buzzsprout.com/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Intentional Teaching: Active Learning in the Humanities
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Derek Bruff with guests Todd Clary, Stephen Sansom, and Carolyn Aslan</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                This episode discusses a case study involving the transformation of a Classical Studies course. It's a perfect intersection of my interests in classics and educational development. The episode explores how active learning approaches can be implemented in humanities courses traditionally taught through lectures.
+              </p>
+              
+              <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/6A7x41P8umcgcHc3vcoMGm?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              
+              <div class="flex justify-end">
+                <a href="https://pca.st/x99rys11" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Listen to Episode
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Teaching in Higher Ed -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://teachinginhighered.com/podcast/transparency-in-learning-and-teaching/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Teaching in Higher Ed: Transparency in Learning and Teaching
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Bonni Stachowiak with guest Kerry Mandulak</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                This podcast offers practical discussion around transparency in teaching, with particular emphasis on syllabus design. Mandulak shares insights from the TILT Higher Ed framework (Transparency in Learning and Teaching) and demonstrates how making learning processes explicit improves student outcomes, particularly for first-generation and underrepresented students.
+              </p>
+              
+              <div class="bg-gray-100 p-4 rounded-lg mb-6">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/episode/3iVIw3g8d3dArZ4y8uU9rc?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+              </div>
+              
+              <div class="flex justify-end">
+                <a href="https://pca.st/qth8rud9" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Listen to Episode
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex justify-center">
+              <a href="https://open.spotify.com/show/5WvYV7Y8Ey5kTJemyyY0iX" target="_blank" rel="noopener" class="inline-flex items-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2">
+                Explore More Episodes
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                </svg>
+              </a>
+            </div>
+          </section>
+
+          <!-- Books Section -->
+          <section id="books" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Books</h2>
+            
+            <!-- Recentering Learning -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://jhupbooks.press.jhu.edu/title/recentering-learning" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Recentering Learning
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Edited by Maggie Debelius, Joshua Kim, and Edward Maloney</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                This book provides a balanced view of the pandemic's impact alongside broader disruptions in higher education. It brings together voices from across academia reflecting on transformation, innovation, and equity. Rather than simply documenting crisis response, the book offers a forward-looking perspective on reimagining education through the lens of student-centered design.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://jhupbooks.press.jhu.edu/title/recentering-learning" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Learn More
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- How Learning Happens -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://www.routledge.com/How-Learning-Happens-Seminal-Works-in-Educational-Psychology-and-What-They/Kirschner-Hendrick/p/book/9780367184575" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  How Learning Happens
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Paul A. Kirschner and Carl Hendrick</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                Kirschner and Hendrick masterfully summarize major findings from educational psychology in accessible language. The book organizes 28 key works into thematic sections, providing practical classroom applications for each concept. I particularly recommend the chapters "Feed Up, Feedback, Feed Forward," "Culture of Learning," and "Direct Instruction" for their clear connections between theory and practice.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://www.routledge.com/How-Learning-Happens-Seminal-Works-in-Educational-Psychology-and-What-They/Kirschner-Hendrick/p/book/9780367184575" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Learn More
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- How Teaching Happens -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://www.routledge.com/How-Teaching-Happens-Seminal-Works-in-Teaching-and-Teacher-Effectiveness/Kirschner-Hendrick-Caviglioli/p/book/9781032202433" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  How Teaching Happens
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Paul A. Kirschner, Carl Hendrick, and Oliver Caviglioli</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                The follow-up to How Learning Happens, this volume focuses on instructional practices and teacher development. Particularly excellent chapters include "Teachers Are Made, Not Born" and "It's All About Alignment." The book combines research-informed insights with practical guidance, making complex teaching concepts accessible without oversimplification.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://www.routledge.com/How-Teaching-Happens-Seminal-Works-in-Teaching-and-Teacher-Effectiveness/Kirschner-Hendrick-Caviglioli/p/book/9781032202433" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Learn More
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Teaching at Its Best -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://www.wiley.com/en-us/Teaching+at+Its+Best%3A+A+Research+Based+Resource+for+College+Instructors%2C+4th+Edition-p-9781119096320" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Teaching at Its Best
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Linda B. Nilson</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                Linda Nilson's comprehensive guide covers the full life cycle of teaching—from course planning and instructional methods to feedback and grading. A mentor first recommended it to me years ago, and it remains my go-to reference for practical teaching guidance. Now in its fourth edition, the book continually evolves to incorporate new research while maintaining its clear, actionable approach.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://www.wiley.com/en-us/Teaching+at+Its+Best%3A+A+Research+Based+Resource+for+College+Instructors%2C+4th+Edition-p-9781119096320" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Learn More
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Articles Section -->
+          <section id="articles" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-6">Articles</h2>
+            
+            <!-- Article 1 -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31952126/" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  A Learning Method for All: Evidence from Behavioral and Neural Data
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Meyer, A.N., Bommarito, M., Shane-Simpson, C., et al.</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                This study on the testing effect shows how retrieval practice benefits all learners, regardless of ability level. Using both behavioral and fMRI data, the researchers demonstrated that retrieval practice is an effective learning strategy across different student populations. The paper makes a compelling case for incorporating regular low-stakes testing into educational settings as a tool for learning, not just assessment.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/31952126/" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Read Article
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Article 2 -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://journals.sagepub.com/doi/10.1177/0098628309350886" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Metacognitive Awareness in Undergraduates: A Comparison of Psychology Majors and Other Majors
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Jennifer McCabe</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                McCabe's research reveals a fascinating disconnect between students' preferred learning strategies and those that are actually effective. The study found that while students were familiar with many learning strategies, they tended to favor less effective approaches like highlighting and rereading. However, with explicit instruction on evidence-based learning techniques, both awareness and learning outcomes improved significantly.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://journals.sagepub.com/doi/10.1177/0098628309350886" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Read Article
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Article 3 -->
+            <div class="mb-8 pb-8 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jnr.24807" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  Which Techniques Do Students Actually Use? An Investigation of Secondary Students' Study Habits
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Bartoszewski, B.L., & Gurung, R.A.R.</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                This article explores the substantial gap between evidence-based learning techniques and the actual habits of secondary students. The research found that despite decades of evidence supporting strategies like distributed practice and retrieval practice, students predominantly use less effective methods like rereading and highlighting. The authors emphasize the need for explicit instruction in effective study strategies, as students don't naturally gravitate toward the most effective approaches.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/jnr.24807" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Read Article
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            <!-- Article 4 -->
+            <div class="mb-8">
+              <h3 class="text-xl font-semibold mb-2">
+                <a href="https://link.springer.com/article/10.1007/s11409-021-09270-y" class="text-blue-600 hover:text-blue-800 transition" target="_blank" rel="noopener">
+                  What Predicts Study Quality? Exploring the Roles of Implicit Beliefs and Course Interest
+                  <svg class="inline-block ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </h3>
+              <p class="text-gray-700 mb-3">Yan, V.X., & Wang, W.</p>
+              
+              <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
+              <p class="text-gray-800 mb-4">
+                Yan and Wang's research connects implicit beliefs and course interest to effective strategy use, emphasizing the importance of teaching students not just to work hard—but to work smart. The study found that students who believe intelligence is malleable (growth mindset) and who have higher interest in course content are more likely to use effective study strategies. These findings suggest that addressing motivational factors alongside strategy instruction may be more effective than focusing solely on techniques.
+              </p>
+              
+              <div class="flex justify-end">
+                <a href="https://link.springer.com/article/10.1007/s11409-021-09270-y" class="inline-flex items-center px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2" target="_blank" rel="noopener">
+                  Read Article
+                  <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Connect Section -->
+          <section class="bg-white rounded-lg shadow-sm p-6 text-center">
+            <p class="text-gray-800 mb-6">
+              I continually update this collection as I discover new resources. If you know of other valuable resources on teaching and learning that should be included here, please <a href="contact.html" class="text-blue-600 hover:text-blue-800">let me know</a>.
+            </p>
+            
+            <div class="flex justify-center space-x-4">
+              <a href="https://bsky.app/profile/jameskruck.bsky.social" class="text-blue-600 hover:text-blue-800 p-2 rounded-full hover:bg-blue-50 transition" target="_blank" rel="noopener" aria-label="Bluesky Profile">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 17.5228 6.47813 22 12.001 22C17.5238 22 22.001 17.5228 22.001 12C22.001 6.47715 17.5238 2 12.001 2ZM8.40733 14.6256V9.89106H10.5516C10.5516 9.89106 10.2268 13.595 13.1246 13.595C14.2223 13.595 15.0861 12.8293 15.0861 11.6506C15.0861 10.3139 14.2951 9.69428 12.1704 9.11773C9.79699 8.46114 7.94596 7.29243 7.94596 5.08568C7.94596 2.23502 10.6331 2.01557 10.6331 2.01557C10.6331 2.01557 16.0823 1.89719 16.0823 6.17358H13.9381C13.9381 6.17358 14.0157 3.28447 11.5532 3.28447C10.3745 3.28447 9.80119 4.00672 9.80119 4.83728C9.80119 6.02919 10.9291 6.48755 12.0738 6.80276C14.6054 7.53312 17.0019 8.40997 17.0019 11.7282C17.0019 14.3307 14.8578 15.1119 13.5141 15.1119C9.51373 15.1119 9.51373 11.0645 9.51373 11.0645H8.40733V14.6256Z"/>
+                </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/james-kruck-77485a102/" class="text-blue-600 hover:text-blue-800 p-2 rounded-full hover:bg-blue-50 transition" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+      <p class="text-gray-400 text-sm">
+        Designed with a focus on accessibility and inclusive design principles.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button 
+    id="scrollToTopBtn" 
+    class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+    aria-label="Scroll to top"
+  >
+    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
+
+  <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    if (menuButton && mobileMenu) {
+      menuButton.addEventListener('click', () => {
+        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('open');
+      });
+    }
+    
+    // Scroll to top functionality
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+    
+    if (scrollToTopBtn) {
+      window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+          scrollToTopBtn.style.opacity = '1';
+        } else {
+          scrollToTopBtn.style.opacity = '0';
+        }
+      });
+      
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    }
+    
+    // Highlight active section in sidebar based on scroll position
+    function highlightActiveSidebarLink() {
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.sidebar-link');
+
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        
+        if (window.pageYOffset >= sectionTop - 200 && window.pageYOffset < sectionTop + sectionHeight - 200) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href');
+        if (href && href.slice(1) === currentSection) {
+          link.classList.add('active');
+        }
+      });
+    }
+    
+    window.addEventListener('scroll', highlightActiveSidebarLink);
+    window.addEventListener('load', highlightActiveSidebarLink);
+  </script>
+  <!-- GoatCounter Analytics -->
+<script data-goatcounter="https://jameskruck.goatcounter.com/count"
+        data-goatcounter-settings='{"no_onload": true}'
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({
+        path: location.pathname + location.search + location.hash,
+        title: document.title
+      });
+    }
+  });
+</script>
+
+<!-- Floating GoatCounter Admin Button -->
+<div id="goatcounter-admin" class="hidden fixed bottom-4 right-4 z-50">
+  <a href="https://jameskruck.goatcounter.com/" target="_blank" rel="noopener"
+     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    📈 Site Stats
+  </a>
+</div>
+<script>
+  if (location.hostname.includes("jameskruck")) {
+    document.getElementById('goatcounter-admin').classList.remove('hidden');
+  }
+</script>

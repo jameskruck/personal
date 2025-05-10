@@ -115,6 +115,10 @@ nav.bg-white {
     transform: scale(1.05);
     background-color: rgba(59, 130, 246, 0.2); /* Slightly brighter background on hover */
 }
+.tag-pink {
+  background-color: rgba(236, 72, 153, 0.15); /* Light pink background */
+  color: #be185d; /* Darker pink text for contrast */
+}
 
 .tag-blue {
     background-color: rgba(59, 130, 246, 0.15);
@@ -562,4 +566,35 @@ footer.bg-gray-800 {
 .animate-fade-in {
   animation: fade-in 1.5s ease-out forwards;
 }
+/* Custom Amber Colors for Resources */
+.bg-amber-600 {
+  background-color: #f59e0b; /* Tailwind 3 Amber-600 hex code */
+}
+
+.hover\:bg-amber-700:hover {
+  background-color: #d97706; /* Tailwind 3 Amber-700 hex code */
+}
+
+.text-amber-700 {
+  color: #b45309; /* Tailwind 3 Amber-700 text color */
+}
+
+.focus\:ring-amber-500:focus {
+  --tw-ring-color: #f59e0b;
+}
+.skill-card, .project-card, .resource-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover, .resource-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+.resource-card:hover .resource-button,
+.project-card:hover .project-button,
+.skill-card:hover .skill-button {
+  background-color: #1d4ed8; /* Tailwind's blue-700 (or adjust to your color) */
+  color: white;
+}
+
 

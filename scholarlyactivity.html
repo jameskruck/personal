@@ -83,6 +83,33 @@
             <p class="text-center text-sm text-gray-500">© 2024 James Kruck, PhD</p>
         </div>
     </footer>
+    <!-- GoatCounter Analytics -->
+<script data-goatcounter="https://jameskruck.goatcounter.com/count"
+        data-goatcounter-settings='{"no_onload": true}'
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({
+        path: location.pathname + location.search + location.hash,
+        title: document.title
+      });
+    }
+  });
+</script>
+
+<!-- Floating GoatCounter Admin Button -->
+<div id="goatcounter-admin" class="hidden fixed bottom-4 right-4 z-50">
+  <a href="https://jameskruck.goatcounter.com/" target="_blank" rel="noopener"
+     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    📈 Site Stats
+  </a>
+</div>
+<script>
+  if (location.hostname.includes("jameskruck")) {
+    document.getElementById('goatcounter-admin').classList.remove('hidden');
+  }
+</script>
 
 </body>
 </html>

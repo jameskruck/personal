@@ -3,367 +3,415 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Educational Development Portfolio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <title>Educational Projects - James Kruck, PhD</title>
+    <meta name="description" content="Educational development projects by James Kruck, PhD - curriculum design, faculty development workshops, and inclusive learning initiatives.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        .hero {
-            background: linear-gradient(rgba(59, 130, 246, 0.1), rgba(59, 130, 246, 0.05));
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-        }
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-        }
-        .tag {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-        .tag-blue {
-            background-color: rgba(59, 130, 246, 0.1);
-            color: #2563eb;
-        }
-        .tag-green {
-            background-color: rgba(16, 185, 129, 0.1);
-            color: #059669;
-        }
-        .tag-purple {
-            background-color: rgba(139, 92, 246, 0.1);
-            color: #7c3aed;
-        }
-        .smooth-scroll {
-            scroll-behavior: smooth;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="smooth-scroll">
+<body class="bg-gray-50">
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Navigation -->
-    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10">
+    <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center">
-                <div class="font-bold text-xl text-blue-600">Portfolio</div>
-                <div class="hidden md:block">
+                <div>
+                    <a href="index.html" class="font-bold text-xl text-blue-600" aria-label="James Kruck, PhD Home Page">James Kruck, PhD</a>
+                </div>
+                <div class="hidden md:block" aria-label="Desktop Navigation">
                     <div class="flex space-x-8">
-                        <a href="#about" class="text-gray-700 hover:text-blue-600 transition">About</a>
-                        <a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
-                        <a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Skills</a>
-                        <a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                        <a href="index.html" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                        <a href="education.html" class="text-gray-700 hover:text-blue-600 transition">Education</a>
+                        <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
+                        <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition">Leadership</a>
+                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+                        <a href="projects.html" class="text-blue-600 font-medium" aria-current="page">Educational Projects</a>
+                        <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition">Resources</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
                     </div>
                 </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-500 hover:text-gray-600 p-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu, hidden by default -->
+        <div id="mobile-menu" class="mobile-menu" aria-label="Mobile Navigation">
+            <div class="flex flex-col space-y-3">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Home</a>
+                <a href="education.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
+                <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
+                <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Leadership</a>
+                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+                <a href="projects.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Educational Projects</a>
+                <a href="resources.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Resources</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="md:w-2/3">
-                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4">
-                    Transforming Teaching & Learning Through Innovative Design
-                </h1>
-                <p class="text-xl text-gray-600 mb-8">
-                    Specializing in curriculum design, digital pedagogy, and inclusive learning environments
+    <section class="page-hero" aria-labelledby="page-heading">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">Educational Projects</h1>
+                <p class="text-xl text-gray-800 mb-6">
+                    Transforming teaching and learning through innovative design and evidence-based practices.
                 </p>
-                <a href="#projects" class="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-md hover:bg-blue-700 transition">
-                    Explore My Projects
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
-            <div class="md:flex items-center space-y-8 md:space-y-0 md:space-x-12">
-                <div class="md:w-1/3 flex justify-center">
-                    <div class="h-64 w-64 rounded-full bg-gray-200 flex items-center justify-center text-gray-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                    </div>
-                </div>
-                <div class="md:w-2/3">
-                    <p class="text-lg text-gray-600 mb-4">
-                        I'm an educational developer passionate about creating inclusive, engaging learning experiences that leverage the best of technology while remaining firmly grounded in sound pedagogical principles.
-                    </p>
-                    <p class="text-lg text-gray-600 mb-4">
-                        With experience in both humanities and technical disciplines, I bridge the gap between traditional academic approaches and innovative digital environments. My work focuses on helping faculty implement evidence-based teaching strategies that support diverse learners.
-                    </p>
-                    <p class="text-lg text-gray-600">
-                        I believe that thoughtful educational design can transform learning experiences, making them more accessible, engaging, and effective for all students. My approach integrates Universal Design for Learning principles with cutting-edge digital tools to create learning environments that adapt to student needs rather than requiring students to adapt to rigid structures.
-                    </p>
+                <div class="flex flex-wrap gap-3" aria-label="Project categories">
+                    <span class="tag tag-blue">Curriculum Design</span>
+                    <span class="tag tag-purple">Faculty Development</span>
+                    <span class="tag tag-green">Digital Learning</span>
+                    <span class="tag tag-orange">Inclusive Teaching</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                    <div class="h-48 bg-blue-100 flex items-center justify-center">
-                        <img src="/api/placeholder/400/320" alt="Course redesign illustration" class="object-cover h-full w-full" />
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-3">
-                            <span class="tag tag-blue">Curriculum Design</span>
-                            <span class="tag tag-green">Digital Learning</span>
-                            <span class="tag tag-purple">Inclusive Design</span>
+    <main id="main-content" class="pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
+            <div class="lg:flex gap-8">
+                <!-- Sidebar -->
+                <aside class="lg:w-1/4 mb-8 lg:mb-0">
+                    <div class="sidebar bg-white rounded-lg shadow-sm p-4 lg:sticky lg:top-32">
+<nav aria-label="Section Navigation">
+      <a href="#overview" class="sidebar-link">Overview</a>
+      <a href="#my-approach" class="sidebar-link">My Approach</a>
+      <a href="#featured-projects" class="sidebar-link">Featured Projects</a>
+      <a href="#curriculum-design" class="sidebar-link">Curriculum Design</a>
+    </nav>
+                        <div class="mt-8 pt-4 border-t border-gray-200">
+                            <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Project Documents</h3>
+                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm flex items-center">
+                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                                <span>Project Portfolio</span>
+                            </a>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">Course Redesign: The Tragic Spirit</h3>
-                        <p class="text-gray-600 mb-4">
-                            A comprehensive transformation of a traditional Classics course into an engaging, inclusive digital learning experience with multiple pathways for student engagement.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
                     </div>
-                </div>
+                </aside>
 
-                <!-- Project 2 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                    <div class="h-48 bg-purple-100 flex items-center justify-center">
-                        <img src="/api/placeholder/400/320" alt="GenAI workshop illustration" class="object-cover h-full w-full" />
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-3">
-                            <span class="tag tag-blue">Faculty Development</span>
-                            <span class="tag tag-purple">Educational Technology</span>
-                            <span class="tag tag-green">AI in Education</span>
+                <!-- Main Content -->
+                <div class="lg:w-3/4">
+                    <!-- Overview Section -->
+                    <section id="overview" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Project Portfolio Overview</h2>
+                        <p class="text-gray-800 mb-4">
+                            My project portfolio showcases my commitment to creating engaging, inclusive learning experiences that leverage sound pedagogical principles while embracing innovative technologies. Each project reflects my belief that thoughtful educational design can transform learning experiences, making them more accessible and effective for all students.
+                        </p>
+                        
+                        <p class="text-gray-800 mb-4">
+                            With experience spanning humanities and technical disciplines, I bridge traditional academic approaches with innovative digital environments. My work focuses on helping faculty implement evidence-based teaching strategies that support diverse learners.
+                        </p>
+                        
+                        <p class="text-gray-800">
+                            The featured projects below represent a range of initiatives, from comprehensive course redesigns to faculty development workshops and digital learning tools. Each demonstrates my approach to integrating Universal Design for Learning principles with engaging technologies to create learning environments that adapt to student needs.
+                        </p>
+                    </section>
+
+                    <!-- Featured Projects Section -->
+                    <section id="featured-projects" class="mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Featured Projects</h2>
+                        
+                        <div class="space-y-8">
+                            <!-- Project 1 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="md:flex">
+<div class="md:w-1/3">
+    <img src="images/Screenshot1.png" alt="GenAI Workshop Preview" class="w-full h-48 md:h-72 object-contain bg-gray-50" />
+</div>
+                                    <div class="p-6 md:w-2/3">
+                                        <div class="mb-3">
+                                            <span class="tag tag-blue">Faculty Development</span>
+                                            <span class="tag tag-green">AI in Education</span>
+                                            <span class="tag tag-purple">Educational Technology</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold mb-2">GenAI in Teaching & Learning Workshop</h3>
+                                        <p class="text-gray-800 mb-4">
+                                            An interactive four-part workshop that introduces faculty to generative AI in education. This project combines hands-on AI exploration with evidence-based teaching strategies and curriculum design principles, including practical implementation planning and authentic assessment approaches.
+                                        </p>
+                                        
+                                        <p class="text-gray-800 mb-4">
+                                            Developed in response to the rapid adoption of AI tools like ChatGPT by students (45% usage) compared to lower faculty adoption (15% usage), addressing the need for faculty support in understanding and implementing AI effectively.
+                                        </p>
+                                        
+                                        <div class="flex justify-end">
+                                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                                View Project Details
+                                                <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 2 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="md:flex">
+                                    <div class="md:w-1/3">
+                                        <img src="/api/placeholder/400/300" alt="UDL Workshop Preview" class="h-full w-full object-cover" />
+                                    </div>
+                                    <div class="p-6 md:w-2/3">
+                                        <div class="mb-3">
+                                            <span class="tag tag-blue">Accessibility</span>
+                                            <span class="tag tag-purple">Inclusive Teaching</span>
+                                            <span class="tag tag-green">Faculty Development</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
+                                        <p class="text-gray-800 mb-4">
+                                            A practical approach to implementing Universal Design for Learning principles through incremental "Plus One" enhancements to existing courses. This workshop helps faculty identify simple but high-impact changes they can make to improve accessibility and engagement.
+                                        </p>
+                                        
+                                        <p class="text-gray-800 mb-4">
+                                            The workshop includes hands-on exercises for creating multiple means of representation, engagement, and expression, with a focus on digital content accessibility and assessment design.
+                                        </p>
+                                        
+                                        <div class="flex justify-end">
+                                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                                View Project Details
+                                                <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Project 3 -->
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                                <div class="md:flex">
+                                    <div class="md:w-1/3">
+                                        <img src="/api/placeholder/400/300" alt="Course Redesign Preview" class="h-full w-full object-cover" />
+                                    </div>
+                                    <div class="p-6 md:w-2/3">
+                                        <div class="mb-3">
+                                            <span class="tag tag-blue">Curriculum Design</span>
+                                            <span class="tag tag-green">Digital Learning</span>
+                                            <span class="tag tag-orange">Blended Learning</span>
+                                        </div>
+                                        <h3 class="text-xl font-semibold mb-2">Course Redesign: The Tragic Spirit</h3>
+                                        <p class="text-gray-800 mb-4">
+                                            A comprehensive transformation of a traditional Classics course into an engaging, accessible digital learning experience. This project involved converting an in-person course into a blended format that seamlessly integrates asynchronous and synchronous learning elements.
+                                        </p>
+                                        
+                                        <p class="text-gray-800 mb-4">
+                                            The redesign focused on competency-based learning, incorporating retrieval practice, flexible assessment options, and multiple pathways for student engagement with classical texts and concepts.
+                                        </p>
+                                        
+                                        <div class="flex justify-end">
+                                            <a href="#" class="text-blue-600 hover:text-blue-800 font-medium flex items-center">
+                                                View Project Details
+                                                <svg class="ml-1 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">GenAI in Teaching & Learning Workshop</h3>
-                        <p class="text-gray-600 mb-4">
-                            An interactive workshop introducing faculty to generative AI tools with hands-on exploration, pedagogical strategies, and implementation planning.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
-                </div>
+                    </section>
 
-                <!-- Project 3 -->
-                <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
-                    <div class="h-48 bg-green-100 flex items-center justify-center">
-                        <img src="/api/placeholder/400/320" alt="UDL workshop illustration" class="object-cover h-full w-full" />
-                    </div>
-                    <div class="p-6">
-                        <div class="mb-3">
-                            <span class="tag tag-blue">Accessibility</span>
-                            <span class="tag tag-green">Faculty Development</span>
-                            <span class="tag tag-purple">Inclusive Teaching</span>
+                    <!-- Curriculum Design Section -->
+                    <section id="curriculum-design" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Curriculum Design</h2>
+                        
+                        <p class="text-gray-800 mb-6">My approach to curriculum design centers on creating learning experiences that are engaging, accessible, and aligned with clearly defined outcomes. Key areas of expertise include:</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-5 bg-blue-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-blue-800">Outcome-Based Course Design</h3>
+                                <p class="text-gray-700">Developing courses with clear learning outcomes that drive assessment strategies and learning activities, ensuring constructive alignment throughout.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-blue-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-blue-800">Authentic Assessment Design</h3>
+                                <p class="text-gray-700">Creating assessments that reflect real-world applications of knowledge and skills, providing meaningful feedback opportunities and promoting deeper learning.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-blue-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-blue-800">Program Mapping</h3>
+                                <p class="text-gray-700">Aligning course outcomes with program-level competencies to ensure comprehensive curriculum coverage and progressive skill development.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-blue-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-blue-800">Inclusive Curriculum Development</h3>
+                                <p class="text-gray-700">Integrating Universal Design for Learning principles to create flexible learning pathways that accommodate diverse learner needs and preferences.</p>
+                            </div>
                         </div>
-                        <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
-                        <p class="text-gray-600 mb-4">
-                            A practical approach to implementing Universal Design for Learning principles through incremental "Plus One" enhancements to existing courses.
-                        </p>
-                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 transition">View Project →</a>
-                    </div>
+                    </section>
+
+                    <!-- Faculty Development Section -->
+                    <section id="faculty-development" class="bg-white rounded-lg shadow-sm p-6 mb-8">
+                        <h2 class="text-2xl font-bold mb-6">Faculty Development</h2>
+                        
+                        <p class="text-gray-800 mb-6">My faculty development initiatives focus on building capacity for innovative, evidence-based teaching practices. I design and facilitate workshops that provide practical strategies faculty can immediately implement in their teaching.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="p-5 bg-purple-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-purple-800">Workshop: Effective Questioning Techniques</h3>
+                                <p class="text-gray-700 mb-3">This workshop explores how structured questioning methods can improve student engagement, reduce participation barriers, and promote critical thinking. Participants learn practical strategies for crafting effective questions and facilitating meaningful discussions.</p>
+                                <div class="flex justify-end">
+                                    <a href="#" class="text-purple-700 hover:text-purple-900 font-medium">View Workshop Materials →</a>
+                                </div>
+                            </div>
+                            
+                            <div class="p-5 bg-purple-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-purple-800">Workshop: Assessment Beyond Exams</h3>
+                                <p class="text-gray-700 mb-3">This interactive session introduces faculty to diverse assessment strategies that go beyond traditional exams, including project-based assessments, reflective assignments, and collaborative work. The workshop includes examples across disciplines and implementation guidance.</p>
+                                <div class="flex justify-end">
+                                    <a href="#" class="text-purple-700 hover:text-purple-900 font-medium">View Workshop Materials →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Digital Learning Section -->
+                    <section id="digital-learning" class="bg-white rounded-lg shadow-sm p-6">
+                        <h2 class="text-2xl font-bold mb-6">Digital Learning</h2>
+                        
+                        <p class="text-gray-800 mb-6">My digital learning projects leverage technology to enhance accessibility, engagement, and learning outcomes. I specialize in creating blended learning environments that combine the best aspects of face-to-face and online instruction.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div class="p-5 bg-green-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-green-800">LMS Implementation Strategy</h3>
+                                <p class="text-gray-700">Strategic implementation of learning management systems focused on assessment data collection, user experience, and integration with teaching practices. Includes faculty training and support frameworks.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-green-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-green-800">Interactive Content Development</h3>
+                                <p class="text-gray-700">Creation of engaging multimedia learning materials, including interactive modules, educational videos, and simulations that support active learning and multiple means of representation.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-green-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-green-800">Accessibility Enhancement</h3>
+                                <p class="text-gray-700">Implementation of WCAG standards and best practices for digital accessibility, ensuring that learning materials are perceivable, operable, understandable, and robust for all users.</p>
+                            </div>
+                            
+                            <div class="p-5 bg-green-50 rounded-lg">
+                                <h3 class="text-lg font-semibold mb-3 text-green-800">Learning Analytics Integration</h3>
+                                <p class="text-gray-700">Development of data-informed approaches to teaching and learning, using analytics to identify areas for intervention, curriculum improvement, and personalized support.</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Areas of Expertise</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Skill Category 1 -->
-                <div class="p-6 bg-blue-50 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-blue-700">Curriculum Design</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Outcome-Based Course Design</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Constructive Alignment</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Program Mapping</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Authentic Assessment Design</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-blue-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Rubric Development</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category 2 -->
-                <div class="p-6 bg-green-50 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-green-700">Educational Technology</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Learning Management Systems</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Interactive Content Creation</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Educational Video Production</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>AI-Enhanced Learning Tools</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Digital Assessment Tools</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Skill Category 3 -->
-                <div class="p-6 bg-purple-50 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-700">Inclusive Teaching</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Universal Design for Learning</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Culturally Responsive Teaching</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Accessibility Standards & Compliance</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Equitable Assessment Design</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-6 w-6 text-purple-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span>Differentiated Instruction</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Get In Touch</h2>
-            <div class="max-w-2xl mx-auto text-center">
-                <p class="text-lg text-gray-600 mb-8">
-                    Interested in collaborating or learning more about my work in educational development? I'd love to connect and discuss how we might work together.
-                </p>
-                <div class="flex justify-center space-x-6">
-                    <a href="mailto:your.email@example.com" class="flex items-center text-gray-700 hover:text-blue-600 transition">
-                        <svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                        Email
-                    </a>
-                    <a href="https://www.linkedin.com/" target="_blank" class="flex items-center text-gray-700 hover:text-blue-600 transition">
-                        <svg class="h-6 w-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="#" class="flex items-center text-gray-700 hover:text-blue-600 transition">
-                        <svg class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                        </svg>
-                        Resume
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-4">© 2025 Your Name. All rights reserved.</p>
-            <p class="text-gray-400 text-sm">
-                Designed with a focus on accessibility and inclusive design principles.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Simple scroll to top button
-        window.onscroll = function() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("scrollToTop").style.display = "block";
-            } else {
-                document.getElementById("scrollToTop").style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            window.scrollTo({top: 0, behavior: 'smooth'});
-        }
-    </script>
+<footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+    <p class="text-gray-400 text-sm">
+      Designed with a focus on accessibility and inclusive design principles.
+    </p>
+  </div>
+</footer>
 
     <!-- Scroll to top button -->
     <button 
-        id="scrollToTop" 
-        onclick="scrollToTop()" 
-        style="display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; cursor: pointer; background-color: #2563eb; color: white; border: none; border-radius: 50%; width: 50px; height: 50px; font-size: 18px; opacity: 0.8;"
-        class="flex items-center justify-center shadow-lg"
+        id="scrollToTopBtn" 
+        class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 transition-opacity duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+        aria-label="Scroll to top"
     >
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
         </svg>
     </button>
+
+ <script>
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuButton?.addEventListener('click', () => {
+        const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('open');
+    });
+
+    // Scroll to top button visibility
+    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.style.opacity = '1';
+        } else {
+            scrollToTopBtn.style.opacity = '0';
+        }
+    });
+
+    scrollToTopBtn?.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+    // Sidebar active section highlighting
+    function highlightActiveSidebarLink() {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.sidebar-link');
+
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            if (window.pageYOffset >= sectionTop - 200 && window.pageYOffset < sectionTop + sectionHeight - 200) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            const href = link.getAttribute('href');
+            if (href && href.slice(1) === currentSection) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', highlightActiveSidebarLink);
+    window.addEventListener('load', highlightActiveSidebarLink);
+</script>
+<!-- GoatCounter Analytics -->
+<script data-goatcounter="https://jameskruck.goatcounter.com/count"
+        data-goatcounter-settings='{"no_onload": true}'
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({
+        path: location.pathname + location.search + location.hash,
+        title: document.title
+      });
+    }
+  });
+</script>
+
+<!-- Floating GoatCounter Admin Button -->
+<div id="goatcounter-admin" class="hidden fixed bottom-4 right-4 z-50">
+  <a href="https://jameskruck.goatcounter.com/" target="_blank" rel="noopener"
+     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    📈 Site Stats
+  </a>
+</div>
+<script>
+  if (location.hostname.includes("jameskruck")) {
+    document.getElementById('goatcounter-admin').classList.remove('hidden');
+  }
+</script>
+
 </body>
 </html>

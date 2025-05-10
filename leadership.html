@@ -134,20 +134,20 @@
                             <a href="#leadership-summary" class="sidebar-link">Looking Forward</a>
                         </nav>
                         <div class="mt-8 pt-4 border-t border-gray-200">
-                            <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" target="_blank" rel="noopener">
-                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                <span>Workshop Materials</span>
-                            </a>
-                            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm flex items-center mt-2" target="_blank" rel="noopener">
-                                <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-                                </svg>
-                                <span>Leadership Tools</span>
-                            </a>
-                        </div>
+    <h3 class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-2">Resources</h3>
+    <a href="Resources/effective-questioning-techniques.pdf" class="text-blue-600 hover:text-blue-800 text-sm flex items-center" target="_blank" rel="noopener">
+        <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <span>Effective Questioning Workshop</span>
+    </a>
+    <a href="Resources/udl-quick-start-guide.pdf" class="text-blue-600 hover:text-blue-800 text-sm flex items-center mt-2" target="_blank" rel="noopener">
+        <svg class="inline-block w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+        </svg>
+        <span>UDL Quick Start Guide</span>
+    </a>
+</div>
                     </div>
                 </aside>
 
@@ -582,5 +582,33 @@
         window.addEventListener('scroll', highlightActiveSidebarLink);
         window.addEventListener('load', highlightActiveSidebarLink);
     </script>
+    <!-- GoatCounter Analytics -->
+<script data-goatcounter="https://jameskruck.goatcounter.com/count"
+        data-goatcounter-settings='{"no_onload": true}'
+        async src="//gc.zgo.at/count.js"></script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    if (window.goatcounter && goatcounter.count) {
+      goatcounter.count({
+        path: location.pathname + location.search + location.hash,
+        title: document.title
+      });
+    }
+  });
+</script>
+
+<!-- Floating GoatCounter Admin Button -->
+<div id="goatcounter-admin" class="hidden fixed bottom-4 right-4 z-50">
+  <a href="https://jameskruck.goatcounter.com/" target="_blank" rel="noopener"
+     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    📈 Site Stats
+  </a>
+</div>
+<script>
+  if (location.hostname.includes("jameskruck")) {
+    document.getElementById('goatcounter-admin').classList.remove('hidden');
+  }
+</script>
+
 </body>
 </html>
