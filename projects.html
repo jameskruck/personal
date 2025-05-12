@@ -380,3 +380,17 @@ In this project, I revisited an old syllabus from my time teaching at the Univer
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
         </svg>
     </button>
+
+    <!-- Floating GoatCounter Admin Button -->
+<div id="goatcounter-admin" class="hidden fixed bottom-4 right-4 z-50">
+  <a href="https://jameskruck.goatcounter.com/" target="_blank" rel="noopener"
+     class="bg-blue-600 text-white text-sm px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400">
+    📈 Site Stats
+  </a>
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("admin") === "true") {
+    document.getElementById('goatcounter-admin').classList.remove('hidden');
+  }
+</script>

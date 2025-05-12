@@ -1215,10 +1215,12 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
 </div>
 <script>
-  if (location.hostname.includes("jameskruck")) {
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("admin") === "true") {
     document.getElementById('goatcounter-admin').classList.remove('hidden');
   }
 </script>
+
 
 
 
