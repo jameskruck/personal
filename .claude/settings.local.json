@@ -44,7 +44,12 @@
       "Read(/C:\\Users\\james\\OneDrive\\Documents2\\GitHub\\Part-2/**)",
       "Read(/C:\\Users\\james\\OneDrive\\Documents2\\GitHub\\projects/**)",
       "Read(/C:\\Users\\james\\OneDrive\\Documents2\\GitHub\\IveyAltText/**)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "Bash(where python:*)",
+      "Bash(where python3:*)",
+      "Bash(where py:*)"
     ],
     "deny": [],
     "ask": []
