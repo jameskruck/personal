@@ -7,10 +7,38 @@
     <meta name="description" content="Explore curated resources on AI in education, including research articles, essays, and practical guides for integrating AI into teaching and learning.">
     
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
     <!-- Stylesheets -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: {
+              50:'#F1F4F8', 100:'#E2E8F0', 500:'#1F3A5F',
+              600:'#1F3A5F', 700:'#16263B', 800:'#16263B'
+            },
+            gray: { 800:'#16263B', 900:'#16263B' },
+            bronze: '#6F441B',
+            paper: '#FBFAF7',
+            sand:  '#F4F1EA',
+            line:  '#E6E1D7',
+            ink:   '#16263B',
+            navy:  '#1F3A5F'
+          },
+          fontFamily: {
+            sans:  ['Inter','system-ui','sans-serif'],
+            serif: ['Fraunces','Georgia','serif'],
+            mono:  ['IBM Plex Mono','ui-monospace','monospace']
+          }
+        }
+      }
+    }
+  </script>
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Common scripts -->
@@ -33,7 +61,7 @@
                         <a href="education.html" class="text-gray-700 hover:text-blue-600 transition">Education</a>
                         <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition">Teaching</a>
                         <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition">Leadership</a>
-                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarly Activity</a>
+                        <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition">Scholarship</a>
                         <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition">Educational Projects</a>
                         <a href="resources.html" class="text-blue-600 font-medium">Resources</a>
                         <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
@@ -55,7 +83,7 @@
                 <a href="education.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Education</a>
                 <a href="teaching.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Teaching</a>
                 <a href="leadership.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Leadership</a>
-                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarly Activity</a>
+                <a href="scholarly.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Scholarship</a>
                 <a href="projects.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Educational Projects</a>
                 <a href="resources.html" class="text-blue-600 font-medium py-2 px-3 rounded-md bg-blue-50">Resources</a>
                 <a href="contact.html" class="text-gray-700 hover:text-blue-600 transition py-2 px-3 rounded-md">Contact</a>
