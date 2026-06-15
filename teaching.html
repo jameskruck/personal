@@ -12,33 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              50:'#F1F4F8', 100:'#E2E8F0', 500:'#1F3A5F',
-              600:'#1F3A5F', 700:'#16263B', 800:'#16263B'
-            },
-            gray: { 800:'#16263B', 900:'#16263B' },
-            bronze: '#6F441B',
-            paper: '#FBFAF7',
-            sand:  '#F4F1EA',
-            line:  '#E6E1D7',
-            ink:   '#16263B',
-            navy:  '#1F3A5F'
-          },
-          fontFamily: {
-            sans:  ['Inter','system-ui','sans-serif'],
-            serif: ['Fraunces','Georgia','serif'],
-            mono:  ['IBM Plex Mono','ui-monospace','monospace']
-          }
-        }
-      }
+      theme: { extend: {
+        colors: {
+          blue: { 50:'#F1F4F8',100:'#E2E8F0',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          gray: { 50:'#FBFAF7',100:'#F4F1EA',800:'#16263B',900:'#16263B' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
+      }}
     }
   </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Conditional stylesheets -->
@@ -205,7 +190,7 @@
                         
                         <div id="teaching-map" class="map-container mb-6"></div>
                         
-                        <div id="map-info" class="bg-blue-50 p-4 rounded-lg mb-6 hidden border border-blue-100">
+                        <div id="map-info" class="bg-sand p-4 rounded-lg mb-6 hidden border border-line">
                             <h3 id="map-title" class="font-semibold mb-2"></h3>
                             <div id="map-description"></div>
                         </div>
@@ -393,8 +378,8 @@
                         <p class="text-gray-800 mb-6">Direct quotes from observations and student feedback highlight the impact of my teaching approaches across different contexts.</p>
                         
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
-                                <h3 class="text-xl font-semibold mb-3 text-blue-800">
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">
                                 Making Complex Material Accessible</h3>
                                 <div class="p-4 bg-white rounded-lg shadow-sm mb-2">
                                     <p class="text-gray-700 italic">"He explained difficult concepts (sometimes presented rather confusing or over-analytical in the textbook for a first-level course) very well and was always available for questions either in person or by email. Occasionally made mistakes but always corrected them—great course."</p>
@@ -402,16 +387,16 @@
                                 <p class="text-gray-700">Students appreciated my ability to break down complex ideas into understandable components, making challenging material accessible while maintaining academic rigor.</p>
                             </div>
                             
-                            <div class="bg-green-50 p-5 rounded-lg border border-green-100">
-                                <h3 class="text-xl font-semibold mb-3 text-green-800">Creating an Engaging Environment</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">Creating an Engaging Environment</h3>
                                 <div class="p-4 bg-white rounded-lg shadow-sm mb-2">
                                     <p class="text-gray-700 italic">"James sparked a lively conversation about heroes, seamlessly blending student contributions into a cohesive discussion. His use of Think-Pair-Share kept every student engaged, and his enthusiasm for student input created an open, collaborative atmosphere."</p>
                                 </div>
                                 <p class="text-gray-700">My focus on inclusive participation strategies helped create learning environments where all students felt empowered to contribute to class discussions.</p>
                             </div>
                             
-                            <div class="bg-purple-50 p-5 rounded-lg border border-purple-100">
-                                <h3 class="text-xl font-semibold mb-3 text-purple-800">Encouraging Critical Thinking</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">Encouraging Critical Thinking</h3>
                                 <div class="p-4 bg-white rounded-lg shadow-sm mb-2">
                                     <p class="text-gray-700 italic">"James guided students to think through the types of conflict a hero might face. They came up with 'personal, strong opponent, moral ambiguity.'"</p>
                                     <p class="text-gray-700 italic mt-2">"James' technique of focusing attention on specific passages, which he reads aloud, is good for encouraging students to base their ideas on specific passages, thus modeling the type of critique sought in papers and tests."</p>
@@ -419,8 +404,8 @@
                                 <p class="text-gray-700">My approach emphasizes developing critical thinking skills through guided exploration and textual analysis.</p>
                             </div>
                             
-                            <div class="bg-amber-50 p-5 rounded-lg border border-amber-100">
-                                <h3 class="text-xl font-semibold mb-3 text-amber-800">Building Confidence</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">Building Confidence</h3>
                                 <div class="p-4 bg-white rounded-lg shadow-sm mb-2">
                                     <p class="text-gray-700 italic">"The activity worked effectively to interest the class in the topic of heroes; it also ensured that every student had something to say, and so participation in this portion of the class was well-balanced. The students clearly enjoyed it."</p>
                                     <p class="text-gray-700 italic mt-2">"You're a really awesome teacher. Thanks for teaching us this whole year."</p>
@@ -436,38 +421,30 @@
                         <p class="text-gray-800 mb-6">My teaching practice draws on several key approaches that enhance student engagement and learning outcomes.</p>
                         
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div class="p-6 bg-blue-50 rounded-lg skill-card border border-blue-100">
-                                <h3 class="text-xl font-semibold mb-4 text-blue-700">Active Learning Strategies</h3>
-                                <ul class="space-y-2" aria-label="Active learning strategies">
-                                    <li class="flex items-start">
-                                        <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <span class="eyebrow">Active Learning Strategies</span>
+                                <ul aria-label="Active learning strategies">
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line first:border-t-0">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Structured retrieval practice</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Think-pair-share activities</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Student-generated discussion prompts</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-6 w-6 text-blue-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Collaborative exploration</span>
                                     </li>
                                 </ul>
                             </div>
                             
-                            <div class="p-6 bg-green-50 rounded-lg skill-card border border-green-100">
-                                <h3 class="text-xl font-semibold mb-4 text-green-700">Inclusive Teaching Practices</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Inclusive Teaching Practices</h3>
                                 <ul class="space-y-2" aria-label="Inclusive teaching practices">
                                     <li class="flex items-start">
                                         <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -496,8 +473,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="p-6 bg-purple-50 rounded-lg skill-card border border-purple-100">
-                                <h3 class="text-xl font-semibold mb-4 text-purple-700">Technology Integration</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Technology Integration</h3>
                                 <ul class="space-y-2" aria-label="Technology integration approaches">
                                     <li class="flex items-start">
                                         <svg class="h-6 w-6 text-purple-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
@@ -526,8 +503,8 @@
                                 </ul>
                             </div>
                             
-                            <div class="p-6 bg-amber-50 rounded-lg skill-card border border-amber-100">
-                                <h3 class="text-xl font-semibold mb-4 text-amber-700">Cultural Bridging</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Cultural Bridging</h3>
                                 <ul class="space-y-2" aria-label="Cultural bridging techniques">
                                     <li class="flex items-start">
                                         <svg class="h-6 w-6 text-amber-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

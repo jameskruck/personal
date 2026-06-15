@@ -12,33 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              50:'#F1F4F8', 100:'#E2E8F0', 500:'#1F3A5F',
-              600:'#1F3A5F', 700:'#16263B', 800:'#16263B'
-            },
-            gray: { 800:'#16263B', 900:'#16263B' },
-            bronze: '#6F441B',
-            paper: '#FBFAF7',
-            sand:  '#F4F1EA',
-            line:  '#E6E1D7',
-            ink:   '#16263B',
-            navy:  '#1F3A5F'
-          },
-          fontFamily: {
-            sans:  ['Inter','system-ui','sans-serif'],
-            serif: ['Fraunces','Georgia','serif'],
-            mono:  ['IBM Plex Mono','ui-monospace','monospace']
-          }
-        }
-      }
+      theme: { extend: {
+        colors: {
+          blue: { 50:'#F1F4F8',100:'#E2E8F0',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          gray: { 50:'#FBFAF7',100:'#F4F1EA',800:'#16263B',900:'#16263B' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
+      }}
     }
   </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Common scripts -->
@@ -164,7 +149,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Report</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Report</div>
     </div>
     <p class="text-gray-700 mb-3">Michelle Kassorla, Maya Georgieva, and Allison Papini</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -192,7 +177,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Research Report</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Research Report</div>
     </div>
     <p class="text-gray-700 mb-3">Donald H. Taylor and Eglė Vinauskaitė</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -220,7 +205,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Framework</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Framework</div>
     </div>
     <p class="text-gray-700 mb-3">Digital Education Council</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -248,7 +233,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Framework</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Framework</div>
     </div>
     <p class="text-gray-700 mb-3">Open University Learning Design Initiative</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -275,7 +260,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Resource Hub</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Resource Hub</div>
     </div>
     <p class="text-gray-700 mb-3">Campus AI Exchange</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -302,7 +287,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Framework</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Framework</div>
     </div>
     <p class="text-gray-700 mb-3">OECD</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -340,7 +325,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Research Study
                                 </div>
                             </div>
@@ -372,7 +357,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Usage Report</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Usage Report</div>
     </div>
     <p class="text-gray-700 mb-3">Anthropic</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -399,7 +384,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Essay
                                 </div>
                             </div>
@@ -432,7 +417,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Research Paper
                                 </div>
                             </div>
@@ -465,7 +450,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Research Paper
                                 </div>
                             </div>
@@ -503,7 +488,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Newsletter</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Newsletter</div>
     </div>
     <p class="text-gray-700 mb-3">Substack</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -530,7 +515,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Peer-Reviewed Study</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Peer-Reviewed Study</div>
     </div>
     <p class="text-gray-700 mb-3">SpringerOpen Journal of Educational Technology</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>
@@ -559,7 +544,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Newsletter
                                 </div>
                             </div>
@@ -592,7 +577,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Newsletter
                                 </div>
                             </div>
@@ -625,7 +610,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Newsletter
                                 </div>
                             </div>
@@ -663,7 +648,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Podcast
                                 </div>
                             </div>
@@ -701,7 +686,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Keynote Address
                                 </div>
                             </div>
@@ -743,7 +728,7 @@
                                         </svg>
                                     </a>
                                 </h3>
-                                <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                     Online Course
                                 </div>
                             </div>
@@ -780,7 +765,7 @@
           </svg>
         </a>
       </h3>
-      <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">Opinion</div>
+      <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">Opinion</div>
     </div>
     <p class="text-gray-700 mb-3">The Chronicle of Higher Education</p>
     <h4 class="text-lg font-semibold mb-2">Why you might like it</h4>

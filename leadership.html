@@ -12,33 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              50:'#F1F4F8', 100:'#E2E8F0', 500:'#1F3A5F',
-              600:'#1F3A5F', 700:'#16263B', 800:'#16263B'
-            },
-            gray: { 800:'#16263B', 900:'#16263B' },
-            bronze: '#6F441B',
-            paper: '#FBFAF7',
-            sand:  '#F4F1EA',
-            line:  '#E6E1D7',
-            ink:   '#16263B',
-            navy:  '#1F3A5F'
-          },
-          fontFamily: {
-            sans:  ['Inter','system-ui','sans-serif'],
-            serif: ['Fraunces','Georgia','serif'],
-            mono:  ['IBM Plex Mono','ui-monospace','monospace']
-          }
-        }
-      }
+      theme: { extend: {
+        colors: {
+          blue: { 50:'#F1F4F8',100:'#E2E8F0',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          gray: { 50:'#FBFAF7',100:'#F4F1EA',800:'#16263B',900:'#16263B' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
+      }}
     }
   </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Conditional stylesheets -->
@@ -186,34 +171,28 @@
                         
                         <div class="grid md:grid-cols-3 gap-6 mb-6">
                             <!-- Pillar 1 -->
-                            <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
-                                <h3 class="text-xl font-semibold mb-3 text-blue-800">Collaboration</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <span class="eyebrow">Collaboration</span>
                                 <p class="text-gray-700 mb-4">I prioritize peer review and open dialogue to encourage team members to learn from one another and share their unique viewpoints. This approach strengthens our outcomes and creates an environment where every voice is valued.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                <ul aria-label="Collaboration practices">
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line first:border-t-0">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Regular peer learning sessions</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Shared resource channels</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Cross-functional teamwork</span>
                                     </li>
                                 </ul>
                             </div>
                             
                             <!-- Pillar 2 -->
-                            <div class="bg-purple-50 p-5 rounded-lg border border-purple-100">
-                                <h3 class="text-xl font-semibold mb-3 text-purple-800">Empowerment</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">Empowerment</h3>
                                 <p class="text-gray-700 mb-4">I'm committed to equipping my team with clear guidance, essential resources, and regular feedback. Whether we're developing a large-scale online course or navigating a high-stakes project, I ensure team members have the tools and support to confidently own their responsibilities.</p>
                                 <ul class="space-y-2 text-gray-700">
                                     <li class="flex items-start">
@@ -238,8 +217,8 @@
                             </div>
                             
                             <!-- Pillar 3 -->
-                            <div class="bg-green-50 p-5 rounded-lg border border-green-100">
-                                <h3 class="text-xl font-semibold mb-3 text-green-800">Accountability</h3>
+                            <div class="bg-sand p-5 rounded-lg border border-line">
+                                <h3 class="text-xl font-semibold mb-3">Accountability</h3>
                                 <p class="text-gray-700 mb-4">A strong team is built on trust and accountability. I develop a culture where team members feel responsible not just for their individual contributions but for our collective team goals. This shared sense of purpose drives us to meet deadlines, exceed expectations, and continuously grow together.</p>
                                 <ul class="space-y-2 text-gray-700">
                                     <li class="flex items-start">
@@ -399,12 +378,12 @@
                         
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold mb-4">The Results</h3>
-                            <div class="bg-blue-50 p-5 rounded-lg border border-blue-100">
+                            <div class="bg-sand p-5 rounded-lg border border-line">
                                 <p class="text-gray-700 mb-4">The restructuring initiative achieved measurable and cultural improvements across the department:</p>
                                 
                                 <div class="grid md:grid-cols-2 gap-6">
                                     <div>
-                                        <h4 class="font-semibold mb-2 text-blue-800">Operational Improvements</h4>
+                                        <h4 class="font-semibold mb-2">Operational Improvements</h4>
                                         <ul class="space-y-2 text-gray-700">
                                             <li class="flex items-start">
                                                 <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -422,7 +401,7 @@
                                     </div>
                                     
                                     <div>
-                                        <h4 class="font-semibold mb-2 text-blue-800">Team Development Outcomes</h4>
+                                        <h4 class="font-semibold mb-2">Team Development Outcomes</h4>
                                         <ul class="space-y-2 text-gray-700">
                                             <li class="flex items-start">
                                                 <svg class="h-5 w-5 text-green-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -449,33 +428,27 @@
                         <p class="text-gray-800 mb-6">My leadership philosophy guides how I approach building and developing educational teams, creating structures that support growth while maintaining focus on outcomes.</p>
                         
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div class="p-6 bg-blue-50 rounded-lg skill-card border border-blue-100">
-                                <h3 class="text-xl font-semibold mb-4 text-blue-700">Evidence-Based Leadership</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <span class="eyebrow">Evidence-Based Leadership</span>
                                 <p class="text-gray-700 mb-4">I apply research-informed approaches to team development, incorporating insights from educational psychology, management studies, and instructional design.</p>
-                                <ul class="space-y-2 text-gray-700">
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                <ul aria-label="Evidence-based leadership practices">
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line first:border-t-0">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Structured career pathways based on skill progression</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Learning communities for knowledge exchange</span>
                                     </li>
-                                    <li class="flex items-start">
-                                        <svg class="h-5 w-5 text-blue-500 mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-                                        </svg>
+                                    <li class="flex items-baseline gap-3 py-3 border-t border-line">
+                                        <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
                                         <span>Data-driven decision-making frameworks</span>
                                     </li>
                                 </ul>
                             </div>
                             
-                            <div class="p-6 bg-green-50 rounded-lg skill-card border border-green-100">
-                                <h3 class="text-xl font-semibold mb-4 text-green-700">Mentorship & Growth Culture</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Mentorship & Growth Culture</h3>
                                 <p class="text-gray-700 mb-4">I foster environments where continuous learning is embedded in daily practice, creating opportunities for mutual mentorship and skill development.</p>
                                 <ul class="space-y-2 text-gray-700">
                                     <li class="flex items-start">

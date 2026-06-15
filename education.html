@@ -12,33 +12,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              50:'#F1F4F8', 100:'#E2E8F0', 500:'#1F3A5F',
-              600:'#1F3A5F', 700:'#16263B', 800:'#16263B'
-            },
-            gray: { 800:'#16263B', 900:'#16263B' },
-            bronze: '#6F441B',
-            paper: '#FBFAF7',
-            sand:  '#F4F1EA',
-            line:  '#E6E1D7',
-            ink:   '#16263B',
-            navy:  '#1F3A5F'
-          },
-          fontFamily: {
-            sans:  ['Inter','system-ui','sans-serif'],
-            serif: ['Fraunces','Georgia','serif'],
-            mono:  ['IBM Plex Mono','ui-monospace','monospace']
-          }
-        }
-      }
+      theme: { extend: {
+        colors: {
+          blue: { 50:'#F1F4F8',100:'#E2E8F0',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          gray: { 50:'#FBFAF7',100:'#F4F1EA',800:'#16263B',900:'#16263B' }
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
+      }}
     }
   </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Conditional stylesheets -->
@@ -195,7 +180,7 @@
                         
                         <div id="education-map" class="map-container mb-6"></div>
                         
-                        <div id="map-info" class="bg-blue-50 p-4 rounded-lg mb-6 hidden border border-blue-100">
+                        <div id="map-info" class="bg-sand p-4 rounded-lg mb-6 hidden border border-line">
                             <h3 id="map-title" class="font-semibold mb-2"></h3>
                             <div id="map-description"></div>
                         </div>
@@ -218,7 +203,7 @@
                                             <h3 class="text-xl font-semibold">PhD in Classics</h3>
                                             <p class="text-gray-700">Western University, London</p>
                                         </div>
-                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                        <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                             2014
                                         </div>
                                     </div>
@@ -237,7 +222,7 @@
                                         </div>
                                     </div>
                                     
-                                    <div class="bg-blue-50 p-5 rounded-lg border border-blue-100 mb-6">
+                                    <div class="bg-sand p-5 rounded-lg border border-line mb-6">
                                         <h4 class="font-semibold mb-3">Dissertation</h4>
                                         <p class="mb-2"><span class="font-semibold">Title:</span> "The Modalities of Roman Translation"</p>
                                         <p class="mb-4">My dissertation examined how Roman translators positioned themselves within their literary world. Traditionally, translation studies focus on the binary of ad verbum (<em>word-for-word</em>) and ad sensum (<em>sense-for-sense</em>) approaches. However, I argued that this binary is insufficient for understanding the broader literary and social role of translators.</p>
@@ -271,7 +256,7 @@
                                             <h3 class="text-xl font-semibold">Master of Arts in Classics</h3>
                                             <p class="text-gray-700">University of Manitoba, Winnipeg</p>
                                         </div>
-                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                        <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                             2008
                                         </div>
                                     </div>
@@ -303,7 +288,7 @@
                                             <h3 class="text-xl font-semibold">Bachelor of Arts in Classics</h3>
                                             <p class="text-gray-700">University of Manitoba, Winnipeg</p>
                                         </div>
-                                        <div class="text-sm font-medium text-blue-700 bg-blue-50 px-3 py-1 rounded-full">
+                                        <div class="bg-sand text-navy font-mono text-xs px-3 py-1 rounded-full">
                                             2005
                                         </div>
                                     </div>
@@ -401,23 +386,23 @@
                         <p class="mb-6 text-gray-800">My academic training has developed transferable skills that continue to shape my professional work in education and curriculum development.</p>
                         
                         <div class="grid md:grid-cols-2 gap-6">
-                            <div class="p-6 bg-blue-50 rounded-lg skill-card border border-blue-100">
-                                <h3 class="text-xl font-semibold mb-4 text-blue-700">Research to Practice</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Research to Practice</h3>
                                 <p class="text-gray-800">Applying academic research methodologies to develop evidence-based learning solutions and evaluate program effectiveness. This includes implementing systematic approaches to data collection and analysis for continuous improvement.</p>
                             </div>
                             
-                            <div class="p-6 bg-green-50 rounded-lg skill-card border border-green-100">
-                                <h3 class="text-xl font-semibold mb-4 text-green-700">Cross-Cultural Communication</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Cross-Cultural Communication</h3>
                                 <p class="text-gray-800">Using insights from classical translation studies to bridge communication gaps in modern educational contexts, ensuring clear and effective communication across diverse audiences and stakeholder groups.</p>
                             </div>
                             
-                            <div class="p-6 bg-purple-50 rounded-lg skill-card border border-purple-100">
-                                <h3 class="text-xl font-semibold mb-4 text-purple-700">Critical Analysis</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Critical Analysis</h3>
                                 <p class="text-gray-800">Leveraging analytical skills to evaluate learning technologies and develop strategic solutions, applying rigorous methodology to assess educational tools and approaches.</p>
                             </div>
                             
-                            <div class="p-6 bg-amber-50 rounded-lg skill-card border border-amber-100">
-                                <h3 class="text-xl font-semibold mb-4 text-amber-700">Teaching Excellence</h3>
+                            <div class="p-6 bg-sand rounded-lg skill-card border border-line">
+                                <h3 class="text-xl font-semibold mb-4">Teaching Excellence</h3>
                                 <p class="text-gray-800">Drawing on classical education principles to design engaging, effective learning experiences that promote deep understanding and lasting knowledge retention.</p>
                             </div>
                         </div>
