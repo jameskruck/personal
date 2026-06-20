@@ -99,19 +99,11 @@
   <meta name="twitter:image" content="https://jameskruck.com/images/social-card.png">
 </head>
 
-<body class="smooth-scroll bg-gray-50 no-scroll">
-<!-- Splash Screen -->
-<div id="splash-screen" class="fixed inset-0 flex items-center justify-center bg-white z-50">
-  <h1 class="text-7xl font-bold text-blue-600 font-sans tracking-wide animate-fade-in">
-    James Kruck, PhD
-  </h1>
-</div>
-
-
+<body class="home-page smooth-scroll bg-gray-50">
  <!-- Skip to content link for accessibility -->
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<header id="site-header" class="opacity-0 transition-opacity duration-1000">
+<header id="site-header">
 
 <!-- Navigation -->
 <nav class="bg-white shadow-sm py-4 sticky top-0 z-10" aria-label="Main Navigation">
@@ -157,20 +149,19 @@
 </nav>
 </header>
 <!-- hero -->
-<main id="main-content" class="opacity-0 transition-opacity duration-1000">
-<section class="hero hero-parallax" aria-labelledby="hero-heading">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-    <!-- New wrapper just around the hero content -->
-    <div class="fade-in-zoom">
-      <div class="md:flex items-center">
+<main id="main-content">
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div class="md:flex items-center gap-16">
         <div class="md:w-2/3">
-          <h1 id="hero-heading" class="hero-title opacity-0 translate-y-8 text-4xl md:text-6xl font-medium leading-tight mb-6">
+          <span class="eyebrow">Learning experience designer · Educational developer</span>
+          <h1 id="hero-heading" class="hero-title text-4xl md:text-6xl font-medium leading-tight mb-6">
             Designing how people learn, and studying what works.
           </h1>
 
-<div class="hero-subcontent opacity-0 translate-y-8">
-  <p class="mb-4">
-    I design evidence-informed programs and curriculum solutions that empower educators, ignite curiosity, and build inclusive learning communities where all learners thrive.
+<div class="hero-subcontent">
+  <p class="text-lg md:text-xl mb-6" style="max-width:60ch;">
+    I turn learning research into practical courses, faculty-development programs, and AI-enabled tools for higher education and professional learners.
   </p>
 
   <div class="flex flex-wrap gap-3 mb-6" aria-label="Areas of expertise">
@@ -181,31 +172,43 @@
     <span class="tag" style="background:transparent;border-color:var(--slate);color:var(--slate);">Classical Studies</span>
   </div>
 </div>
-          <a href="#contact" class="hero-button inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-md hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 shadow-lg transform hover:-translate-y-1 hover:shadow-xl opacity-0 translate-y-8">
-            Connect About Teaching & Learning
-          </a>
+          <div class="flex flex-wrap gap-3 mt-2">
+            <a href="#projects" class="btn-primary">Explore selected work</a>
+            <a href="portfolio.html" class="btn-secondary">View applied portfolio</a>
+          </div>
         </div>
 
         <div class="md:w-1/3 flex justify-center mt-6 md:mt-0">
 <img src="images/james.png" alt="James Kruck, smiling at the camera. James has a beard and is bald." class="profile-image" style="object-position: center 70%;">
         </div>
       </div>
+  </div>
+</section>
+
+<section class="selected-work-band" aria-labelledby="selected-work-heading">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="selected-work-intro">
+      <span class="eyebrow">Selected work</span>
+      <h2 id="selected-work-heading">Designed for use, not display.</h2>
+    </div>
+    <div class="selected-work-grid">
+      <a href="https://jameskruck.github.io/ai_chatbot/" class="work-link" target="_blank" rel="noopener">
+        <span>01</span><strong>AI Chatbot Strategy Course<span class="sr-only"> (opens in a new tab)</span></strong><small>Business learning · Generative AI</small>
+      </a>
+      <a href="https://jameskruck.github.io/leverageAI/" class="work-link" target="_blank" rel="noopener">
+        <span>02</span><strong>GenAI Faculty Workshop<span class="sr-only"> (opens in a new tab)</span></strong><small>Educator development · AI adoption</small>
+      </a>
+      <a href="https://jameskruck.github.io/udlworkshop/" class="work-link" target="_blank" rel="noopener">
+        <span>03</span><strong>UDL Plus One Workshop<span class="sr-only"> (opens in a new tab)</span></strong><small>Accessibility · Practical implementation</small>
+      </a>
     </div>
   </div>
 </section>
-<!-- Scroll Down Arrow (keep as you had it) -->
-<div id="scroll-down" class="flex justify-center mt-6 opacity-0 translate-y-4">
-  <a href="#about" aria-label="Scroll down to About Me section">
-    <svg class="animate-bounce h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-    </svg>
-  </a>
-</div>
         <!-- About Section -->
 <section id="about" class="py-20 bg-white fade-in-zoom" aria-labelledby="about-heading">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <span class="eyebrow" style="text-align:center;display:block;">About</span>
-        <h2 id="about-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">About Me</h2>
+        <h2 id="about-heading" class="text-3xl font-bold text-center text-gray-900 mb-12">What I bring to the work</h2>
         <div class="md:flex items-start space-y-8 md:space-y-0 md:space-x-12">
             <div class="md:w-2/3">
                 <p class="text-gray-800 mb-4">
@@ -219,7 +222,7 @@
                 </p>
             </div>
             <div class="md:w-1/3 bg-sand border border-line rounded-lg p-8">
-                <span class="eyebrow">Academic foundations</span>
+                <h3 class="text-xl font-semibold mb-4">Academic Foundations</h3>
                 <ul aria-label="My academic and professional values">
                     <li class="flex items-baseline gap-3 py-3 border-t border-line first:border-t-0">
                         <span aria-hidden="true" style="display:inline-block;width:7px;height:7px;background:var(--bronze);border-radius:1px;flex:none;position:relative;top:7px;"></span>
@@ -928,7 +931,7 @@
       <!-- Project: UDL Plus One Workshop -->
       <div class="bg-white rounded-lg shadow-md overflow-hidden project-card">
         <div class="h-48 bg-purple-100 flex items-center justify-center" aria-hidden="true">
-          <img src="images/Screenshot2.png" alt="Preview of the UDL workshop. Includes text "An experiential workshop that introduces safety trainers to Universal Design for Learning through the practical "Plus One" approach" class="object-cover h-full w-full" />
+          <img src="images/Screenshot2.png" alt="Preview of the UDL workshop introducing safety trainers to Universal Design for Learning through the practical Plus One approach" class="object-cover h-full w-full" />
         </div>
         <div class="p-6">
           <h3 class="text-xl font-semibold mb-2">UDL Plus One Workshop</h3>
@@ -980,16 +983,6 @@
 
   </div>
 </section>
-
-    <!-- Button Below the Grid -->
-    <div class="text-center mt-10">
-      <a href="projects.html" class="inline-block bg-white border border-blue-600 text-blue-600 font-semibold px-6 py-3 rounded-md hover:bg-blue-50 transition focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-        View all educational projects
-      </a>
-    </div>
-
-
-
 
 <!-- Divider: Top gray, bottom white -->
 <div class="relative">
@@ -1179,7 +1172,7 @@
 <footer class="bg-gray-800 text-white py-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <p class="mb-4">
-      Designed and built by James Kruck, with a commitment to accessibility, inclusion, and lifelong learning. © 2025
+      Designed and built by James Kruck, with a commitment to accessibility, inclusion, and lifelong learning. © 2026
     </p>
     <p class="mb-4"><a href="portfolio.html" class="text-gray-300 hover:text-white underline">Applied portfolio</a></p>
   </div>
@@ -1196,83 +1189,6 @@
     </svg>
 </button>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // --- Elements ---
-  const splash = document.getElementById('splash-screen');
-  const header = document.getElementById('site-header');
-  const mainContent = document.getElementById('main-content');
-  const body = document.body;
-  const about = document.getElementById('about');
-
-  const hero = document.querySelector('.fade-in-zoom');
-  const heroTitle = document.querySelector('.hero-title');
-  const heroSubcontent = document.querySelector('.hero-subcontent');
-  const heroButton = document.querySelector('.hero-button');
-  const scrollArrow = document.getElementById('scroll-down');
-  
-  const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .card-fade-up, .fade-divider');
-
-  // --- Splash Screen Logic ---
-  // 1. Keep splash visible for 2.5 seconds
-  setTimeout(() => {
-    // 2. Start fade out (assuming a 1s transition is defined in CSS for opacity)
-    splash.classList.add('opacity-0', 'pointer-events-none');
-    
-    // 3. Fade in header and main content as splash fades out
-    header.classList.remove('opacity-0');
-    mainContent.classList.remove('opacity-0');
-
-    // 4. After fade out, hide splash completely and enable scrolling
-    setTimeout(() => {
-      splash.style.display = 'none';
-      body.classList.remove('no-scroll');
-      
-      // 5. Staggered animation for hero section content
-      if (hero) hero.classList.add('visible');
-      if(about) about.classList.add('visible');
-      if (heroTitle) setTimeout(() => heroTitle.classList.add('visible'), 300);
-      if (heroSubcontent) setTimeout(() => heroSubcontent.classList.add('visible'), 900);
-      if (heroButton) setTimeout(() => heroButton.classList.add('visible'), 1200);
-      if (scrollArrow) setTimeout(() => scrollArrow.classList.add('visible'), 1600);
-
-    }, 1000); // This timeout matches the CSS transition duration
-
-  }, 2500); // 2.5-second delay before starting the fade
-
-  // --- Scroll Animation Logic (from original script) ---
-  const fadeInOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -100px 0px"
-  };
-
-  const fadeInObserver = new IntersectionObserver(function(entries, observer) {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        // Stagger the animation slightly
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, index * 150); 
-        observer.unobserve(entry.target);
-      }
-    });
-  }, fadeInOptions);
-
-  fadeElements.forEach(element => {
-    if (window.innerWidth >= 768) {
-      if (element.classList.contains('fade-in')) {
-        element.classList.remove('fade-in');
-        if (Math.random() > 0.5) {
-          element.classList.add('fade-in-left');
-        } else {
-          element.classList.add('fade-in-right');
-        }
-      }
-    }
-    fadeInObserver.observe(element);
-  });
-});
-</script>
 <script data-goatcounter="https://jameskruck.goatcounter.com/count"
         data-goatcounter-settings='{"no_onload": true}'
         async src="//gc.zgo.at/count.js"></script>

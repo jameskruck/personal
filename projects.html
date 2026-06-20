@@ -26,10 +26,12 @@
         fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
       }}
     }
-  </script>
+    </script>
     <link rel="stylesheet" href="css/styles.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="js/common.js" defer></script>
 </head>
-<body class="bg-gray-50">
+<body class="projects-page">
     <!-- Skip to content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -79,12 +81,13 @@
     <!-- Hero Section -->
     <section class="page-hero" aria-labelledby="page-heading">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-4xl"> <!-- Wider container -->
-    <h1 id="page-heading" class="text-4xl font-bold text-gray-900 mb-4">Educational Projects</h1>
-    <p class="text-xl text-gray-800 mb-6">
-        Creating inclusive, engaging learning experiences through design and evidence-based teaching.
+            <div class="max-w-5xl">
+    <span class="eyebrow">Project catalogue</span>
+    <h1 id="page-heading">Learning experiences built to be used.</h1>
+    <p class="projects-lede">
+        A broad collection of courses, workshops, interactive tools, and curriculum experiments—each grounded in evidence, accessibility, and a real learning need.
     </p>
-    <div class="flex flex-wrap gap-2" aria-label="Project categories"> <!-- Smaller gap -->
+    <div class="flex flex-wrap gap-2 mt-6" aria-label="Project categories">
         <span class="tag tag-blue">Curriculum Design</span>
         <span class="tag tag-purple">Educator Development</span>
         <span class="tag tag-green">AI</span>
@@ -92,6 +95,11 @@
         <span class="tag tag-pink">Accessibility</span>
         <span class="tag tag-teal">UDL</span>
         <span class="tag tag-yellow">Ed Tech</span>
+    </div>
+    <div class="project-summary" aria-label="Project collection summary">
+        <div><strong>8</strong><span>Featured projects</span></div>
+        <div><strong>4</strong><span>Design domains</span></div>
+        <div><strong>One principle</strong><span>Start with the learner</span></div>
     </div>
 </div>
         </div>
@@ -487,9 +495,10 @@ The featured projects below represent my work across multiple dimensions of educ
 <section id="claude-code-workshop" class="bg-white rounded-lg shadow-md overflow-hidden mb-8">
     <div class="md:flex">
         <div class="md:w-1/3">
-            <img src="images/claude-code-workshop.png" alt="Claude Code Workshop Preview" 
-                 class="zoomable-image w-full h-48 md:h-72 object-contain bg-gray-50"
-                 data-zoom-caption="Claude Code Workshop: Building Educational Tools with AI" />
+            <div class="project-placeholder" aria-label="Claude Code Workshop project cover">
+                <span>Hands-on workshop</span>
+                <strong>Building educational tools with AI</strong>
+            </div>
         </div>
         <div class="p-6 md:w-2/3">
             <div class="mb-3">
@@ -530,6 +539,9 @@ The featured projects below represent my work across multiple dimensions of educ
     </div>
 </section>
 
+                        </div>
+                    </section>
+
 <!-- Curriculum Design Section -->
 <section id="curriculum-design" class="bg-white rounded-lg shadow-sm p-6 mb-8">
     <h2 class="text-2xl font-bold mb-6">Curriculum Design</h2>
@@ -563,16 +575,10 @@ The featured projects below represent my work across multiple dimensions of educ
             </div>
         </div>
     </main>
-    <!-- Image Zoom Modal -->
-<div id="imageZoomOverlay" class="image-zoom-overlay">
-    <span class="image-zoom-close" id="imageZoomClose">&times;</span>
-    <img id="imageZoomContent" class="image-zoom-content" src="" alt="">
-    <div id="imageZoomCaption" class="image-zoom-caption"></div>
-</div>
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="mb-4">© 2025 James Kruck, PhD. All rights reserved.</p>
+            <p class="mb-4">© 2026 James Kruck, PhD. All rights reserved.</p>
             <p class="mb-4"><a href="portfolio.html" class="text-gray-300 hover:text-white underline">Applied portfolio</a></p>
             <p class="text-gray-400 text-sm">
                 Designed with a focus on accessibility and inclusive design principles.
@@ -604,61 +610,5 @@ The featured projects below represent my work across multiple dimensions of educ
     document.getElementById('goatcounter-admin').classList.remove('hidden');
   }
 </script>
-
-<!-- JavaScript for Image Zoom Functionality -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Get modal elements
-    const overlay = document.getElementById('imageZoomOverlay');
-    const zoomedImage = document.getElementById('imageZoomContent');
-    const caption = document.getElementById('imageZoomCaption');
-    const closeBtn = document.getElementById('imageZoomClose');
-    
-    // Get all zoomable images
-    const zoomableImages = document.querySelectorAll('.zoomable-image');
-    
-    // Add click event to each zoomable image
-    zoomableImages.forEach(img => {
-        img.addEventListener('click', function() {
-            overlay.classList.add('active');
-            zoomedImage.src = this.src;
-            zoomedImage.alt = this.alt;
-            
-            // Set caption from data attribute or alt text
-            const captionText = this.dataset.zoomCaption || this.alt;
-            caption.textContent = captionText;
-            
-            // Prevent body scroll when modal is open
-            document.body.style.overflow = 'hidden';
-        });
-    });
-    
-    // Close modal functions
-    function closeModal() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-    
-    // Close on X button click
-    closeBtn.addEventListener('click', closeModal);
-    
-    // Close on overlay click (but not on image click)
-    overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-            closeModal();
-        }
-    });
-    
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('active')) {
-            closeModal();
-        }
-    });
-    
-    // Handle image loading errors
-    zoomedImage.addEventListener('error', function() {
-        caption.textContent = 'Image could not be loaded';
-    });
-});
-</script>
+</body>
+</html>
