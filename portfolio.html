@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Kruck, PhD — Applied Portfolio</title>
+  <meta name="description" content="Selected applied work in learning design and generative AI for adult and professional learners, with the project leadership behind it.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Tailwind (CDN first, then config) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: {
+          blue:   { 50:'#F1F4F8',100:'#E2E8F0',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          gray:   { 50:'#FBFAF7',100:'#F4F1EA',800:'#16263B',900:'#16263B' },
+          green:  { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          purple: { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          yellow: { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          orange: { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          teal:   { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          red:    { 50:'#F4F1EA',100:'#E6E1D7',400:'#1F3A5F',500:'#1F3A5F',600:'#1F3A5F',700:'#16263B',800:'#16263B' },
+          bronze:'#6F441B', paper:'#FBFAF7', sand:'#F4F1EA', line:'#E6E1D7', ink:'#16263B', navy:'#1F3A5F'
+        },
+        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Fraunces','Georgia','serif'], mono:['IBM Plex Mono','ui-monospace','monospace'] }
+      }}
+    }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <meta name="theme-color" content="#FBFAF7">
+</head>
+
+<body class="smooth-scroll">
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<!-- Minimal top bar (this page is intentionally outside the main site nav) -->
+<header class="bg-white" style="border-bottom:1px solid var(--line);">
+  <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-serif font-semibold text-lg text-ink" target="_blank" rel="noopener">James Kruck, <span class="text-navy">PhD</span><span class="sr-only"> (opens in a new tab)</span></a>
+    <a href="index.html" class="font-mono text-sm" style="color:var(--slate);" target="_blank" rel="noopener">&larr; jameskruck.com<span class="sr-only"> (opens in a new tab)</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="max-w-5xl mx-auto px-6 pt-20 pb-14">
+    <span class="eyebrow">Applied portfolio</span>
+    <h1 class="font-serif font-medium text-4xl md:text-5xl text-ink leading-tight mb-6" style="max-width:18ch;">
+      Turning learning research into AI-enabled tools people actually use.
+    </h1>
+    <p class="text-lg" style="max-width:60ch;">
+      A selection of learning-design and generative-AI work for business and professional education, with the project leadership behind it, grounded in accessibility and evidence.
+    </p>
+  </section>
+
+  <hr style="border:none;border-top:1px solid var(--line);" class="max-w-5xl mx-auto">
+
+  <!-- Applied AI and learning design -->
+  <section class="max-w-5xl mx-auto px-6 py-16" aria-labelledby="ai-heading">
+    <span class="eyebrow">Applied AI and learning design</span>
+    <h2 id="ai-heading" class="font-serif font-medium text-3xl text-ink mb-3">Tools built from educational objectives</h2>
+    <p class="mb-10" style="max-width:62ch;">
+      Each of these started as a learning goal and ended as something a learner or instructor can open and use. The labels note what the work demonstrates in an applied-research and tool-development context.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-5">
+
+      <!-- MBA Career Agent -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4">
+          <span class="tag">Generative AI</span><span class="tag">MBA</span><span class="tag">Nebula One</span><span class="tag">Project contribution</span>
+        </div>
+        <h3 class="font-serif text-xl text-ink mb-3">MBA Career Agent</h3>
+        <p>A multi-phase generative AI agent built on Ivey's Nebula One platform, supporting MBA students through the Careers curriculum. I contribute to the design and development, translating curricular objectives into agent behaviour alongside faculty and the technical team.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">Translating program learning objectives into working AI features for a degree program, the same problem space as an AI-enabled learning dashboard.</p>
+        <div class="mt-auto pt-2"><span class="font-mono text-sm" style="color:var(--slate);">Internal to Ivey &middot; not publicly linkable</span></div>
+      </article>
+
+      <!-- AI Chatbot Strategy Course -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4"><span class="tag">Generative AI</span><span class="tag">Business case</span><span class="tag">Built tool</span></div>
+        <h3 class="font-serif text-xl text-ink mb-3">AI Chatbot Strategy Course</h3>
+        <p>A three-phase experience that moves learners from analysing a retail business case to building a working chatbot prototype, with virtual MBA peers powered by a language model and a hands-on build in Chatbase.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">End-to-end design of an AI-mediated learning experience for business learners, including the working tool itself.</p>
+        <div class="mt-auto pt-2"><a class="font-semibold text-navy hover:text-bronze" href="https://jameskruck.github.io/ai_chatbot/" target="_blank" rel="noopener">Open the course &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
+      </article>
+
+      <!-- GenAI Workshop -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4"><span class="tag">Faculty development</span><span class="tag">AI adoption</span><span class="tag">Interactive</span></div>
+        <h3 class="font-serif text-xl text-ink mb-3">GenAI in Teaching and Learning Workshop</h3>
+        <p>A four-part interactive workshop that takes faculty from first experiments to practical classroom use, built around the gap between high student adoption of AI and much lower faculty use.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">Knowledge translation for educators, turning research on adoption into a usable professional-development tool.</p>
+        <div class="mt-auto pt-2"><a class="font-semibold text-navy hover:text-bronze" href="https://jameskruck.github.io/leverageAI/" target="_blank" rel="noopener">Open the workshop &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
+      </article>
+
+      <!-- Adaptive Case Studies -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4"><span class="tag">Generative AI</span><span class="tag">Scenario design</span><span class="tag">Built tool</span></div>
+        <h3 class="font-serif text-xl text-ink mb-3">AI-Powered Adaptive Case Studies</h3>
+        <p>An interactive tool that adapts hazard case studies across six industries, so one scenario framework serves very different professional audiences without rebuilding the content each time.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">Using AI to scale case-based learning, directly relevant to case-method business education.</p>
+        <div class="mt-auto pt-2"><a class="font-semibold text-navy hover:text-bronze" href="https://jameskruck.github.io/Part-2/" target="_blank" rel="noopener">Open the tool &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
+      </article>
+
+      <!-- Analogue AI Card Deck -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4"><span class="tag">AI literacy</span><span class="tag">Faculty resource</span><span class="tag">Built tool</span></div>
+        <h3 class="font-serif text-xl text-ink mb-3">Analogue AI Learning Inspiration Card Deck</h3>
+        <p>Fifty activities that introduce faculty to AI as a partner for brainstorming and problem-solving, designed for low-stakes experimentation and browsing by theme.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">Lowering the barrier to AI adoption for educators through a designed, approachable resource.</p>
+        <div class="mt-auto pt-2"><a class="font-semibold text-navy hover:text-bronze" href="https://genai.jameskruck.com" target="_blank" rel="noopener">Open the deck &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
+      </article>
+
+      <!-- UDL Plus One -->
+      <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="mb-4"><span class="tag">Accessibility</span><span class="tag">UDL</span><span class="tag">Interactive</span></div>
+        <h3 class="font-serif text-xl text-ink mb-3">UDL Plus One Workshop</h3>
+        <p>An experiential workshop that introduces practitioners to Universal Design for Learning through the practical Plus One approach, using a concrete procedure to show how existing content can be enhanced rather than rebuilt.</p>
+        <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
+        <p class="text-sm">Inclusive-design practice translated into a hands-on tool, supporting the equity and accessibility side of the work.</p>
+        <div class="mt-auto pt-2"><a class="font-semibold text-navy hover:text-bronze" href="https://jameskruck.github.io/udlworkshop/" target="_blank" rel="noopener">Open the workshop &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
+      </article>
+
+    </div>
+
+    <div class="flex flex-wrap gap-3 mt-8">
+      <a class="font-mono text-sm px-4 py-2 rounded-lg bg-white hover:text-bronze" style="border:1px solid var(--line);color:var(--navy);" href="https://jameskruck.github.io/memorygarden/index.html" target="_blank" rel="noopener">Memory Garden &middot; intergenerational learning module &#8599;<span class="sr-only"> (opens in a new tab)</span></a>
+      <a class="font-mono text-sm px-4 py-2 rounded-lg bg-white hover:text-bronze" style="border:1px solid var(--line);color:var(--navy);" href="projects.html" target="_blank" rel="noopener">All educational projects &#8599;<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+  </section>
+
+  <hr style="border:none;border-top:1px solid var(--line);" class="max-w-5xl mx-auto">
+
+  <!-- Adult and professional learning at scale -->
+  <section class="max-w-5xl mx-auto px-6 py-16" aria-labelledby="adult-heading">
+    <span class="eyebrow">Adult and professional learning at scale</span>
+    <h2 id="adult-heading" class="font-serif font-medium text-3xl text-ink mb-4">Where the practice was built</h2>
+    <div style="max-width:64ch;">
+      <p>Before Ivey, I led curriculum for a national occupational health and safety provider, designing learning for a workforce of adult professionals. Over nine years I built more than 130 competency-based learning experiences across online, blended, and in-person formats, established the quality assurance and learning-analytics processes behind them, and brought all digital content into AODA and WCAG 2.1 compliance.</p>
+      <p>That work is the foundation under the AI and learning-design projects above. The instinct to start from a real learner need, design for adults who are busy and self-directed, and finish with something usable comes directly from it.</p>
+    </div>
+  </section>
+
+  <hr style="border:none;border-top:1px solid var(--line);" class="max-w-5xl mx-auto">
+
+  <!-- Scholarship -->
+  <section class="max-w-5xl mx-auto px-6 py-16" aria-labelledby="schol-heading">
+    <span class="eyebrow">Scholarship and dissemination</span>
+    <h2 id="schol-heading" class="font-serif font-medium text-3xl text-ink mb-3">Sharing the work as it matures</h2>
+    <p class="mb-8" style="max-width:62ch;">I bring applied work to peer audiences as it becomes transferable practice, and I am building toward a sustained record of conference contributions in higher-education pedagogy.</p>
+    <ul class="list-none p-0 m-0" style="max-width:72ch;">
+      <li class="flex gap-5 py-5" style="border-top:1px solid var(--line);">
+        <span class="font-mono text-bronze" style="font-size:.9rem;">2025</span>
+        <span class="text-ink">Kruck, J. &ldquo;Practical UDL: A Plus-One Approach to Accessible and Inclusive Learning Design.&rdquo; <span style="color:var(--slate);">Accessibility &amp; Inclusion Online Conference (refereed).</span></span>
+      </li>
+      <li class="flex gap-5 py-5" style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);">
+        <span class="font-mono text-bronze" style="font-size:.9rem;">2025</span>
+        <span class="text-ink">Kruck, J. &ldquo;Three Accessibility Wins: From Quick Fixes to Scalable Change.&rdquo; <span style="color:var(--slate);">Summer of Access Webinar Series (refereed).</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <hr style="border:none;border-top:1px solid var(--line);" class="max-w-5xl mx-auto">
+
+  <!-- Teaching foundation -->
+  <section class="max-w-5xl mx-auto px-6 py-16" aria-labelledby="teach-heading">
+    <span class="eyebrow">Teaching foundation</span>
+    <h2 id="teach-heading" class="font-serif font-medium text-3xl text-ink mb-4">Built on classroom teaching</h2>
+    <div style="max-width:64ch;">
+      <p>The work here rests on years of university teaching at the University of Illinois, Quest University, Western, and Manitoba, and on certification as an Instructional Skills Workshop facilitator. My full teaching record, including philosophy, classroom observations, and sample syllabi, lives on the main site.</p>
+      <p><a class="font-semibold text-navy hover:text-bronze" href="teaching.html" target="_blank" rel="noopener">See the teaching record &#8599;<span class="sr-only"> (opens in a new tab)</span></a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-gray-800 text-white py-12">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex flex-wrap gap-6 font-mono text-sm mb-4">
+      <a href="index.html" target="_blank" rel="noopener">jameskruck.com<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="contact.html" target="_blank" rel="noopener">Contact<span class="sr-only"> (opens in a new tab)</span></a>
+      <a href="https://www.linkedin.com/in/james-kruck-77485a102/" target="_blank" rel="noopener">LinkedIn<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
+    <p class="text-sm" style="opacity:.85;">Designed and built by James Kruck, with a commitment to accessibility and inclusion.</p>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var io = new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, {threshold:0.12});
+    document.querySelectorAll('.card-fade-up').forEach(function(el){ io.observe(el); });
+  })();
+</script>
+</body>
+</html>

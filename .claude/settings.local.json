@@ -49,9 +49,13 @@
       "Bash(python:*)",
       "Bash(where python:*)",
       "Bash(where python3:*)",
-      "Bash(where py:*)"
+      "Bash(where py:*)",
+      "PowerShell(git *)"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "github"
+  ]
 }
