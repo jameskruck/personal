@@ -37,7 +37,7 @@
   <meta name="theme-color" content="#FBFAF7">
 </head>
 
-<body class="smooth-scroll">
+<body class="portfolio-page smooth-scroll">
 <a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- Minimal top bar (this page is intentionally outside the main site nav) -->
@@ -64,29 +64,44 @@
   <hr style="border:none;border-top:1px solid var(--line);" class="max-w-5xl mx-auto">
 
   <!-- Applied AI and learning design -->
-  <section class="max-w-5xl mx-auto px-6 py-16" aria-labelledby="ai-heading">
-    <span class="eyebrow">Applied AI and learning design</span>
-    <h2 id="ai-heading" class="font-serif font-medium text-3xl text-ink mb-3">Tools built from educational objectives</h2>
-    <p class="mb-10" style="max-width:62ch;">
-      Each of these started as a learning goal and ended as something a learner or instructor can open and use. The labels note what the work demonstrates in an applied-research and tool-development context.
-    </p>
+  <section class="portfolio-work-band py-16" aria-labelledby="ai-heading">
+    <div class="max-w-7xl mx-auto px-6">
+    <div class="portfolio-work-heading">
+      <div class="portfolio-work-copy">
+        <span class="eyebrow">Selected projects</span>
+        <h2 id="ai-heading" class="font-serif font-medium text-3xl text-ink">Applied AI and learning design</h2>
+      </div>
+      <div class="carousel-toolbar" aria-label="Project carousel controls">
+        <p id="project-carousel-status" class="carousel-status" aria-live="polite">Project 1 of 6</p>
+        <div class="carousel-buttons">
+          <button id="project-carousel-previous" type="button" class="carousel-button" aria-label="Show previous project">&larr;</button>
+          <button id="project-carousel-next" type="button" class="carousel-button" aria-label="Show next project">&rarr;</button>
+        </div>
+      </div>
+    </div>
 
-    <div class="grid md:grid-cols-2 gap-5">
+    <div id="project-carousel" class="portfolio-carousel grid md:grid-cols-2 gap-5" role="region" aria-label="Applied AI and learning design projects" tabindex="0">
 
       <!-- MBA Career Agent -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/career-agent.png" alt="Preview of the MBA Career Agent showing its personalized welcome message and self-reflection starter" loading="lazy">
+        </div>
         <div class="mb-4">
           <span class="tag">Generative AI</span><span class="tag">MBA</span><span class="tag">Nebula One</span><span class="tag">Project contribution</span>
         </div>
         <h3 class="font-serif text-xl text-ink mb-3">MBA Career Agent</h3>
-        <p>A multi-phase generative AI agent built on Ivey's Nebula One platform, supporting MBA students through the Careers curriculum. I contribute to the design and development, translating curricular objectives into agent behaviour alongside faculty and the technical team.</p>
+        <p>A multi-phase generative AI agent built on Ivey's Nebula One platform that guides MBA students through structured self-reflection on their identity and goals to support career exploration. I contribute to the design and development, translating curricular objectives into agent behaviour alongside faculty and the technical team.</p>
         <p class="font-mono uppercase tracking-wider text-bronze mb-1" style="font-size:.72rem;">Demonstrates</p>
-        <p class="text-sm">Translating program learning objectives into working AI features for a degree program, the same problem space as an AI-enabled learning dashboard.</p>
-        <div class="mt-auto pt-2"><span class="font-mono text-sm" style="color:var(--slate);">Internal to Ivey &middot; not publicly linkable</span></div>
+        <p class="text-sm">Building an AI tool that develops students' self-awareness and career direction, closely parallel to an AI-enabled dashboard for essential human skills.</p>
+        <div class="mt-auto pt-2"><span class="font-mono text-sm" style="color:var(--slate);">Internal tool &middot; </span><a class="font-semibold text-navy hover:text-bronze" href="https://www.youtube.com/watch?v=ODuugjkGiRs" target="_blank" rel="noopener">see Ivey's video on the Career Agent &#8599;<span class="sr-only"> (opens in a new tab)</span></a></div>
       </article>
 
       <!-- AI Chatbot Strategy Course -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/aichat.png" alt="AI Chatbot Strategy Course interface showing an AI-supported business learning activity" loading="lazy">
+        </div>
         <div class="mb-4"><span class="tag">Generative AI</span><span class="tag">Business case</span><span class="tag">Built tool</span></div>
         <h3 class="font-serif text-xl text-ink mb-3">AI Chatbot Strategy Course</h3>
         <p>A three-phase experience that moves learners from analysing a retail business case to building a working chatbot prototype, with virtual MBA peers powered by a language model and a hands-on build in Chatbase.</p>
@@ -97,6 +112,9 @@
 
       <!-- GenAI Workshop -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/Screenshot1.png" alt="GenAI in Teaching and Learning workshop interface for faculty participants" loading="lazy">
+        </div>
         <div class="mb-4"><span class="tag">Faculty development</span><span class="tag">AI adoption</span><span class="tag">Interactive</span></div>
         <h3 class="font-serif text-xl text-ink mb-3">GenAI in Teaching and Learning Workshop</h3>
         <p>A four-part interactive workshop that takes faculty from first experiments to practical classroom use, built around the gap between high student adoption of AI and much lower faculty use.</p>
@@ -107,6 +125,9 @@
 
       <!-- Adaptive Case Studies -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/case study.png" alt="Adaptive case-study interface presenting an industry-specific workplace hazard scenario" loading="lazy">
+        </div>
         <div class="mb-4"><span class="tag">Generative AI</span><span class="tag">Scenario design</span><span class="tag">Built tool</span></div>
         <h3 class="font-serif text-xl text-ink mb-3">AI-Powered Adaptive Case Studies</h3>
         <p>An interactive tool that adapts hazard case studies across six industries, so one scenario framework serves very different professional audiences without rebuilding the content each time.</p>
@@ -117,6 +138,9 @@
 
       <!-- Analogue AI Card Deck -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/analogue-ai.png" alt="AI Learning Inspiration interface showing activity navigation and a Growth Mindset learning card" loading="lazy">
+        </div>
         <div class="mb-4"><span class="tag">AI literacy</span><span class="tag">Faculty resource</span><span class="tag">Built tool</span></div>
         <h3 class="font-serif text-xl text-ink mb-3">Analogue AI Learning Inspiration Card Deck</h3>
         <p>Fifty activities that introduce faculty to AI as a partner for brainstorming and problem-solving, designed for low-stakes experimentation and browsing by theme.</p>
@@ -127,6 +151,9 @@
 
       <!-- UDL Plus One -->
       <article class="project-card card-fade-up p-7 flex flex-col">
+        <div class="portfolio-card-media">
+          <img src="images/Screenshot2.png" alt="UDL Plus One workshop interface introducing an accessibility-focused learning activity" loading="lazy">
+        </div>
         <div class="mb-4"><span class="tag">Accessibility</span><span class="tag">UDL</span><span class="tag">Interactive</span></div>
         <h3 class="font-serif text-xl text-ink mb-3">UDL Plus One Workshop</h3>
         <p>An experiential workshop that introduces practitioners to Universal Design for Learning through the practical Plus One approach, using a concrete procedure to show how existing content can be enhanced rather than rebuilt.</p>
@@ -140,6 +167,7 @@
     <div class="flex flex-wrap gap-3 mt-8">
       <a class="font-mono text-sm px-4 py-2 rounded-lg bg-white hover:text-bronze" style="border:1px solid var(--line);color:var(--navy);" href="https://jameskruck.github.io/memorygarden/index.html" target="_blank" rel="noopener">Memory Garden &middot; intergenerational learning module &#8599;<span class="sr-only"> (opens in a new tab)</span></a>
       <a class="font-mono text-sm px-4 py-2 rounded-lg bg-white hover:text-bronze" style="border:1px solid var(--line);color:var(--navy);" href="projects.html" target="_blank" rel="noopener">All educational projects &#8599;<span class="sr-only"> (opens in a new tab)</span></a>
+    </div>
     </div>
   </section>
 
@@ -200,6 +228,54 @@
 </footer>
 
 <script>
+  (function(){
+    var track = document.getElementById('project-carousel');
+    var previous = document.getElementById('project-carousel-previous');
+    var next = document.getElementById('project-carousel-next');
+    var status = document.getElementById('project-carousel-status');
+    if (!track || !previous || !next || !status) return;
+
+    var cards = Array.prototype.slice.call(track.querySelectorAll(':scope > article'));
+    var current = 0;
+    var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function updateControls(index) {
+      current = Math.max(0, Math.min(index, cards.length - 1));
+      status.textContent = 'Project ' + (current + 1) + ' of ' + cards.length;
+      previous.disabled = current === 0;
+      next.disabled = current === cards.length - 1;
+    }
+
+    function goTo(index) {
+      var target = Math.max(0, Math.min(index, cards.length - 1));
+      track.scrollTo({ left: cards[target].offsetLeft - track.offsetLeft, behavior: reducedMotion ? 'auto' : 'smooth' });
+      updateControls(target);
+    }
+
+    previous.addEventListener('click', function(){ goTo(current - 1); });
+    next.addEventListener('click', function(){ goTo(current + 1); });
+    track.addEventListener('keydown', function(event){
+      if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(current - 1); }
+      if (event.key === 'ArrowRight') { event.preventDefault(); goTo(current + 1); }
+    });
+
+    var scrollTimer;
+    track.addEventListener('scroll', function(){
+      window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(function(){
+        var nearest = 0;
+        var distance = Infinity;
+        cards.forEach(function(card, index){
+          var cardDistance = Math.abs(card.offsetLeft - track.offsetLeft - track.scrollLeft);
+          if (cardDistance < distance) { distance = cardDistance; nearest = index; }
+        });
+        updateControls(nearest);
+      }, 80);
+    }, { passive: true });
+
+    updateControls(0);
+  })();
+
   (function(){
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var io = new IntersectionObserver(function(es){
